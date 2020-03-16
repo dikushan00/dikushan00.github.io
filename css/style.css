@@ -73,22 +73,24 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .main_menu {
     height: 48px;
-    width: 76%;
+    width: 74%;
     float: left;
 }
 
 .menu_item {
-    transition: 0.3s background-color;
+    background-color: rgb(5, 141, 142);
+    transition: 0.3s background-color linear;
 }
 
 .menu_item :hover {
     background-color: #0fc7c8;
+    transition: 0.2s background-color linear;
 }
 
 .menu_item_link {
@@ -113,7 +115,7 @@ body {
 }
 
 .search {
-    width: 74%;
+    width: 70%;
     height: 33px;
     border-radius: 5px;
     padding: 0 10px;
@@ -158,6 +160,7 @@ li a {
 
 .predmety_menu_item :hover {
     background-color: #dcdcdc;
+    transition: .2s background-color ease-in-out;
 }
 
 .predmety_link {
@@ -167,7 +170,7 @@ li a {
     height: 45px;
     text-align: center;
     text-transform: uppercase;
-    padding: 0px 37px;
+    padding: 0px 36px;
     display: flex;
     align-items: center;
 }
