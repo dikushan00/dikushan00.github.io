@@ -1,4 +1,4 @@
-
+@menu-color:rgb(5, 141, 142);
 
 * {
     box-sizing: border-box;
@@ -109,6 +109,14 @@ body {
 
 .active_link {
     background-color: #0fc7c8;
+}
+
+.toggleMenu{
+    display: none;
+}
+
+.main_menu input{
+    display: none;
 }
 
 .send {
@@ -271,8 +279,13 @@ li a {
 }
 
 @media (max-width: 768px){
+    .container{
+        width: 80%;
+    }
+    
     .header{
-        height: 110px;
+        height: 200px;
+        padding: 10px;
         display: block;
         text-align: center;
     }
@@ -286,6 +299,27 @@ li a {
     }
     
     .uzor{
+        display: none;
+    }
+    
+    .menu_item{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .menu{
+        display: none;
+    }
+    
+    .toggleMenu{
+        display: block;
+        position: relative;
+        background-color: @menu_color;
+        cursor: pointer;
+        padding: 15px 40px;
+    }
+    
+    .predmety_menu{
         display: none;
     }
 }
