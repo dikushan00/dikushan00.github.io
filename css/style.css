@@ -110,7 +110,7 @@ body {
     background-color: #0fc7c8;
 }
 
-.main_menu input {
+.main_menu > input {
     display: none;
 }
 
@@ -323,11 +323,24 @@ li a {
         font-size: 19px;
     }
     
+    .toggleMenuInput{
+        display: block;
+    }
+    
+    input{
+        display: block;
+    }
+    
     label .fa-bars{
         position: absolute;
         top: 15px;
         left: 12px;
         font-size: 20px;
+    }
+    
+    input[type="checkbox"]:checked .toggleMenu{
+        color: #fff;
+        background-color: #000;
     }
 
     .predmety_menu {
@@ -356,4 +369,6 @@ li a {
         display: flex;
         margin-top: 20px;
     }
+    
+    
 }
