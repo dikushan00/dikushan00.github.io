@@ -279,12 +279,14 @@ li a {
 
 @media (max-width: 768px) {
     .container {
-        width: 80%;
+        width: 100%;
+        margin: 0;
     }
 
     .header {
         height: 200px;
-        padding: 10px;
+        width: 100%;
+        padding: 50px;
         display: block;
         text-align: center;
     }
@@ -294,7 +296,7 @@ li a {
     }
 
     .header_title {
-        font-size: 26px;
+        font-size: 19px;
     }
 
     .uzor {
@@ -307,6 +309,7 @@ li a {
     }
 
     .menu {
+        width: 100%;
         display: none;
     }
 
@@ -316,10 +319,22 @@ li a {
         background-color: @menu_color;
         cursor: pointer;
         padding: 15px 40px;
+        font-size: 19px;
+    }
+    
+    label .fa-bars{
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        font-size: 20px;
     }
 
     .predmety_menu {
         display: none;
+    }
+    
+    .about_us{
+        font-size: 13px;
     }
     
     .footer{
