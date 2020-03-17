@@ -339,10 +339,16 @@ li a {
     
     .footer{
         height: auto;
-        display: block;
+        flex-wrap: wrap;
+        padding: 20px 15px;
     }
     
     .footer_container{
         display: block;
+    }
+    
+    .social_networks{
+        display: flex;
+        margin-top: 20px;
     }
 }
