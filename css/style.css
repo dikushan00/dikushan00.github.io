@@ -297,7 +297,7 @@ li a {
 
 @media (max-width: 768px) {
     .container {
-        width: auto;
+        width: 100%;
         margin: 0;
     }
 
@@ -406,6 +406,7 @@ li a {
 
     .social_networks {
         display: flex;
+        justify-content: center;
         margin-top: 35px;
     }
 
