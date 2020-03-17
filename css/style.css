@@ -277,13 +277,23 @@ li a {
     color: #f1233b;
 }
 
+.toggleMenu {
+    display: block;
+    height: inherit;
+    position: relative;
+    background-color: @menu_color;
+    cursor: pointer;
+    padding: 15px 40px;
+    font-size: 19px;
+}
+
 @media (max-width: 768px) {
     .container {
         width: auto;
         margin: 0;
     }
-    
-    body{
+
+    body {
         width: 105%;
     }
 
@@ -318,65 +328,55 @@ li a {
         display: none;
     }
 
-    .toggleMenu {
-        display: block;
+    .input[type="checkbox"] {
         position: relative;
-        background-color: @menu_color;
-        cursor: pointer;
-        padding: 15px 40px;
-        font-size: 19px;
     }
-    
-    .toggleMenuInput{
-        display: block;
-    }
-    
-    input{
-        display: block;
-    }
-    
-    label .fa-bars{
+
+    label .fa-bars {
         position: absolute;
         top: 15px;
         left: 12px;
         font-size: 20px;
     }
-    
-    input[type="checkbox"]:checked + .toggleMenu{
+
+    input[type="checkbox"]:checked + .toggleMenu {
         display: block;
+        background-color: #000;
         color: #fff;
     }
-    
-    input[type="checkbox"]:checked ~ .menu{
+
+    input[type="checkbox"]:checked ~ .menu {
         display: block;
+        position: absolute;
+        z-index: 1000;
     }
 
     .predmety_menu {
         display: none;
     }
-    
-    .about_us{
+
+    .about_us {
         font-size: 13px;
     }
-    
-    .footer{
+
+    .footer {
         height: auto;
         flex-wrap: wrap;
         padding: 20px 15px;
     }
-    
-    .footer_container{
+
+    .footer_container {
         display: block;
     }
-    
-    .footer_side{
+
+    .footer_side {
         width: auto;
     }
-    
-    .social_networks{
+
+    .social_networks {
         display: flex;
         margin-top: 20px;
     }
-    
-    
+
+
 }
