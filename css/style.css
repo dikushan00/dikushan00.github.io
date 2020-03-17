@@ -294,7 +294,7 @@ li a {
     }
 
     body {
-        width: 105%;
+        min-width:100vw;
     }
 
     .header {
@@ -316,6 +316,10 @@ li a {
 
     .uzor {
         display: none;
+    }
+    
+    .main_menu{
+        width: 50%;
     }
 
     .menu_item {
@@ -356,6 +360,10 @@ li a {
 
     .about_us {
         font-size: 13px;
+    }
+    
+    .kgu_img{
+        height: 105px;
     }
 
     .footer {
