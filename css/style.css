@@ -341,7 +341,6 @@ li a {
 
     input[type="checkbox"]:checked + .toggleMenu {
         display: block;
-        background-color: #000;
         color: #fff;
     }
 
