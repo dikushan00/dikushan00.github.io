@@ -279,7 +279,7 @@ li a {
 
 @media (max-width: 768px) {
     .container {
-        width: 100%;
+        width: auto;
         margin: 0;
     }
 
@@ -297,6 +297,7 @@ li a {
 
     .header_title {
         font-size: 19px;
+        margin-left: 11px;
     }
 
     .uzor {
@@ -345,6 +346,10 @@ li a {
     
     .footer_container{
         display: block;
+    }
+    
+    .footer_side{
+        width: auto;
     }
     
     .social_networks{
