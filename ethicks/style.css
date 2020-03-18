@@ -5,6 +5,7 @@
 
 body {
     width: 100%;
+    max-width: 1920px;
 }
 
 .container {
@@ -292,13 +293,7 @@ li a {
     display: none;
 }
 
-@media (max-width: 1320px){
-    .predmety_link{
-        padding: 0 5px;
-    }
-}
-
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .container {
         width: 100%;
         margin: 0;
@@ -368,18 +363,9 @@ li a {
         position: absolute;
         z-index: 1000;
     }
-    
-    .predmety{
-        height: 150px;
-    }
 
     .predmety_menu {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .predmety_menu_item{
-        width: 50%;
+        display: none;
     }
 
     .about_us {
