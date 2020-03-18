@@ -119,6 +119,7 @@ body {
 .send {
     display: flex;
     margin-top: 7px;
+    padding: 0 10px;
 }
 
 .search {
