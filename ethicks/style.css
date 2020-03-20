@@ -280,6 +280,7 @@ li a {
     color: #ccc;
     font-size: 22px;
     transition: 0.3s color;
+    line-height: 28px;
 }
 
 .footer_links_item a:hover {
