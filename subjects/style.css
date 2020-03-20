@@ -85,12 +85,12 @@ body {
 
 .menu_item {
     background-color: #058d8e;
-    transition: .3s background-color ease;
+    transition: 0.3s background-color linear;
 }
 
 .menu_item :hover {
     background-color: #0fc7c8;
-    transition: .3s background-color ease;
+    transition: 0.2s background-color linear;
 }
 
 .menu_item_link {
@@ -106,7 +106,7 @@ body {
 }
 
 .active_link {
-    background-color: #0fc7c8;
+    background-color: #dcdcdc;
 }
 
 .main_menu > input {
@@ -139,6 +139,7 @@ body {
     background-color: #fff;
 }
 
+
 .search_btn :hover {
     cursor: pointer;
     color: #00c1c3;
@@ -169,12 +170,14 @@ li a {
 
 .predmety_menu_item {
     transition: .3s background-color ease;
+    ;
     background-color: #e8e8e8;
 }
 
 .predmety_menu_item :hover {
     background-color: #dcdcdc;
     transition: .3s background-color ease;
+    ;
 }
 
 .predmety_link {
@@ -197,11 +200,22 @@ li a {
     margin-top: 50px;
 }
 
-.about_us {
-    font-size: 20px;
+.content_text {
+    font-size: 19px;
     font-family: "Cambria";
     color: #007778;
     margin-left: 100px;
+}
+
+.text_content_title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.subject_img {
+    height: 410px;
+    float: left;
+    margin: 0 15px 15px 0;
 }
 
 .kgu_img {
