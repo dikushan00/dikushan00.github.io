@@ -13,6 +13,7 @@ body {
 }
 
 .header {
+    width: 100%;
     background-color: #007778;
     height: 115px;
     display: flex;
@@ -63,6 +64,7 @@ body {
     clear: both;
     background-color: #058d8e;
     height: 48px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -113,6 +115,27 @@ body {
     display: none;
 }
 
+.menu_fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    animation: showElement;
+    animation-duration: 1s;
+}
+
+@keyframes showElement{
+    0% {
+        opacity: 0;
+        top: -70px;
+    }
+    
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
 .toggleMenu {
     display: none;
 }
@@ -149,6 +172,7 @@ body {
 }
 
 .predmety {
+    width: 100%;
     background-color: #e8e8e8;
     height: 45px;
 }
