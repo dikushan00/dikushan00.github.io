@@ -3,123 +3,429 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KGU Vestnik</title>
+    <title>Foto-Salon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="./js/all.js"></script>
+    <link rel="stylesheet" href="./libs/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./libs/slick-1.8.1/slick/slick-theme.css">
+    <script src="./libs/fontawesome/js/all.min.js"></script>
+    <script src="./libs/jQuery/bower_components/jquery/dist/jquery.min.js"> </script>
+    <script src="libs/slick-1.8.1/slick/slick.js"></script>
 </head>
 
 <body>
     <header class="header">
-        <img src="./img/uzor.png" alt="" class="uzor">
+        <div class="header_wrap"></div>
         <div class="container header_container">
-            <a href="./index.html" class="logo"><img src="./img/logo.png" alt="LOGO" class="logo_img"></a>
-            <p class="header_title">Вестник КГУ имени Шокана Уалиханова</p>
+            <a href="#" class="logo"><img src="./img/camera_logo.png" alt="LOGO" class="logo_img"></a>
+            <div class="header_address">
+                <p class="header_title header_title_address">Адрес:</p>
+                <p class="header_text adress_text">
+                    г. Кокшетау Абая 158А
+                </p>
+            </div>
+            <div class="header_contacts contacts">
+                <p class="header_title header_title_contacts">Контакты:</p>
+                <p class="header_text contacts_text">
+                    <span class="phone_first">8(747)-158-95-95 </span><br>
+                    <span class="phone_first">8(747)-157-95-95 </span><br>
+                    <span class="phone_first">foto-salon@mail.ru</span>
+                </p>
+            </div>
         </div>
     </header>
-    <div class="nav">
-        <div class="container">
-            <nav class="main_menu">
-                <input type="checkbox" name="menu" id="menu_toggle" class="toggleMenuInput">
-                <label for="menu_toggle" class="toggleMenu"><i class="fas fa-bars"></i>Menu</label>
-                <ul class="menu">
-                    <li class="menu_item"><a href="#" class="menu_item_link active_link">О журнале</a></li>
-                    <li class="menu_item"><a href="./ethicks/index.html" class="menu_item_link">Этика публикации</a></li>
-                    <li class="menu_item"><a href="./gid/index.html" class="menu_item_link">Гид для автора</a></li>
-                    <li class="menu_item"><a href="./contacts/index.html" class="menu_item_link last">Контакты</a></li>
-                </ul>
-            </nav>
-            <form action="send" class="send">
-                <input type="search" placeholder="Введите.." class="search">
-                <button class="search_btn"><i class="fas fa-search"></i></button>
-            </form>
+    <nav class="main_menu">
+        <div class="container menu_container">
+            <!--
+            <input type="checkbox" name="menu" id="menu_toggle" class="toggleMenuInput">
+            <label for="menu_toggle" class="toggleMenu"><i class="fas fa-bars"></i>Menu</label>-->
+            <ul class="menu">
+                <li class="menu_item">
+                    <div class="menu_item_wrap"><a href="#" class="menu_item_link active_link">ФОТОУСЛУГИ</a></div>
+                    <div class="sub_menu_area">
+                        <a href="#">
+                            <p class="sub_menu_title">Фотоуслуги</p>
+                        </a>
+                        <ul class="sub_menu">
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu_item">
+                    <div class="menu_item_wrap"><a href="#" class="menu_item_link">ФОТОСУВЕНИРЫ</a></div>
+                    <div class="sub_menu_area">
+                        <a href="#">
+                            <p class="sub_menu_title">Фотоуслуги</p>
+                        </a>
+                        <ul class="sub_menu">
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu_item">
+                    <div class="menu_item_wrap"><a href="#" class="menu_item_link">ОЦИФРОВКА СЛАЙДОВ И ВИДЕОКАССЕТ</a></div>
+                    <div class="sub_menu_area">
+                        <a href="#">
+                            <p class="sub_menu_title">Фотоуслуги</p>
+                        </a>
+                        <ul class="sub_menu">
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu_item">
+                    <div class="menu_item_wrap"><a href="#" class="menu_item_link last">КОПИЦЕНТР</a></div>
+                    <div class="sub_menu_area">
+                        <a href="#">
+                            <p class="sub_menu_title">Фотоуслуги</p>
+                        </a>
+                        <ul class="sub_menu">
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu_item">
+                    <div class="menu_item_wrap"><a href="#" class="menu_item_link">ПОЛИГРАФИЯ</a></div>
+                    <div class="sub_menu_area">
+                        <a href="#">
+                            <p class="sub_menu_title">Фотоуслуги</p>
+                        </a>
+                        <ul class="sub_menu">
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu_item">
+                    <div class="menu_item_wrap"><a href="#" class="menu_item_link last">ПЕЧАТЬ</a></div>
+                    <div class="sub_menu_area">
+                        <a href="#">
+                            <p class="sub_menu_title">Фотоуслуги</p>
+                        </a>
+                        <ul class="sub_menu">
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                            <li class="sub_menu_item">
+                                <a href="#">
+                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
+                                    <p class="menu_item_title">Печать фото</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="predmety">
-        <div class="container">
-            <nav>
-                <ul class="predmety_menu">
-                    <li class="predmety_menu_item"><a href="./subjects/math.html" class="predmety_link">Математика</a></li>
-                    <li class="predmety_menu_item"><a href="./subjects/physic.html" class="predmety_link">Физика</a></li>
-                    <li class="predmety_menu_item"><a href="./subjects/bio.html" class="predmety_link">Биология</a></li>
-                    <li class="predmety_menu_item"><a href="./subjects/chemistry.html" class="predmety_link">Химия</a></li>
-                    <li class="predmety_menu_item"><a href="./subjects/ped.html" class="predmety_link">Педагогика</a></li>
-                    <li class="predmety_menu_item"><a href="./subjects/liter.html" class="predmety_link">Литература</a></li>
-                    <li class="predmety_menu_item"><a href="./subjects/econom.html" class="predmety_link">Экономика</a></li>
-                    <li class="predmety_menu_item"><a href="./subjects/rights.html" class="predmety_link">Право</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <main class="content">
-        <div class="container">
-            <h2 class="content_title">О ЖУРНАЛЕ</h2>
-            <p class="about_us">
-                The University of British Columbia (UBC) is a global centre for teaching, learning and research, consistently ranked among the top 20 public universities in the world and recently recognized as North America’s most international university. <br><img src="img/kgu.jpg" alt="" class="kgu_img">
+    </nav>
+    <div class="main">
+        <div class="container main_container">
+            <div class="sale">
+                <h3 class="sale_title">Специальные предложения!</h3>
+                <img src="./img/sale.png" alt="Sale" class="sale_main_img">
+                <div class="sale_item">
+                    <img src="./img/sale1.jpg" alt="Sale" class="sale_img">
+                    <p class="sale_item_description">При заказе двух услуг - третья в подарок!</p>
+                </div>
+            </div>
+            <ul class="menu_side menu_left_first">
+                <h4 class="menu_side_title menu_left_title">Фотография</h4>
+                <li class="menu_side_item menu_left_item"><a href="#">Художественная</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Портретная</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Детская</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Семейная</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Предметная</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Событийная</a></li>
+            </ul>
+            <ul class="menu_side menu_left_second">
+                <h4 class="menu_side_title menu_left_title">Фотосьемка</h4>
+                <li class="menu_side_item menu_left_item"><a href="#">Свадьба</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Юбилей</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Крещение</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Выпускной</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Корпаратив</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Предметы</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">Интерьер</a></li>
+            </ul>
+            <ul class="menu_side menu_left_third">
+                <h4 class="menu_side_title menu_left_title">Документы</h4>
+                <li class="menu_side_item menu_left_item"><a href="#">3 х 4</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">3.5 х 4.5</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">4 х 5</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">4 x 6</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">4.5 х 6</a></li>
+                <li class="menu_side_item menu_left_item"><a href="#">9 х 12</a></li>
+            </ul>
+            <div class="main_title_area">
+                <h2 class="main_title">Оформляйте заказы онлайн или по телефону и воспользуйтесь нашей доставкой.</h2>
+            </div>
+            <div class="workTime_area">
+                <p class="workTime"><span class="workTime_span">Режим работы</span> | Пн-Пт с 09:00 до 20:00 | Сб-Вс с 10:00 до 18:00</p>
+            </div>
+            <div class="slider">
+                <a href="#">
+                    <div class="slider_item"><img src="./img/1.jpg" alt="slider_photo" class="slider_img">
+                        <p class="slider_item_title">Семейное фото</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="slider_item"><img src="./img/2.jpg" alt="slider_photo" class="slider_img">
+                        <p class="slider_item_title">Реставрация фото</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="slider_item"><img src="./img/3.jpg" alt="slider_photo" class="slider_img">
+                        <p class="slider_item_title">Бесмертный полк</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="slider_item"><img src="./img/4.png" alt="slider_photo" class="slider_img">
+                        <p class="slider_item_title">Таблички</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="slider_item"><img src="./img/5.jpg" alt="slider_photo" class="slider_img">
+                        <p class="slider_item_title">Пазлы</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="slider_item"><img src="./img/6.jpg" alt="slider_photo" class="slider_img">
+                        <p class="slider_item_title">Супер-фото</p>
+                    </div>
+                </a>
+            </div>
 
-                Since 1915, our motto, Tuum Est (It is Yours), has been a declaration of our commitment to attracting and supporting those who have the drive to shape a better world. As a result, UBC students, faculty and staff continue to embrace innovation and challenge the status quo, placing us at the forefront of discovery, learning and engagement. UBC encourages bold thinking, curiosity and initiative, so you can realize your greatest potential.
-                The “Karaganda University Bulletin,” an open source scientific periodical, plans to to publish scientific research conducted by Kazakh scientists, as well as those working in other countries, in all fields of science. The journal will be of interest to Kazakhstani and foreign faculty members, as well as doctoral students, undergraduates and students who are interested in the latest results of fundamental and applied research applicable to their academic fields. The journal aims to provide a productive environment for the exchange of relevant scientific and educational information in order to meet the needs of an expanding, integrating international scientific community, while emphasising new methods and progressive ideas. <br><br>
-
-                The purpose of the scientific periodical «Bulletin of Karaganda University — is to publish in open press the results of scientific research of scientists of Kazakhstan and other countries in all branches of science.
-                The frequency of each series is 1 time per quarter. <br><br>
-
-                Since 1996, the journal began publishing research in two distinct formats; The Humanties Series and The Natural Sciences Series. Later, starting in 2010, the journal began publishig research in nine distinct series. Each of these are included in the KKSON RK list of scientific publications and recommendations for publishing doctoral and candidate dissertations. All the journal series are registered with the ISSN International Center for the Registration of Serial Publications (UNESCO, Paris, France). Together, the journal series serve as a comprehensive periodical, which goes to press four times a year (once per quarter). <br><br>
-
-                Languages of publications: English, Russian, Kazakh <br><br>
-
-                Periodicity: 1 time per quarter. <br><br>
-
-                Significantly, this journal is linked to leading Kazakhstan and foreign library systems and abstract databases. This allows readers immediate and open access to published materials. Since 2015, three journals:
-                1. The Bulletin of the Karaganda State University - Chemistry
-                2. The Bulletin of Karaganda State University - Physics
-                3. The Bulletin of Karaganda State University - Mathematics were included in the Emerging Sources Citation Index (ESCI), a citation database for the Web of Science.
-            </p>
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="container footer_container">
-            <div class="footer_side footer_left">
-                <div class="mobile_container">
-                    <a href="./index.html" class="logo footer_logo"><img src="./img/logo.png" alt="LOGO" class="logo_img"></a>
-                    <div class="social_networks">
-                        <a href="https://www.facebook.com/kgu.kz.17"><i class="fab fa-facebook-square social_network"></i></a>
-                        <a href="https://vk.com/kgu_kz_2017"><i class="fab fa-vk social_network"></i></a>
-                        <a href="https://www.youtube.com/channel/UCNBcb0ogBZHjEpwjrdIoFGQ"><i class="fab fa-youtube social_network"></i></a>
-                        <a href="https://www.instagram.com/kgu.kz/"><i class="fab fa-instagram social_network"></i></a>
+            <div class="about_us">
+                <h3 class="about_us_title">Профессиональный фото центр "ФОТОТЕТ"</h3>
+                <p class="about_description">Добро пожаловать на официальный веб-сайт фотоателье "ФОТОТЕТ". Профессиональный фотограф - студийная, портретная, семейная, предметная фотография. Фото на паспорт, ВИЗУ и другие документы всех возможных форматов. Услуги редактирования изображения (реставрация, ретушь) и любого другого текстового документа (набор текста, исправление). Распечатка фотографий любого формата до А0. Сканирование, копирование документов, а также ламинация до формата А3 (30см на 40см.) Разработка персонального дизайна, фирменного знака для визиток, сайта. Монтаж, обработка и многое другое ... Фотографии художника создаются с большим терпением и вниманием к деталям. Опытный фотограф реализует любую Вашу задумку. <br><br>
+                    У нас на сайте вы сможете узнать все, что интересует вас в фотографии, как художника в картинах. Секреты настройки света и профессиональные уроки съёмки, цифровой обработки изображений. Также вы можете посмотреть портфолио - личные работы и проекты.</p>
+            </div>
+            <div class="why_we">
+                <div class="why_we_content">
+                    <h3 class="why_we_title">Почему <span class="site_span">мы</span>?</h3>
+                    <div class="why_we_side_wrap">
+                        <div class="why_we_side why_we_first"><i class="fas fa-bullseye why_we_icon"></i>
+                            <p class="why_we_description">Наша работа - это наше хобби.
+                                Мы занимаемся фотоуслугами, потому что <span class="site_span">нам это нравится</span>, поэтому вся работа выполняется с душой.</p>
+                        </div>
+                        <div class="why_we_side why_we_second"><i class="fas fa-heart why_we_icon"></i>
+                            <p class="why_we_description">Каждый заказ выполняется индивидуально и <span class="site_span">с любовью</span>.
+                                Мы контролируем качество каждого заказа.</p>
+                        </div>
+                        <div class="why_we_side why_we_third"><i class="fas fa-check-circle why_we_icon"></i>
+                            <p class="why_we_description">Мы не пользуемся услугами посредников, мы сами все делаем и сами отвечаем за <span class="site_span">качество</span> и сроки. Мы не просто выполняем заказы, мы делаем фотоподарки.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer_side footer_midle">
-                <h3 class="footer_midle_title">Полезные ссылки</h3>
-                <ul class="footer_links">
-                    <li class="footer_links_item"><a href="http://kgu.kz/">kgu.kz</a></li>
-                    <li class="footer_links_item"><a href="./articles/index_best.html">Лучшие работы</a></li>
-                    <li class="footer_links_item"><a href="./articles/index.html">Недавно добавленные</a></li>
-                    <li class="footer_links_item"><a href="#">Для автора</a></li>
-                    <li class="footer_links_item"><a href="https://shoqan716.github.io/" class="shoqan">&#60;/SHOQAN&#62;</a></li>
-                </ul>
-            </div>
-            <div class="footer_side footer_right">
-                <p class="footer_right_text">
-                    Казахстан, Кокшетау<br>
-                    ул. Абая 76,<br>
-                    mail@kgu.kz<br>
-                    КГУ им. Ш.Уалиханова 2020<br>
-                    Все права защищены.
-                </p>
-
-                <p class="footer_right_text footer_right_text_mobile">Казахстан, Кокшетау,
-                    ул. Абая 76,
-                    mail@kgu.kz</p>
-                <span class="copyright">
-                    КГУ им. Ш.Уалиханова &copy;2020
-                    Все права защищены</span>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer_text">© 2017 Brand All Rights Reserved.</p>
+            <div class="soc_net">
+                <a href="#">
+                    <div class="soc_net_item soc_net_item1"><i class="fab fa-facebook-f sn_img"></i></div>
+                </a>
+                <a href="#">
+                    <div class="soc_net_item soc_net_item2"><i class="fab fa-twitter sn_img"></i></div>
+                </a>
+                <a href="#">
+                    <div class="soc_net_item soc_net_item3"><i class="fab fa-linkedin-in sn_img"></i></div>
+                </a>
+                <a href="#">
+                    <div class="soc_net_item soc_net_item4"><i class="fab fa-google-plus-g sn_img"></i></div>
+                </a>
+                <a href="#">
+                    <div class="soc_net_item soc_net_item5"><i class="fab fa-pinterest-p sn_img"></i></div>
+                </a>
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script>
+        $(".slider").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+
+    </script>
 </body>
 
 </html>
