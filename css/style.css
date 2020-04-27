@@ -381,7 +381,7 @@ a {
   background-color: #fff;
 }
 .soc_net_item2 {
-  background-color: #4d7eba;
+  background-color: #fff;
 }
 .soc_net_item3 {
   background-color: #ededed;
@@ -398,15 +398,9 @@ a {
 .soc_net_item:hover .sn_img {
   color: #fff;
 }
-.soc_net_item2:hover {
-  background-color: #fff;
-}
-.soc_net_item2:hover .fa-twitter {
-  color: #4d7eba;
+.soc_net_item2:hover .fa-vk {
+  color: #fff;
 }
 .sn_img {
   color: #b2b2b2;
-}
-.fa-twitter {
-  color: #fff;
 }
