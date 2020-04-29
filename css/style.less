@@ -82,6 +82,10 @@ a {
     }
 }
 
+.toggle_menu {
+    display: none;
+}
+
 .logo {
     margin-left: 100px;
 
@@ -377,6 +381,7 @@ a {
         height: 450px;
         float: right;
         position: relative;
+        padding-left: 11px;
     }
 
     &_title {
@@ -565,6 +570,7 @@ a {
 
     .slider {
         width: 100%;
+        padding: 0;
 
         &_item {}
 
@@ -581,24 +587,88 @@ a {
             left: 0;
         }
     }
+
+    .why_we {
+
+        &_content {
+            padding: 10px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
 
-
-
-    .header_burger {
-        display: block;
-        position: relative;
-        height: 22px;
-        width: 26px;
-        float: right;
-        top: 28px;
-        z-index: 1000;
+    .container {
+        padding: 0 10px;
     }
 
-    .header_burger:hover {
-        cursor: pointer;
+    .toggle_menu {
+        display: block;
+    }
+
+    .header {
+
+        .logo {
+            margin: 0;
+
+            &_img {
+                width: 80px;
+            }
+        }
+
+        &_burger {
+            display: block;
+            position: relative;
+            height: 22px;
+            width: 26px;
+            float: right;
+            top: 28px;
+            z-index: 1000;
+        }
+
+        &_burger:hover {
+            cursor: pointer;
+        }
+
+        &_burger:after,
+        &_burger:before {
+            position: absolute;
+            content: " ";
+            background-color: #fff;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: all ease .5s;
+        }
+
+        &_burger:after {
+            bottom: 0;
+        }
+
+        &_burger:before {
+            top: 0;
+        }
+
+        &_burger.active:after {
+            transform: rotate(-45deg);
+            bottom: 10px;
+            transition: all ease .5s;
+        }
+
+        &_burger.active:before {
+            transform: rotate(45deg);
+            top: 10px;
+        }
+
+        &_burger.active span {
+            transform: scale(0);
+        }
+
+        &_mob_menu {
+            position: absolute;
+            height: 100%;
+            width: 34px;
+        }
     }
 
     .burger {
@@ -608,51 +678,6 @@ a {
         left: 0;
         top: 10px;
         background-color: #fff;
-    }
-
-    .header_burger:after,
-    .header_burger:before {
-        position: absolute;
-        content: " ";
-        background-color: #fff;
-        width: 100%;
-        height: 2px;
-        left: 0;
-        transition: all ease .5s;
-    }
-
-    .header_burger:after {
-        bottom: 0;
-    }
-
-    .header_burger:before {
-        top: 0;
-    }
-
-    .header_burger.active:after {
-        transform: rotate(-45deg);
-        bottom: 10px;
-        transition: all ease .5s;
-    }
-
-    .header_burger.active:before {
-        transform: rotate(45deg);
-        top: 10px;
-    }
-
-    .header_burger.active span {
-        transform: scale(0);
-    }
-
-    .col {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 100px;
-    }
-
-    .item_img {
-        width: 150px;
     }
 
     nav {
@@ -691,21 +716,6 @@ a {
         overflow: hidden;
     }
 
-
-    .header_mob_menu {
-        position: absolute;
-        height: 100%;
-        width: 34px;
-    }
-
-    .header {
-
-        &_address,
-        &_contacts {
-            margin-left: 55px;
-        }
-    }
-
     .main_menu {
         display: none;
     }
@@ -713,8 +723,8 @@ a {
     .slider {
 
         &_img {
-            height: 115px;
-            width: 130px;
+            height: 70px;
+            width: 80px;
         }
 
         button::before {
@@ -724,23 +734,24 @@ a {
 
     .why_we {
 
+        &_container {
+            padding: 0;
+        }
+
         &_content {
             width: 100%;
             float: none;
-            padding: 10px;
+            padding-top: 10px;
         }
-
-        &_title {}
 
         &_description {
             text-align: center;
         }
 
         &_side {
-            height: calc(100%/3);
             width: calc(100%/3);
-            padding: 0 20px;
             display: block;
+            padding: 0;
 
             &_wrap {
                 height: 380px;
@@ -760,5 +771,101 @@ a {
         .content_wrap {
             width: 100%;
         }
+    }
+
+    .footer {
+
+        &_side {
+            padding: 0;
+        }
+
+        &_text {
+            text-align: center;
+            float: none;
+        }
+
+        &_side {
+
+            &_title {
+                font-size: 14px;
+            }
+
+            &_item a {
+                font-size: 13px;
+            }
+        }
+
+        .soc_net {
+            float: none;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+
+    .header {
+
+        &_address,
+        &_contacts {
+            margin-left: 20px;
+        }
+
+        &_title {
+            font-size: 17px;
+        }
+
+        &_text {
+            font-size: 14px;
+        }
+
+    }
+
+    .why_we {
+
+        &_title {
+            margin: 0;
+        }
+
+        &_content {
+            width: 100%;
+            float: none;
+            padding: 10px;
+        }
+
+        &_description {
+            text-align: center;
+        }
+
+        &_side {
+            display: flex;
+            padding: 0;
+            width: 100%;
+
+            &_wrap {
+                height: 380px;
+                display: block;
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        &_icon {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content_wrap {
+            width: 100%;
+        }
+    }
+
+    .slick-next {
+        right: -15px;
+    }
+
+    .slick-prev {
+        left: -15px;
     }
 }
