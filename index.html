@@ -37,19 +37,19 @@
                 </p>
             </div>
         </div>
+    </header>
+    <nav class="toggle_menu">
         <div class="header_mob_menu">
             <div class="header_burger">
                 <span class="burger"></span>
             </div>
         </div>
-    </header>
-    <nav>
         <ul class="tg_menu">
-            <li class="menu_item"><a href="#">Математика</a></li>
-            <li class="menu_item"><a href="#">Физика</a></li>
-            <li class="menu_item"><a href="#">Литература</a></li>
-            <li class="menu_item"><a href="#">Химия</a></li>
-            <li class="menu_item"><a href="#">Музыка</a></li>
+            <li class="tg_menu_item"><a href="#">Математика</a></li>
+            <li class="tg_menu_item"><a href="#">Физика</a></li>
+            <li class="tg_menu_item"><a href="#">Литература</a></li>
+            <li class="tg_menu_item"><a href="#">Химия</a></li>
+            <li class="tg_menu_item"><a href="#">Музыка</a></li>
         </ul>
     </nav>
     <nav class="main_menu">
@@ -470,7 +470,7 @@
         });
 
         $('.header_burger').on("click", function() {
-            $('.tg_menu , .header_burger').toggleClass('active');
+            $(' body , .toggle_menu , .header_burger').toggleClass('active');
             $('body').css('position', 'relative');
         })
 
