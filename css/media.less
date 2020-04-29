@@ -1,0 +1,74 @@
+@main_font: 'Merriweather', serif;
+@sd_font: 'PT Sans Narrow', sans-serif;
+@container_width: 1000px;
+@span_color: #5e8fcbff - #111;
+@span_color2: crimson;
+@header_font: 'Lobster';
+
+@media (max-width: 1500px) {
+    .menu {
+        display: flex;
+
+        &_side {
+            display: none;
+        }
+    }
+
+    .sale {
+        position: initial !important;
+        right: 0 !important;
+
+        &_img {
+            width: 130px !important;
+            margin-top: 4px !important;
+        }
+
+        &_main_img {
+            display: none !important;
+        }
+
+        &_item {
+
+            &_description {
+                margin: 0 auto;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .footer {
+        height: 385px !important;
+
+        &_menu {
+            display: flex !important;
+            justify-content: space-around;
+            border-bottom: 1px solid;
+        }
+
+        &_side {
+            width: 185px;
+            margin-top: 20px;
+            list-style: none;
+            padding: 15px 20px;
+
+            &_title {
+                text-align: center;
+                margin-top: 8px;
+            }
+
+            &_item {
+                margin-top: 10px;
+                text-align: center;
+
+                &:hover a {
+                    color: @span_color;
+                }
+
+                a {
+                    text-align: center;
+                    color: #ccc - #555;
+                }
+            }
+        }
+    }
+}
