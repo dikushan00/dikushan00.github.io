@@ -468,6 +468,7 @@ a {
   }
   .toggle_menu {
     display: block;
+    left: 100%;
   }
   .header .logo {
     margin: 0;
@@ -477,12 +478,16 @@ a {
   }
   .header_burger {
     display: block;
-    position: relative;
-    height: 22px;
+    position: fixed;
+    height: 21px;
     width: 26px;
-    float: right;
-    top: 28px;
+    right: 9px;
     z-index: 1000;
+    margin-top: 31px;
+  }
+  .header_burger.active {
+    right: 9px !important;
+    left: 88%;
   }
   .header_burger:hover {
     cursor: pointer;
@@ -491,26 +496,40 @@ a {
   .header_burger:before {
     position: absolute;
     content: " ";
-    background-color: #fff;
+    background-color: #000;
     width: 100%;
     height: 2px;
     left: 0;
     transition: all ease 0.5s;
+    opacity: 0.2;
   }
   .header_burger:after {
-    bottom: 0;
+    bottom: 3px;
   }
   .header_burger:before {
     top: 0;
   }
   .header_burger.active:after {
     transform: rotate(-45deg);
-    bottom: 10px;
+    bottom: 9px;
     transition: all ease 0.5s;
+    opacity: 1;
+    background-color: #fff;
   }
   .header_burger.active:before {
     transform: rotate(45deg);
     top: 10px;
+    opacity: 1;
+    background-color: #fff;
+  }
+  .header_burger:hover:after {
+    opacity: 1;
+  }
+  .header_burger:hover:before {
+    opacity: 1;
+  }
+  .header_burger:hover .burger {
+    opacity: 1;
   }
   .header_burger.active span {
     transform: scale(0);
@@ -518,15 +537,21 @@ a {
   .header_mob_menu {
     position: absolute;
     height: 100%;
-    width: 34px;
+    width: 44px;
+    padding-top: 113px;
+    right: 0;
+  }
+  .header_mob_menu .active {
+    background: none;
   }
   .burger {
     position: absolute;
     width: 100%;
     height: 2px;
     left: 0;
-    top: 10px;
-    background-color: #fff;
+    top: 8px;
+    background-color: #000;
+    opacity: 0.2;
   }
   nav {
     width: 100%;
@@ -547,9 +572,10 @@ a {
   .tg_menu {
     list-style: none;
     margin: 0 auto;
+    margin-top: 70px;
   }
   .tg_menu_item {
-    margin-top: 17px;
+    margin-top: 25px;
     text-align: center;
   }
   .tg_menu_item a {
@@ -621,13 +647,13 @@ a {
 @media (max-width: 500px) {
   .header_address,
   .header_contacts {
-    margin-left: 20px;
+    margin-left: 14px;
   }
   .header_title {
-    font-size: 17px;
+    font-size: 14px;
   }
   .header_text {
-    font-size: 14px;
+    font-size: 12px;
   }
   .why_we_title {
     margin: 0;
