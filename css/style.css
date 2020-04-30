@@ -581,6 +581,9 @@ a {
   .tg_menu_item a {
     color: #fff;
   }
+  .tg_menu_item:hover a {
+    color: #4d7eba;
+  }
   .active {
     left: 0;
     overflow: hidden;
@@ -654,6 +657,16 @@ a {
   }
   .header_text {
     font-size: 12px;
+  }
+  .tg_menu {
+    margin-top: 70px;
+    padding: 0;
+  }
+  .tg_menu_item {
+    margin-top: 32px;
+  }
+  .tg_menu_item a {
+    font-size: 13px;
   }
   .why_we_title {
     margin: 0;
