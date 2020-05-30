@@ -3,487 +3,327 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Foto-Salon</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <title>dikushan00</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./libs/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="./libs/slick-1.8.1/slick/slick-theme.css">
-    <script src="./libs/fontawesome/js/all.min.js"></script>
-    <script src="./libs/jQuery/bower_components/jquery/dist/jquery.min.js"> </script>
-    <script src="libs/slick-1.8.1/slick/slick.js"></script>
+    <link rel="stylesheet" href="libs/slick-theme.css">
+    <link rel="stylesheet" href="libs/slick.css">
+    <link rel="stylesheet" href="./libs/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Lato:wght@100;400;700&family=Open+Sans:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="./libs/aos.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/slick.js"></script>
+    <script src="libs/all.min.js"></script>
 </head>
 
 <body>
-    <div class="header_mob_menu">
-        <div class="header_burger">
-            <span class="burger"></span>
+    <a href="#" class="swipe_btn"><i class="fas fa-angle-up"></i></a>
+    <div class="home" id="home">
+        <div class="container home_container">
+            <header class="header">
+                <a href="#" class="logo"><img src="./img/Logo.png" alt="LOGO" class="logo_img">
+                </a>
+                <nav>
+                    <ul class="menu">
+                        <li class="menu_item menu_item_active"><a href="#">Home</a></li>
+                        <li class="menu_item"><a href="#about">About</a></li>
+                        <li class="menu_item"><a href="#ingridients">Igredients</a></li>
+                        <li class="menu_item"><a href="#rmenu">Menu</a></li>
+                        <li class="menu_item"><a href="#review">Reviews</a></li>
+                        <li class="menu_item"><a href="#contact">Reservations</a></li>
+                    </ul>
+                </nav>
+                <div class="soc_net">
+                    <a href="#">
+                        <div class="soc_net_item soc_net_item2"><i class="fab fa-twitter sn_img"></i></div>
+                    </a>
+                    <a href="#">
+                        <div class="soc_net_item soc_net_item1"><i class="fab fa-facebook-f sn_img"></i></div>
+                    </a>
+                    <a href="#">
+                        <div class="soc_net_item soc_net_item3"><i class="fab fa-youtube"></i></div>
+                    </a>
+                </div>
+                <div class="header_card">
+                    <a href="" class="header_card_link"><i class="fas fa-shopping-cart header_card_linkk"></i></a>
+                    <div class="basket_drop">
+                        <div class="basket_item_area">
+                            <div class="basket_item">
+                                <img src="./img/dishes.png" alt="photo" class="basket_item_img">
+                                <div class="basket_item_midle">
+                                    <h4 class="basket_item_title">Ramen</h4><img src="./img/star.png" alt="PHOTO" class="star">
+                                    <p class="basket_item_price">1<span class="basket_item_count"></span> x <span class="basket_item_price4one">250$</span></p>
+                                </div>
+                                <a href="#"><i class="fas fa-times-circle basket_item_delete"></i></a>
+                            </div>
+                        </div>
+                        <div class="basket_totalPrice">
+                            <p class="total">TOTAL</p>
+                            <p class="price">250$</p>
+                        </div>
+                        <a href="#" class="basket_btn checkout">CHECKOUT</a>
+                        <a href="#" class="basket_btn go">GO TO CARD</a>
+                    </div>
+                </div>
+            </header>
+            <p class="home_title">the right ingredients
+                for the right food</p>
+            <div class="home_dec">
+                <img src="./img/Decoration.png" alt="Dec">
+            </div>
+            <div class="home_btn_area">
+                <a href="#contact" class="home_btn">BOOK A TABlE</a>
+                <a href="#rmenu" class="home_btn">SEE THE MENU</a>
+            </div>
         </div>
     </div>
-    <header class="header">
-        <div class="header_wrap"></div>
-        <div class="container header_container">
-            <a href="#" class="logo"><img src="./img/camera_logo.png" alt="LOGO" class="logo_img"></a>
-            <div class="header_address">
-                <p class="header_title header_title_address">Адрес:</p>
-                <p class="header_text adress_text">
-                    г. Кокшетау Абая 158А
-                </p>
-            </div>
-            <div class="header_contacts contacts">
-                <p class="header_title header_title_contacts">Контакты:</p>
-                <p class="header_text contacts_text">
-                    <span class="phone_first">8(747)-158-95-95 </span><br>
-                    <span class="phone_first">8(747)-157-95-95 </span><br>
-                    <span class="phone_first">foto-salon@mail.ru</span>
-                </p>
-            </div>
-        </div>
-    </header>
-    <nav class="toggle_menu">
-        <ul class="tg_menu">
-            <li class="tg_menu_item"><a href="#">Фотоуслуги</a></li>
-            <li class="tg_menu_item"><a href="#">ФОТОСУВЕНИРЫ</a></li>
-            <li class="tg_menu_item"><a href="#">ОЦИФРОВКА СЛАЙДОВ И ВИДЕОКАССЕТ</a></li>
-            <li class="tg_menu_item"><a href="#">КОПИЦЕНТР</a></li>
-            <li class="tg_menu_item"><a href="#">ПОЛИГРАФИЯ</a></li>
-            <li class="tg_menu_item"><a href="#">ПЕЧАТЬ</a></li>
-        </ul>
-    </nav>
-    <nav class="main_menu">
-        <div class="container menu_container">
-            <!--
-            <input type="checkbox" name="menu" id="menu_toggle" class="toggleMenuInput">
-            <label for="menu_toggle" class="toggleMenu"><i class="fas fa-bars"></i>Menu</label>-->
-            <ul class="menu">
-                <li class="menu_item">
-                    <div class="menu_item_wrap"><a href="#" class="menu_item_link active_link">ФОТОУСЛУГИ</a></div>
-                    <div class="sub_menu_area">
-                        <a href="#">
-                            <p class="sub_menu_title">Фотоуслуги</p>
-                        </a>
-                        <ul class="sub_menu">
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="menu_item">
-                    <div class="menu_item_wrap"><a href="#" class="menu_item_link">ФОТОСУВЕНИРЫ</a></div>
-                    <div class="sub_menu_area">
-                        <a href="#">
-                            <p class="sub_menu_title">Фотоуслуги</p>
-                        </a>
-                        <ul class="sub_menu">
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="menu_item">
-                    <div class="menu_item_wrap"><a href="#" class="menu_item_link">ОЦИФРОВКА СЛАЙДОВ И ВИДЕОКАССЕТ</a></div>
-                    <div class="sub_menu_area">
-                        <a href="#">
-                            <p class="sub_menu_title">Фотоуслуги</p>
-                        </a>
-                        <ul class="sub_menu">
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="menu_item">
-                    <div class="menu_item_wrap"><a href="#" class="menu_item_link last">КОПИЦЕНТР</a></div>
-                    <div class="sub_menu_area">
-                        <a href="#">
-                            <p class="sub_menu_title">Фотоуслуги</p>
-                        </a>
-                        <ul class="sub_menu">
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="menu_item">
-                    <div class="menu_item_wrap"><a href="#" class="menu_item_link">ПОЛИГРАФИЯ</a></div>
-                    <div class="sub_menu_area">
-                        <a href="#">
-                            <p class="sub_menu_title">Фотоуслуги</p>
-                        </a>
-                        <ul class="sub_menu">
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="menu_item">
-                    <div class="menu_item_wrap"><a href="#" class="menu_item_link last">ПЕЧАТЬ</a></div>
-                    <div class="sub_menu_area">
-                        <a href="#">
-                            <p class="sub_menu_title">Фотоуслуги</p>
-                        </a>
-                        <ul class="sub_menu">
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                            <li class="sub_menu_item">
-                                <a href="#">
-                                    <img src="./img/hover2.jpg" alt="PHOTO" class="sub_menu_img">
-                                    <p class="menu_item_title">Печать фото</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="main">
-        <div class="container main_container">
-            <div class="sale">
-                <h3 class="sale_title">Специальные предложения!</h3>
-                <img src="./img/sale.png" alt="Sale" class="sale_main_img">
-                <div class="sale_item">
-                    <img src="./img/sale1.jpg" alt="Sale" class="sale_img">
-                    <p class="sale_item_description">При заказе двух услуг - третья в подарок!</p>
-                </div>
-            </div>
-            <ul class="menu_side menu_left_first menu_side_ver">
-                <h4 class="menu_side_title menu_left_title">Фотография</h4>
-                <li class="menu_side_item menu_left_item"><a href="#">Художественная</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Портретная</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Детская</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Семейная</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Предметная</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Событийная</a></li>
-            </ul>
-            <ul class="menu_side menu_left_second menu_side_ver">
-                <h4 class="menu_side_title menu_left_title">Фотосьемка</h4>
-                <li class="menu_side_item menu_left_item"><a href="#">Свадьба</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Юбилей</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Крещение</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Выпускной</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Корпаратив</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Предметы</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">Интерьер</a></li>
-            </ul>
-            <ul class="menu_side menu_left_third menu_side_ver">
-                <h4 class="menu_side_title menu_left_title">Документы</h4>
-                <li class="menu_side_item menu_left_item"><a href="#">3 х 4</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">3.5 х 4.5</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">4 х 5</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">4 x 6</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">4.5 х 6</a></li>
-                <li class="menu_side_item menu_left_item"><a href="#">9 х 12</a></li>
-            </ul>
-            <div class="main_title_area">
-                <h2 class="main_title">Оформляйте заказы онлайн или по телефону и воспользуйтесь нашей доставкой.</h2>
-            </div>
-            <div class="workTime_area">
-                <p class="workTime"><span class="workTime_span">Режим работы</span> | Пн-Пт с 09:00 до 20:00 | Сб-Вс с 10:00 до 18:00</p>
-            </div>
 
-        </div>
-        <div class="slider_wrap">
-            <div class="container">
-                <div class="slider">
-                    <a href="#">
-                        <div class="slider_item"><img src="./img/1.jpg" alt="slider_photo" class="slider_img">
-                            <p class="slider_item_title">Семейное фото</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="slider_item"><img src="./img/2.jpg" alt="slider_photo" class="slider_img">
-                            <p class="slider_item_title">Реставрация фото</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="slider_item"><img src="./img/3.jpg" alt="slider_photo" class="slider_img">
-                            <p class="slider_item_title">Бесмертный полк</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="slider_item"><img src="./img/4.png" alt="slider_photo" class="slider_img">
-                            <p class="slider_item_title">Таблички</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="slider_item"><img src="./img/5.jpg" alt="slider_photo" class="slider_img">
-                            <p class="slider_item_title">Пазлы</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="slider_item"><img src="./img/6.jpg" alt="slider_photo" class="slider_img">
-                            <p class="slider_item_title">Супер-фото</p>
-                        </div>
-                    </a></div>
+    <div class="about" id="about">
+        <div class="container about_container">
+            <div class="about_content">
+                <h3 class="about_content_title">
+                    Just the right food
+                </h3>
+                <img src="./img/Divider.png" alt="decor" class="about_content_decor">
+                <p class="about_content_desc">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+                <img src="./img/cook.png" alt="cook" class="about_content_cook">
+                <img src="./img/dish.png" alt="DDD" class="about_content_dish">
             </div>
         </div>
-        <div class="about_us">
-            <div class="container main_container">
-                <h3 class="about_us_title">Профессиональный фото центр "ФОТОТЕТ"</h3>
-                <p class="about_description">Добро пожаловать на официальный веб-сайт фотоателье "ФОТОТЕТ". Профессиональный фотограф - студийная, портретная, семейная, предметная фотография. Фото на паспорт, ВИЗУ и другие документы всех возможных форматов. Услуги редактирования изображения (реставрация, ретушь) и любого другого текстового документа (набор текста, исправление). Распечатка фотографий любого формата до А0. Сканирование, копирование документов, а также ламинация до формата А3 (30см на 40см.) Разработка персонального дизайна, фирменного знака для визиток, сайта. Монтаж, обработка и многое другое ... Фотографии художника создаются с большим терпением и вниманием к деталям. Опытный фотограф реализует любую Вашу задумку. <br><br>
-                    У нас на сайте вы сможете узнать все, что интересует вас в фотографии, как художника в картинах. Секреты настройки света и профессиональные уроки съёмки, цифровой обработки изображений. Также вы можете посмотреть портфолио - личные работы и проекты.</p>
-            </div>
-        </div>
-        <div class="container why_we_container">
-            <div class="why_we">
-                <div class="content_wrap"></div>
-                <div class="why_we_content">
-                    <h3 class="why_we_title">Почему <span class="site_span">мы</span>?</h3>
-                    <div class="why_we_side_wrap">
-                        <div class="why_we_side why_we_first"><i class="fas fa-bullseye why_we_icon"></i>
-                            <p class="why_we_description">Наша работа - это наше хобби.
-                                Мы занимаемся фотоуслугами, потому что <span class="site_span">нам это нравится</span>, поэтому вся работа выполняется с душой.</p>
-                        </div>
-                        <div class="why_we_side why_we_second"><i class="fas fa-heart why_we_icon"></i>
-                            <p class="why_we_description">Каждый заказ выполняется индивидуально и <span class="site_span">с любовью</span>.
-                                Мы контролируем качество каждого заказа.</p>
-                        </div>
-                        <div class="why_we_side why_we_third"><i class="fas fa-check-circle why_we_icon"></i>
-                            <p class="why_we_description">Мы не пользуемся услугами посредников, мы сами все делаем и сами отвечаем за <span class="site_span">качество</span> и сроки. Мы не просто выполняем заказы, мы делаем фотоподарки.</p>
-                        </div>
-                    </div>
+    </div>
+
+    <div class="ingridients" id="ingridients">
+        <div class="container ingridients_container">
+            <div class="ingridients_content_area"></div>
+            <div class="ingridients_content">
+                <h3 class="ingridients_content_title">Fine ingredients</h3>
+                <img src="./img/iDivider.png" alt="ddd" class="decor ingridients_content_decor">
+                <p class="ingridients_content_desc">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
+                </p>
+                <div class="ingridients_content_el">
+                    <img src="./img/i1.png" alt="1">
+                    <img src="./img/i2.png" alt="2">
+                    <img src="./img/i3.png" alt="2">
                 </div>
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="container footer_container">
-            <div class="footer_menu">
-                <ul class="footer_side footer_left_first menu_side_mob">
-                    <h4 class="footer_side_title footer_left_title">Фотография</h4>
-                    <li class="footer_side_item footer_left_item"><a href="#">Художественная</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Портретная</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Детская</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Семейная</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Предметная</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Событийная</a></li>
-                </ul>
-                <ul class="footer_side footer_left_second menu_side_mob">
-                    <h4 class="footer_side_title footer_left_title">Фотосьемка</h4>
-                    <li class="footer_side_item footer_left_item"><a href="#">Свадьба</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Юбилей</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Крещение</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Выпускной</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Корпаратив</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Предметы</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">Интерьер</a></li>
-                </ul>
-                <ul class="footer_side footer_left_third menu_side_mob">
-                    <h4 class="footer_side_title footer_left_title">Документы</h4>
-                    <li class="footer_side_item footer_left_item"><a href="#">3 х 4</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">3.5 х 4.5</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">4 х 5</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">4 x 6</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">4.5 х 6</a></li>
-                    <li class="footer_side_item footer_left_item"><a href="#">9 х 12</a></li>
-                </ul>
+
+    <div class="rmenu" id="rmenu">
+        <div class="container rmenu_container">
+            <div class="rmenu_content">
+                <div class="left">
+                    <div class="rmenu_content_item">
+                        <h3 class="about_content_title rmenu_content_title">
+                            Apetisers
+                        </h3>
+                        <img src="./img/Divider.png" alt="decor" class="about_content_decor rmenu_content_decor">
+                        <div class="rmenu_content_item_block clearfix">
+                            <h3 class="title clearfix">Tzatsiki</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                        <div class="rmenu_content_item_block clearfix">
+                            <h3 class="title clearfix">Aubergine Salad</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                        <div class="rmenu_content_item_block clearfix">
+                            <h3 class="title clearfix">Aubergine Salad</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                    </div>
+                    <div class="rmenu_content_item">
+                        <h3 class="about_content_title rmenu_content_title">
+                            Salads
+                        </h3>
+                        <img src="./img/Divider.png" alt="decor" class="about_content_decor rmenu_content_decor">
+                        <div class="rmenu_content_item_block clearfix">
+                            <h3 class="title clearfix">Tzatsiki</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                        <div class="rmenu_content_item_block clearfix rmenu_content_item_block_special">
+                            <img src="./img/sq.png" alt="square" class="special_img">
+                            <span class="special_text">Special</span>
+                            <h3 class="title clearfix">Greek Salad</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                        <div class="rmenu_content_item_block clearfix">
+                            <h3 class="title clearfix">Aubergine Salad</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="rmenu_content_item">
+                        <h3 class="about_content_title rmenu_content_title">
+                            Starters
+                        </h3>
+                        <img src="./img/Divider.png" alt="decor" class="about_content_decor rmenu_content_decor">
+                        <div class="rmenu_content_item_block clearfix">
+                            <h3 class="title clearfix">Tzatsiki</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                        <div class="rmenu_content_item_block clearfix">
+                            <h3 class="title clearfix">Aubergine Salad</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                    </div>
+                    <div class="rmenu_content_item">
+                        <h3 class="about_content_title rmenu_content_title">
+                            Main Dishes
+                        </h3>
+                        <img src="./img/Divider.png" alt="decor" class="about_content_decor rmenu_content_decor">
+                        <div class="rmenu_content_item_block clearfix">
+                            <h3 class="title clearfix">Tzatsiki</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                        <div class="rmenu_content_item_block clearfix rmenu_content_item_block_special">
+                            <img src="./img/sq.png" alt="square" class="special_img">
+                            <span class="special_text">Special</span>
+                            <h3 class="title clearfix">Roast Lamb</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                        <div class="rmenu_content_item_block clearfix">
+                            <h3 class="title clearfix">Aubergine Salad</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                        <div class="rmenu_content_item_block clearfix">
+                            <h3 class="title clearfix">Aubergine Salad</h3>
+                            <span class="price clearfix">$5.50.</span>
+                            <hr>
+                            <p class="desc clearfix">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="footer_text clearfix">© 2017 Brand All Rights Reserved.</p>
-            <div class="soc_net clearfix">
-                <a href="#">
-                    <div class="soc_net_item soc_net_item1"><i class="fab fa-facebook-f sn_img"></i></div>
-                </a>
-                <a href="#">
-                    <div class="soc_net_item soc_net_item2"><i class="fab fa-vk sn_img"></i></div>
-                </a>
-                <a href="#">
-                    <div class="soc_net_item soc_net_item3"><i class="fab fa-instagram sn_img"></i></div>
-                </a>
-                <a href="#">
-                    <div class="soc_net_item soc_net_item4"><i class="fab fa-google-plus-g sn_img"></i></div>
-                </a>
-                <a href="#">
-                    <div class="soc_net_item soc_net_item5"><i class="fab fa-youtube sn_img"></i></div>
-                </a>
+            <a href="#" class="contact_content_form_btn rmenu_btn">See all menu</a>
+        </div>
+    </div>
+
+    <div class="review" id="review">
+        <div class="container review_container">
+            <div class="review_content_area"></div>
+            <div class="review_content">
+                <img src="./img/kav.png" alt="KAV" class="review_content_kav">
+                <div class="review_content_text">
+                    <h3 class="ingridients_content_title review_content_title">Guest Reviews</h3>
+                    <img src="./img/iDivider.png" alt="ddd" class="decor ingridients_content_decor review_content_decor">
+                    <p class="review_content_desc">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
+                    </p>
+                    <span class="review_content_author">- food inc, New York</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <div class="container contact_container">
+            <div class="contact_img">
+                <img src="./img/image2.png" alt="IMG" class="contact_image">
+                <img src="./img/image.png" alt="IMG" class="contact_image">
+            </div>
+            <div class="contact_content">
+                <h3 class="about_content_title contact_content_title">
+                    Just the right food
+                </h3>
+                <img src="./img/Divider.png" alt="decor" class="about_content_decor contact_content_decor">
+                <p class="contact_content_desc">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.
+                    <br><br>
+                    Delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</p>
+
+                <form action="#" class="contact_content_form">
+                    <div class="contact_content_form_item">
+                        <label for="contact_content_form_name">Name</label>
+                        <input type="text" id="contact_content_form_name" class="contact_content_form_input contact_content_form_name" placeholder="your name *">
+                    </div>
+                    <div class="contact_content_form_item">
+                        <label for="contact_content_form_email">Email</label>
+                        <input type="text" id="contact_content_form_email" class="contact_content_form_input contact_content_form_name" placeholder="your email *">
+                    </div>
+                    <div class="contact_content_form_item">
+                        <label for="contact_content_form_date">Date</label>
+                        <input type="date" id="contact_content_form_date" class="contact_content_form_input contact_content_form_name" placeholder="date *">
+                    </div>
+                    <div class="contact_content_form_item">
+                        <label for="contact_content_form_number">Number</label>
+                        <input type="tel" id="contact_content_form_number" class="contact_content_form_input contact_content_form_name" placeholder="party number" pattern="8[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <a href="#" class="contact_content_form_btn">Book now!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="container footer_container">
+            <div class="footer_content">
+                <div class="footer_content_item footer_content_item_left">
+                    <h3 class="ingridients_content_title footer_content_title">About us</h3>
+                    <img src="./img/iDivider.png" alt="ddd" class="decor ingridients_content_decor footer_content_decor">
+                    <p class="footer_content_desc">Lambda's new and expanded Chelsea location represents a truly authentic <span>Greek</span> patisserie, featuring breakfasts of fresh croissants and steaming bowls of café.
+                        Lamda the best restaurant in town</p>
+                </div>
+
+                <div class="footer_content_item footer_content_middle">
+                    <h3 class="ingridients_content_title footer_content_title">Opening Hours</h3>
+                    <img src="./img/iDivider.png" alt="ddd" class="decor ingridients_content_decor footer_content_decor">
+                    <p class="footer_content_desc"><span>Mon-Thu:</span> 7:00am-8:00pm</p>
+                    <p class="footer_content_desc"><span>Fri-Sun:</span> 7:00am-10:00pm</p>
+                    <div class="footer_content_item_bank">
+                        <i class="fab fa-cc-visa footer_content_item_bankItem"></i>
+                        <i class="fab fa-cc-apple-pay footer_content_item_bankItem"></i>
+                        <i class="fab fa-cc-mastercard footer_content_item_bankItem"></i>
+                        <i class="fab fa-cc-paypal footer_content_item_bankItem"></i>
+                    </div>
+                </div>
+
+                <div class="footer_content_item footer_content_item_right">
+                    <h3 class="ingridients_content_title footer_content_title">Our Location</h3>
+                    <img src="./img/iDivider.png" alt="ddd" class="decor ingridients_content_decor footer_content_decor">
+                    <p class="footer_content_desc"><span>19th Paradise Street Sitia <br>128 Meserole Avenue</span></p>
+                    <div class="soc_net footer_content_soc_net">
+                        <a href="#">
+                            <div class="soc_net_item soc_net_item2"><i class="fab fa-twitter sn_img"></i></div>
+                        </a>
+                        <a href="#">
+                            <div class="soc_net_item soc_net_item1"><i class="fab fa-facebook-f sn_img"></i></div>
+                        </a>
+                        <a href="#">
+                            <div class="soc_net_item soc_net_item3"><i class="fab fa-youtube"></i></div>
+                        </a>
+                        <a href="#">
+                            <div class="soc_net_item soc_net_item3"><i class="fab fa-trello"></i></div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-    <script>
-        $(".slider").slick({
-            dots: true,
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3
-        });
 
-        $('.header_burger').on("click", function() {
-            $(' body , .toggle_menu , .header_burger').toggleClass('active');
-            $('body').css('position', 'relative');
-        })
-
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
