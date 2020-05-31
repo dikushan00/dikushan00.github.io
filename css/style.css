@@ -236,7 +236,7 @@ a:active {
   width: 226px;
   height: 55px;
   color: #fff;
-  line-height: 3;
+  line-height: 55px;
   font-family: 'Lato', sans-serif;
   border-width: 1px;
   border-color: #ffffff;
@@ -370,7 +370,7 @@ a:active {
   margin-top: 60px;
 }
 .rmenu {
-  height: 1060px;
+  height: 1025px;
   background: url(../img/rm_bg.png) no-repeat;
   background-size: cover;
   background-position: top;
@@ -391,6 +391,22 @@ a:active {
   height: auto;
   margin-left: 50px;
   margin-top: 50px;
+}
+.rmenu_content_item_btn {
+  width: 78px;
+  height: 27px;
+  display: block;
+  text-align: center;
+  line-height: 27px;
+  color: #fff;
+  background-color: #dab33e;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  position: absolute;
+  margin: 0;
+  font-weight: 700;
+  right: 0;
+  top: 36px;
 }
 .rmenu_content_item_block {
   height: 65px;
@@ -521,7 +537,7 @@ a:active {
   left: 38px;
 }
 .contact {
-  height: 745px;
+  height: 830px;
   padding: 25px;
   background: url("../img/background.png") no-repeat;
   background-size: cover;
@@ -554,6 +570,17 @@ a:active {
 .contact_content_form_item {
   margin-top: 42px;
   position: relative;
+}
+.contact_content_form_item_table {
+  width: 100%;
+  text-align: center;
+}
+.contact_content_form_item_table img {
+  width: 317px;
+  position: absolute;
+  top: -39px;
+  right: -216px;
+  display: none;
 }
 .contact_content_form_item label {
   position: absolute;
@@ -588,10 +615,10 @@ a:active {
 .contact_content_form_btn {
   background-color: #dab33e;
   width: 198px;
-  height: 34px;
+  height: 44px;
   margin: 0 auto;
   text-align: center;
-  line-height: 2;
+  line-height: 44px;
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;

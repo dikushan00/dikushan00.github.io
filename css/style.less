@@ -289,7 +289,7 @@ a:active {
         width: 226px;
         height: 55px;
         color: #fff;
-        line-height: 3;
+        line-height: 55px;
         font-family: @text_font;
         border-width: 1px;
         border-color: rgb(255, 255, 255);
@@ -443,7 +443,7 @@ a:active {
 }
 
 .rmenu {
-    height: 1060px;
+    height: 1025px;
     background: url(../img/rm_bg.png) no-repeat;
     background-size: cover;
     background-position: top;
@@ -468,6 +468,23 @@ a:active {
             height: auto;
             margin-left: 50px;
             margin-top: 50px;
+
+            &_btn {
+                width: 78px;
+                height: 27px;
+                display: block;
+                text-align: center;
+                line-height: 27px;
+                color: #fff;
+                background-color: #dab33e;
+                font-family: 'Lato', sans-serif;
+                font-size: 12px;
+                position: absolute;
+                margin: 0;
+                font-weight: 700;
+                right: 0;
+                top: 36px;
+            }
 
             &_block {
                 height: 65px;
@@ -622,7 +639,7 @@ a:active {
 }
 
 .contact {
-    height: 745px;
+    height: 830px;
     padding: 25px;
     background: url("../img/background.png") no-repeat;
     background-size: cover;
@@ -659,6 +676,19 @@ a:active {
             &_item {
                 margin-top: 42px;
                 position: relative;
+
+                &_table {
+                    width: 100%;
+                    text-align: center;
+
+                    & img {
+                        width: 317px;
+                        position: absolute;
+                        top: -39px;
+                        right: -216px;
+                        display: none;
+                    }
+                }
 
                 & label {
                     position: absolute;
@@ -697,10 +727,10 @@ a:active {
             &_btn {
                 background-color: @main_color;
                 width: 198px;
-                height: 34px;
+                height: 44px;
                 margin: 0 auto;
                 text-align: center;
-                line-height: 2;
+                line-height: 44px;
                 font-size: 16px;
                 font-family: @a_font;
                 color: rgb(255, 255, 255);
