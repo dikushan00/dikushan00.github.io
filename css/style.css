@@ -332,7 +332,7 @@ a:active {
   width: 570px;
   height: 557px;
   background-color: #000000;
-  opacity: 0.67;
+  opacity: 0.67 !important;
   padding: 80px;
 }
 .ingridients_content_title {
@@ -502,7 +502,7 @@ a:active {
 .review_content_area {
   position: absolute;
   background-color: #000;
-  opacity: 0.75;
+  opacity: 0.75 !important;
   width: 770px;
   height: 557px;
 }

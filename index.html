@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Lato:wght@100;400;700&family=Open+Sans:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./libs/aos.css">
     <script src="libs/jquery.min.js"></script>
+    <script src="libs/aos.js"></script>
     <script src="libs/all.min.js"></script>
 </head>
 
@@ -85,22 +87,22 @@
 
     <div class="about" id="about">
         <div class="container about_container">
-            <div class="about_content">
+            <div class="about_content" data-aos="fade-right">
                 <h3 class="about_content_title">
                     Just the right food
                 </h3>
                 <img src="./img/Divider.png" alt="decor" class="about_content_decor">
                 <p class="about_content_desc">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
                 <img src="./img/cook.png" alt="cook" class="about_content_cook">
-                <img src="./img/dish.png" alt="DDD" class="about_content_dish">
             </div>
+            <img src="./img/dish.png" alt="DDD" class="about_content_dish">
         </div>
     </div>
 
     <div class="ingridients" id="ingridients">
         <div class="container ingridients_container">
-            <div class="ingridients_content_area"></div>
-            <div class="ingridients_content">
+            <div class="ingridients_content_area" data-aos="fade-left"></div>
+            <div class="ingridients_content" data-aos="fade-left">
                 <h3 class="ingridients_content_title">Fine ingredients</h3>
                 <img src="./img/iDivider.png" alt="ddd" class="decor ingridients_content_decor">
                 <p class="ingridients_content_desc">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
@@ -239,8 +241,8 @@
 
     <div class="review" id="review">
         <div class="container review_container">
-            <div class="review_content_area"></div>
-            <div class="review_content">
+            <div class="review_content_area" data-aos="fade-up"></div>
+            <div class="review_content" data-aos="fade-up">
                 <img src="./img/kav.png" alt="KAV" class="review_content_kav">
                 <div class="review_content_text">
                     <h3 class="ingridients_content_title review_content_title">Guest Reviews</h3>
