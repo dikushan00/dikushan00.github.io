@@ -64,3 +64,11 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+
+$(window).scroll(function () {
+    var st = $(this).scrollTop();
+    $(".about_content_dish").css({
+        "transform": "translate(0%, -" +
+            st / 80 + "%)"
+    })
+});

@@ -265,6 +265,7 @@ a:active {
   background: url("../img/background.png") no-repeat;
   background-size: cover;
   background-position: top;
+  overflow: hidden;
 }
 .about_container {
   position: relative;
@@ -305,7 +306,7 @@ a:active {
 }
 .about_content_dish {
   position: absolute;
-  top: -45px;
+  top: -10px;
   right: 0;
 }
 .ingridients {
@@ -375,6 +376,41 @@ a:active {
   background-size: cover;
   background-position: top;
   padding: 30px 0;
+  position: relative;
+}
+.rmenu_search {
+  position: absolute;
+  width: 261px;
+  height: 33px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  outline: none;
+  padding: 3px 13px;
+  font-family: 'Lato', sans-serif;
+  transition: 0.3s all;
+}
+.rmenu_search:hover,
+.rmenu_search:focus {
+  border: 2px solid #dab33e;
+}
+.rmenu_search_area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 40px;
+  right: -864px;
+  top: 20px;
+}
+.rmenu_search_btn {
+  position: absolute;
+  right: 0;
+  color: #ccc;
+  font-size: 24px;
+  transition: 0.3s all;
+}
+.rmenu_search_btn:hover {
+  color: #dab33e;
 }
 .rmenu_content {
   display: flex;

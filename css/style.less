@@ -322,6 +322,7 @@ a:active {
     background: url("../img/background.png") no-repeat;
     background-size: cover;
     background-position: top;
+    overflow: hidden;
 
     &_container {
         position: relative;
@@ -367,7 +368,7 @@ a:active {
 
         &_dish {
             position: absolute;
-            top: -45px;
+            top: -10px;
             right: 0;
         }
     }
@@ -448,7 +449,46 @@ a:active {
     background-size: cover;
     background-position: top;
     padding: 30px 0;
+    position: relative;
 
+    &_search {
+        position: absolute;
+        width: 261px;
+        height: 33px;
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        outline: none;
+        padding: 3px 13px;
+        font-family: @text_font;
+        transition: .3s all;
+
+        &:hover,
+        &:focus {
+            border: 2px solid @main_color;
+        }
+
+        &_area {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 300px;
+            height: 40px;
+            right: -864px;
+            top: 20px;
+        }
+
+        &_btn {
+            position: absolute;
+            right: 0;
+            color: #ccc;
+            font-size: 24px;
+            transition: .3s all;
+
+            &:hover {
+                color: @main_color;
+            }
+        }
+    }
 
     &_container {}
 
