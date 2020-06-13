@@ -104,7 +104,7 @@ json.onreadystatechange = function () {
                 var basket_item_price = "<p class='basket_item_price'><span class='basket_item_count'>1</span> x <span class = 'basket_item_price4one'>" +
                     itemKey.price + "</span></p>";
 
-                var delete_btn = "<a href='' class = 'basket_item_delete' data-index = " + index + "><i class='fas fa-times-circle basket_item_remove'></i></a>";
+                var delete_btn = "<a href='#' class = 'basket_item_delete' data-index = " + index + "><i class='fas fa-times-circle basket_item_remove'></i></a>";
                 /*
                     $('<a />', {
                         class: "basket_item_remove",
@@ -164,22 +164,26 @@ json.onreadystatechange = function () {
             console.log(index);
             console.log("index");
             countGoods--;
-            amount -= this.cardItems[index].price;
-            this.basketItems.splice(index, 1);
+            amount -= cardItems[index].price;
+            basketItems.splice(index, 1);
             refresh();
         }
 
-        //        $(basket_area).on("click", '.basket_item_delete', delete_product($(this).data("index")));
+        //        $(basket_area).on("click", '.basket_item_delete', delete_product($(this).data("index")))
 
-//        $('.basket_item_remove').on("click", function (e) {
-            //            e.preventDefault();
-            //            var index = parseInt($(this).data("index"));
-            //            console.log(index);
-            //            delete_product(index);
-            //        });
+        //        $('.basket_item_remove').on("click", function (e) {
+        //            e.preventDefault();
+        //            var index = parseInt($(this).data("index"));
+        //            console.log(index);
+        //            delete_product(index);
+        //        });
 
-        $('.basket_item_area').on('click', '.basket_item_remove', function () {
-            delete_product(this.dataset.index);
+        //        $('.basket_item_area').on('click', '.basket_item_remove', function () {
+        //            delete_product($(this).data("index"));
+        //        });
+
+        $('.basket_item_remove').on('click', function () {
+            delete_product(+$(this).data("index"));
         });
 
         var refresh = function () {
