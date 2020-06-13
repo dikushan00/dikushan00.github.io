@@ -80,17 +80,10 @@ json.onreadystatechange = function () {
     if (json.readyState == 4 && json.status == 200) {
         console.log("state = 4");
 
-
-        //    if (json.status == 200) {
-        //        console.log("status = 200");
-        //    } else {
-        //        console.log("status is not 200");
-        //    }
         var basketCard = JSON.parse(json.responseText);
 
-
-        var amount = basketCard.amount;
-        $(".price span").text(+amount);
+        var amount = parseFloat(basketCard.amount);
+        $(".price span").text(amount);
 
         ////////////////////////////////////////////
 
@@ -99,13 +92,37 @@ json.onreadystatechange = function () {
         var countGoods = 0;
         var cardItems = [];
         basket_area.append("<p class = 'basket_empty'>Корзина пуста</p>");
+        $(".price span").text(amount);
+        var renderItemList = function () {
+            basket_area.empty();
+            var index = 0;
+            for (var itemKey of cardItems) {
+                var basket_item = $("<div/>", {
+                    class: "basket_item"
+                });
+                var basket_item_title = "<h4 class = 'basket_item_title'>" + itemKey.title + "</h4>";
+                var basket_item_price = "<p class='basket_item_price'><span class='basket_item_count'>1</span> x <span class = 'basket_item_price4one'>" +
+                    itemKey.price + "</span></p>";
+
+                var delete_btn = $('<a />', {
+                    class: "basket_item_delete",
+                    'data-index': index,
+                    html: '<i class="fas fa-times-circle basket_item_delete"></i>'
+                });
+                /*"<a href='' class = 'basket_item_delete' data-index = " + index + "></a>";*/
+                $(".price span").empty();
+                $(".price span").text(amount);
+                index++;
+
+                basket_item.append(basket_item_title);
+                basket_item.append(basket_item_price);
+                basket_item.append(delete_btn);
+                basket_area.append(basket_item);
+            }
+        };
 
 
         var add = function (id, title, price) {
-            //        this.id = id;
-            //        this.title = title;
-            //        this.price = price;
-
             var id = id;
             var title = title;
             var price = price;
@@ -118,30 +135,13 @@ json.onreadystatechange = function () {
 
             countGoods++;
             amount += parseFloat(price);
+            console.log(amount);
             cardItems.push(basketItem);
+            renderItemList();
+
             if (cardItems.length > 0) {
                 $(".basket_empty").remove();
             }
-            refresh();
-            $(".price span").empty();
-            $(".price span").text(amount);
-
-            var basket_area = $(".basket_item_area");
-
-            var basket_item = $("<div/>", {
-                class: "basket_item"
-            });
-
-            var basket_item_title = "<h4 class = 'basket_item_title'>" + title + "</h4>";
-            var basket_item_price = "<p class='basket_item_price'><span class='basket_item_count'>1</span> x <span class = 'basket_item_price4one'>" +
-                price + "</span></p>";
-
-            var delete_btn = "<a href=''><i class='fas fa-times-circle basket_item_delete'></i></a>"
-
-            basket_item.append(basket_item_title);
-            basket_item.append(basket_item_price);
-            basket_item.append(delete_btn);
-            basket_area.append(basket_item);
         };
 
         $(".rmenu_content_item_btn").on("click", function () {
@@ -155,14 +155,27 @@ json.onreadystatechange = function () {
                     price = parseFloat(key.price);
                 }
             }
-            console.log(product_id);
             add(product_id, title, price);
         });
 
+        var delete_product = function (index) {
+            console.log(index);
+            countGoods--;
+            amount -= this.cardItems[index].price;
+            this.basketItems.splice(index, 1);
+            refresh();
+        }
+
+        $(".basket_item_delete").on("click", delete_product(this.dataset.index));
 
         var refresh = function () {
+            basket_area.empty();
             $(".price span").empty(); //Очищаем содержимое контейнера
+            $(".price span").text(amount);
+            renderItemList();
         };
+
+
         /*
 
                 Basket.prototype.delete = function () {
