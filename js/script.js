@@ -72,3 +72,110 @@ $(window).scroll(function () {
             st / 80 + "%)"
     })
 });
+
+var json = new XMLHttpRequest();
+json.open('GET', 'basket.json', true);
+json.send();
+json.onreadystatechange = function () {
+    if (json.readyState == 4 && json.status == 200) {
+        console.log("state = 4");
+
+
+        //    if (json.status == 200) {
+        //        console.log("status = 200");
+        //    } else {
+        //        console.log("status is not 200");
+        //    }
+        var basketCard = JSON.parse(json.responseText);
+
+
+        var amount = basketCard.amount;
+        $(".price span").text(+amount);
+
+        ////////////////////////////////////////////
+
+
+        var basket_area = $(".basket_item_area");
+        var countGoods = 0;
+        var cardItems = [];
+        basket_area.append("<p class = 'basket_empty'>Корзина пуста</p>");
+
+
+        var add = function (id, title, price) {
+            //        this.id = id;
+            //        this.title = title;
+            //        this.price = price;
+
+            var id = id;
+            var title = title;
+            var price = price;
+
+            var basketItem = {
+                "id": id,
+                "title": title,
+                "price": price
+            };
+
+            countGoods++;
+            amount += parseFloat(price);
+            cardItems.push(basketItem);
+            if (cardItems.length > 0) {
+                $(".basket_empty").remove();
+            }
+            refresh();
+            $(".price span").empty();
+            $(".price span").text(amount);
+
+            var basket_area = $(".basket_item_area");
+
+            var basket_item = $("<div/>", {
+                class: "basket_item"
+            });
+
+            var basket_item_title = "<h4 class = 'basket_item_title'>" + title + "</h4>";
+            var basket_item_price = "<p class='basket_item_price'><span class='basket_item_count'>1</span> x <span class = 'basket_item_price4one'>" +
+                price + "</span></p>";
+
+            var delete_btn = "<a href=''><i class='fas fa-times-circle basket_item_delete'></i></a>"
+
+            basket_item.append(basket_item_title);
+            basket_item.append(basket_item_price);
+            basket_item.append(delete_btn);
+            basket_area.append(basket_item);
+        };
+
+        $(".rmenu_content_item_btn").on("click", function () {
+            var product_id = parseInt($(this).attr('data-id'));
+            var title;
+            var price;
+
+            for (var key of basketCard.basket) {
+                if (parseInt(key.id) == product_id) {
+                    title = key.title;
+                    price = parseFloat(key.price);
+                }
+            }
+            console.log(product_id);
+            add(product_id, title, price);
+        });
+
+
+        var refresh = function () {
+            $(".price span").empty(); //Очищаем содержимое контейнера
+        };
+        /*
+
+                Basket.prototype.delete = function () {
+                    var basket_items = $('.basket_item');
+                    basket_items.remove();
+                    var $basketData = $('#basket_data');
+                    $basketData.empty();
+                    this.countGoods = 0;
+                    this.amount = 0;
+                    $basketData.append('<p>Всего товаров: ' + this.countGoods + '</p>');
+                    $basketData.append('<p>Общая сумма: ' + this.amount + '</p>');
+                }*/
+    } else {
+        console.log("status is not 4");
+    }
+}

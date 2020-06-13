@@ -1,0 +1,65 @@
+{
+    "basket": [
+        {
+            "id": "1",
+            "title": "Ramen",
+            "price": "5.5"
+    },
+        {
+            "id": "2",
+            "title": "Burger",
+            "price": "1.2"
+    },
+        {
+            "id": "3",
+            "title": "Doner",
+            "price": "3.2"
+    },
+        {
+            "id": "4",
+            "title": "Tzezar",
+            "price": "5.5"
+    },
+        {
+            "id": "5",
+            "title": "Beshbarmak",
+            "price": "7.8"
+    },
+        {
+            "id": "6",
+            "title": "Sandwich",
+            "price": "2.6"
+    },
+        {
+            "id": "7",
+            "title": "Baursak",
+            "price": "9.6"
+    },
+        {
+            "id": "8",
+            "title": "Sup",
+            "price": "4.8"
+    },
+        {
+            "id": "9",
+            "title": "Sushi",
+            "price": "1.1"
+    },
+        {
+            "id": "10",
+            "title": "Pizza",
+            "price": "0.7"
+    },
+        {
+            "id": "11",
+            "title": "Kumper",
+            "price": "4.9"
+    },
+        {
+            "id": "12",
+            "title": "Pirazhok",
+            "price": "3.3"
+    }
+  ],
+    "amount": "0"
+}
