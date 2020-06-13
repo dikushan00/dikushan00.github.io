@@ -104,12 +104,14 @@ json.onreadystatechange = function () {
                 var basket_item_price = "<p class='basket_item_price'><span class='basket_item_count'>1</span> x <span class = 'basket_item_price4one'>" +
                     itemKey.price + "</span></p>";
 
-                var delete_btn = $('<a />', {
-                    class: "basket_item_delete",
-                    'data-index': index,
-                    html: '<i class="fas fa-times-circle basket_item_delete"></i>'
-                });
-                /*"<a href='' class = 'basket_item_delete' data-index = " + index + "></a>";*/
+                var delete_btn = "<a href='' class = 'basket_item_delete' data-index = " + index + "><i class='fas fa-times-circle basket_item_remove'></i></a>";
+                /*
+                    $('<a />', {
+                        class: "basket_item_remove",
+                        'data-index': index,
+                        //                    html: '<i class="fas fa-times-circle basket_item_delete"></i>'
+                        text: "x"
+                    });*/
                 $(".price span").empty();
                 $(".price span").text(amount);
                 index++;
@@ -160,13 +162,25 @@ json.onreadystatechange = function () {
 
         var delete_product = function (index) {
             console.log(index);
+            console.log("index");
             countGoods--;
             amount -= this.cardItems[index].price;
             this.basketItems.splice(index, 1);
             refresh();
         }
 
-        $(".basket_item_delete").on("click", delete_product(this.dataset.index));
+        //        $(basket_area).on("click", '.basket_item_delete', delete_product($(this).data("index")));
+
+//        $('.basket_item_remove').on("click", function (e) {
+            //            e.preventDefault();
+            //            var index = parseInt($(this).data("index"));
+            //            console.log(index);
+            //            delete_product(index);
+            //        });
+
+        $('.basket_item_area').on('click', '.basket_item_remove', function () {
+            delete_product(this.dataset.index);
+        });
 
         var refresh = function () {
             basket_area.empty();
