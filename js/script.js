@@ -82,8 +82,8 @@ json.onreadystatechange = function () {
 
         var basketCard = JSON.parse(json.responseText);
 
-        var amount = parseFloat(basketCard.amount);
-        $(".price span").text(amount);
+        var amount = 0;
+        $(".price span").text(+amount.toFixed(2));
 
         ////////////////////////////////////////////
 
@@ -92,19 +92,21 @@ json.onreadystatechange = function () {
         var countGoods = 0;
         var cardItems = [];
         basket_area.append("<p class = 'basket_empty'>Корзина пуста</p>");
-        $(".price span").text(amount);
+        $(".price span").text(+amount.toFixed(2));
+
         var renderItemList = function () {
             basket_area.empty();
             var index = 0;
             for (var itemKey of cardItems) {
                 var basket_item = $("<div/>", {
-                    class: "basket_item"
+                    class: "basket_item",
+                    id: itemKey.id
                 });
                 var basket_item_title = "<h4 class = 'basket_item_title'>" + itemKey.title + "</h4>";
                 var basket_item_price = "<p class='basket_item_price'><span class='basket_item_count'>1</span> x <span class = 'basket_item_price4one'>" +
                     itemKey.price + "</span></p>";
 
-                var delete_btn = "<a href='#' class = 'basket_item_delete' data-index = " + index + "><i class='fas fa-times-circle basket_item_remove'></i></a>";
+                var delete_btn = "<a href='#' class = 'basket_item_delete' data-index = " + index + " id = '" + itemKey.id + "'><i class='fas fa-times-circle basket_item_remove'></i></a>";
                 /*
                     $('<a />', {
                         class: "basket_item_remove",
@@ -113,7 +115,7 @@ json.onreadystatechange = function () {
                         text: "x"
                     });*/
                 $(".price span").empty();
-                $(".price span").text(amount);
+                $(".price span").text(+amount.toFixed(2));
                 index++;
 
                 basket_item.append(basket_item_title);
@@ -136,7 +138,7 @@ json.onreadystatechange = function () {
             };
 
             countGoods++;
-            amount += parseFloat(price);
+            amount += price;
             console.log(amount);
             cardItems.push(basketItem);
             renderItemList();
@@ -161,11 +163,9 @@ json.onreadystatechange = function () {
         });
 
         var delete_product = function (index) {
-            console.log(index);
-            console.log("index");
             countGoods--;
-            amount -= cardItems[index].price;
-            basketItems.splice(index, 1);
+            amount -= parseFloat(cardItems[index].price);
+            cardItems.splice(index, 1);
             refresh();
         }
 
@@ -178,18 +178,18 @@ json.onreadystatechange = function () {
         //            delete_product(index);
         //        });
 
-        //        $('.basket_item_area').on('click', '.basket_item_remove', function () {
-        //            delete_product($(this).data("index"));
-        //        });
-
-        $('.basket_item_remove').on('click', function () {
+        $('.basket_item_area').on('click', '.basket_item_delete', function () {
             delete_product(+$(this).data("index"));
         });
+        //
+        //        $('.basket_item_remove').on('click', function () {
+        //            delete_product(+$(this).data("index"));
+        //        });
 
         var refresh = function () {
             basket_area.empty();
             $(".price span").empty(); //Очищаем содержимое контейнера
-            $(".price span").text(amount);
+            $(".price span").text(+amount.toFixed(2));
             renderItemList();
         };
 
