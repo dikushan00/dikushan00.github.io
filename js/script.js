@@ -35,6 +35,16 @@ $("#contact_content_form_table").on("click", function () {
 $(document).on('scroll', function () {
     var scrollBtn = $(this).scrollTop();
 
+    if (scrollBtn >= 120) {
+        $(".header_card").addClass("fixed");
+        $(".header").addClass("fixed");
+        $(".header_card").addClass("fixed");
+    } else {
+        $(".header_card").removeClass("fixed");
+        $(".header").removeClass("fixed");
+        $(".header_card").removeClass("fixed");
+    }
+
     if (scrollBtn >= 500) {
         $(".swipe_btn").fadeIn(400);
     } else {
@@ -61,7 +71,7 @@ AOS.init({
     easing: 'ease', // default easing for AOS animations
     once: true, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them
-    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
 
 });
 
@@ -70,14 +80,14 @@ $(window).scroll(function () {
     $(".about_content_dish").css({
         "transform": "translate(0%, -" +
             st / 80 + "%)"
-    })
+    });
 });
 
 var json = new XMLHttpRequest();
 json.open('GET', 'basket.json', true);
 json.send();
 json.onreadystatechange = function () {
-    if (json.readyState == 4 && json.status == 200) {
+    if (json.readyState === 4 && json.status === 200) {
         console.log("state = 4");
 
         var basketCard = JSON.parse(json.responseText);
@@ -107,13 +117,7 @@ json.onreadystatechange = function () {
                     itemKey.price + "</span></p>";
 
                 var delete_btn = "<a href='#' class = 'basket_item_delete' data-index = " + index + " id = '" + itemKey.id + "'><i class='fas fa-times-circle basket_item_remove'></i></a>";
-                /*
-                    $('<a />', {
-                        class: "basket_item_remove",
-                        'data-index': index,
-                        //                    html: '<i class="fas fa-times-circle basket_item_delete"></i>'
-                        text: "x"
-                    });*/
+
                 $(".price span").empty();
                 $(".price span").text(+amount.toFixed(2));
                 index++;
@@ -137,6 +141,9 @@ json.onreadystatechange = function () {
                 "price": price
             };
 
+            addNot(id, title);
+            $("#added-" + id).fadeOut(2000);
+
             countGoods++;
             amount += price;
             console.log(amount);
@@ -146,7 +153,57 @@ json.onreadystatechange = function () {
             if (cardItems.length > 0) {
                 $(".basket_empty").remove();
             }
+
         };
+
+        var delete_product = function (index) {
+            countGoods--;
+            amount -= parseFloat(cardItems[index].price);
+            cardItems.splice(index, 1);
+            refresh();
+        };
+
+        var refresh = function () {
+            basket_area.empty();
+            $(".price span").empty(); //Очищаем содержимое контейнера
+            $(".price span").text(+amount.toFixed(2));
+            renderItemList();
+        };
+
+        var addNotarea = $("<ul/>", {
+            class: "addNot_list"
+        });
+
+        var addNot = function (id, title) {
+            var id = id;
+            var title = title;
+
+            var addNotarea_item = $("<li/>", {
+                class: "addNot_list_item",
+                id: "added-" + id
+            });
+
+            var addedProduct = $("<div/>", {
+                class: "addedProduct"
+            });
+
+            var addedProductText = $("<p/>", {
+                class: "addedProductText",
+                id: "added-text-" + id,
+                text: "Added: " + title
+            });
+
+            $("#added-" + id).fadeOut(2000);
+
+            addedProduct.append(addedProductText);
+            addNotarea_item.append(addedProduct);
+            addNotarea.append(addNotarea_item);
+            $("body").append(addNotarea);
+        };
+
+
+        ///////////////////////////////////////
+
 
         $(".rmenu_content_item_btn").on("click", function () {
             var product_id = parseInt($(this).attr('data-id'));
@@ -162,50 +219,10 @@ json.onreadystatechange = function () {
             add(product_id, title, price);
         });
 
-        var delete_product = function (index) {
-            countGoods--;
-            amount -= parseFloat(cardItems[index].price);
-            cardItems.splice(index, 1);
-            refresh();
-        }
-
-        //        $(basket_area).on("click", '.basket_item_delete', delete_product($(this).data("index")))
-
-        //        $('.basket_item_remove').on("click", function (e) {
-        //            e.preventDefault();
-        //            var index = parseInt($(this).data("index"));
-        //            console.log(index);
-        //            delete_product(index);
-        //        });
-
         $('.basket_item_area').on('click', '.basket_item_delete', function () {
             delete_product(+$(this).data("index"));
         });
-        //
-        //        $('.basket_item_remove').on('click', function () {
-        //            delete_product(+$(this).data("index"));
-        //        });
 
-        var refresh = function () {
-            basket_area.empty();
-            $(".price span").empty(); //Очищаем содержимое контейнера
-            $(".price span").text(+amount.toFixed(2));
-            renderItemList();
-        };
-
-
-        /*
-
-                Basket.prototype.delete = function () {
-                    var basket_items = $('.basket_item');
-                    basket_items.remove();
-                    var $basketData = $('#basket_data');
-                    $basketData.empty();
-                    this.countGoods = 0;
-                    this.amount = 0;
-                    $basketData.append('<p>Всего товаров: ' + this.countGoods + '</p>');
-                    $basketData.append('<p>Общая сумма: ' + this.amount + '</p>');
-                }*/
     } else {
         console.log("status is not 4");
     }
