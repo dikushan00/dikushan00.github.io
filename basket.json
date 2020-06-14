@@ -3,12 +3,12 @@
         {
             "id": "1",
             "title": "Ramen",
-            "price": "5.5"
+            "price": "5.50"
     },
         {
             "id": "2",
             "title": "Burger",
-            "price": "1.2"
+            "price": "1.20"
     },
         {
             "id": "3",
@@ -17,48 +17,48 @@
     },
         {
             "id": "4",
-            "title": "Tzezar",
-            "price": "5.5"
+            "title": "Olivie",
+            "price": "5.80"
     },
         {
             "id": "5",
-            "title": "Beshbarmak",
-            "price": "7.8"
+            "title": "Greek Salad",
+            "price": "7.80"
     },
         {
             "id": "6",
-            "title": "Sandwich",
-            "price": "2.6"
+            "title": "Tzezar Salad",
+            "price": "2.60"
     },
         {
             "id": "7",
-            "title": "Baursak",
-            "price": "9.6"
+            "title": "Plov",
+            "price": "9.60"
     },
         {
             "id": "8",
-            "title": "Sup",
-            "price": "4.8"
+            "title": "Kuriniy Sup",
+            "price": "4.80"
     },
         {
             "id": "9",
-            "title": "Sushi",
-            "price": "7.2"
+            "title": "Manty",
+            "price": "7.20"
     },
         {
             "id": "10",
-            "title": "Pizza",
-            "price": "0.7"
+            "title": "Beshbarmak",
+            "price": "7.00"
     },
         {
             "id": "11",
-            "title": "Kumper",
-            "price": "4.9"
+            "title": "Balyamysh",
+            "price": "4.90"
     },
         {
             "id": "12",
-            "title": "Pirazhok",
-            "price": "3.3"
+            "title": "Lagman",
+            "price": "3.30"
     }
   ]
 }
