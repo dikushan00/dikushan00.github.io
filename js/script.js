@@ -104,19 +104,27 @@ json.onreadystatechange = function () {
         basket_area.append("<p class = 'basket_empty'>Корзина пуста</p>");
         $(".price span").text(+amount.toFixed(2));
 
-        var renderItemList = function () {
+        var renderItemList = function (count) {
+
             basket_area.empty();
             var index = 0;
+            if (cardItems.length > 5) {
+                $(".basket_item_area").css({
+                    "height": "270px",
+                    "overflow": "scroll",
+                    "overflow-x": "hidden"
+                })
+            }
             for (var itemKey of cardItems) {
+
                 var basket_item = $("<div/>", {
                     class: "basket_item",
                     id: itemKey.id
                 });
                 var basket_item_title = "<h4 class = 'basket_item_title'>" + itemKey.title + "</h4>";
-                var basket_item_price = "<p class='basket_item_price'><span class='basket_item_count'>1</span> x <span class = 'basket_item_price4one'>" +
-                    itemKey.price + "</span></p>";
-
-                var delete_btn = "<a href='#' class = 'basket_item_delete' data-index = " + index + " id = '" + itemKey.id + "'><i class='fas fa-times-circle basket_item_remove'></i></a>";
+                var basket_item_price = "<p class='basket_item_price'><span class='basket_item_count'>" + itemKey.count + "</span> x <span class = 'basket_item_price4one'>" +
+                    (itemKey.priceOne).toFixed(2) + "</span></p>";
+                var delete_btn = "<a href=' ' class = 'basket_item_delete' data-index = " + index + " id = '" + itemKey.id + "'><i class='fas fa-times-circle basket_item_remove'></i></a>";
 
                 $(".price span").empty();
                 $(".price span").text(+amount.toFixed(2));
@@ -129,26 +137,44 @@ json.onreadystatechange = function () {
             }
         };
 
-
+        var idNot = 0;
         var add = function (id, title, price) {
             var id = id;
             var title = title;
             var price = price;
+            var priceOne = price;
+            var count = 1;
+            var idItems = [];
+
+            idItems.push(id);
 
             var basketItem = {
                 "id": id,
                 "title": title,
-                "price": price
+                "price": price,
+                "priceOne": price,
+                "count": 1
             };
+            for (let i = 0; i < cardItems.length; i++) {
+                if (cardItems[i].id === id) {
+                    basketItem.count = cardItems[i].count;
+                    basketItem.price = cardItems[i].priceOne;
+                    basketItem.priceOne += basketItem.price;
+                    basketItem.count++;
+                    cardItems.splice(i, 1);
+                }
+            }
 
-            addNot(id, title);
-            $("#added-" + id).fadeOut(2000);
 
             countGoods++;
             amount += price;
-            console.log(amount);
             cardItems.push(basketItem);
             renderItemList();
+
+
+            idNot = Math.floor(Math.random() * 5000);
+            addNot(idNot, title);
+            $("#added-" + idNot).fadeOut(2000);
 
             if (cardItems.length > 0) {
                 $(".basket_empty").remove();
@@ -158,9 +184,12 @@ json.onreadystatechange = function () {
 
         var delete_product = function (index) {
             countGoods--;
-            amount -= parseFloat(cardItems[index].price);
+            amount -= parseFloat(cardItems[index].priceOne);
             cardItems.splice(index, 1);
             refresh();
+            if (cardItems.length == 0) {
+                basket_area.append("<p class = 'basket_empty'>Корзина пуста</p>");
+            }
         };
 
         var refresh = function () {
@@ -174,9 +203,16 @@ json.onreadystatechange = function () {
             class: "addNot_list"
         });
 
+        var addNotItems = [];
+
         var addNot = function (id, title) {
-            var id = id;
+            var id = id /*+ Math.random() * 50000*/ ;
             var title = title;
+
+            var addNotItem = {
+                "id": id,
+                "title": title
+            }
 
             var addNotarea_item = $("<li/>", {
                 class: "addNot_list_item",
@@ -193,7 +229,9 @@ json.onreadystatechange = function () {
                 text: "Added: " + title
             });
 
-            $("#added-" + id).fadeOut(2000);
+            //$("#added-" + id).fadeOut(2000);
+
+            addNotItems.push(addNotItem);
 
             addedProduct.append(addedProductText);
             addNotarea_item.append(addedProduct);
@@ -219,7 +257,8 @@ json.onreadystatechange = function () {
             add(product_id, title, price);
         });
 
-        $('.basket_item_area').on('click', '.basket_item_delete', function () {
+        $('.basket_item_area').on('click', '.basket_item_delete', function (e) {
+            e.preventDefault();
             delete_product(+$(this).data("index"));
         });
 
