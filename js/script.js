@@ -171,13 +171,10 @@ json.onreadystatechange = function () {
                     cardItems.splice(i, 1);
                 }
             }
-
-
             countGoods++;
             amount += price;
             cardItems.push(basketItem);
             renderItemList();
-
 
             idNot = Math.floor(Math.random() * 5000);
             addNot(idNot, title);
@@ -235,8 +232,6 @@ json.onreadystatechange = function () {
                 id: "added-text-" + id,
                 text: "Added: " + title
             });
-
-            //$("#added-" + id).fadeOut(2000);
 
             addNotItems.push(addNotItem);
 
