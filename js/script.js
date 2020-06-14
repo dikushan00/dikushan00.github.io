@@ -113,8 +113,15 @@ json.onreadystatechange = function () {
                     "height": "270px",
                     "overflow": "scroll",
                     "overflow-x": "hidden"
-                })
+                });
+            } else {
+                $(".basket_item_area").css({
+                    "height": "auto",
+                    "overflow": "hidden",
+                    "overflow-x": "hidden"
+                });
             }
+
             for (var itemKey of cardItems) {
 
                 var basket_item = $("<div/>", {
