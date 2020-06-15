@@ -60,6 +60,7 @@ a:active {
 .fixed .header_card {
   height: auto !important;
   top: 17px;
+  background: none;
 }
 .header {
   height: 120px;
@@ -192,10 +193,11 @@ a:active {
   font-family: 'Lato', sans-serif;
   margin: 0;
   width: 52%;
+  opacity: 0.75;
 }
 .header_card .basket_drop .basket_item_price {
   margin: 0;
-  width: 27%;
+  width: 28%;
 }
 .header_card .basket_drop .basket_item img {
   width: 40px;
@@ -258,7 +260,7 @@ a:active {
 .home_dec {
   text-align: center;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 55px;
 }
 .home_btn {
   opacity: 0.8;
@@ -573,7 +575,7 @@ a:active {
   height: 557px;
 }
 .review_content_desc {
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Gentium Book Basic', serif;
   color: #dde0df;
   font-weight: bold;
@@ -698,6 +700,9 @@ a:active {
   width: 570px;
   display: flex;
   justify-content: space-between;
+}
+.contact_img img {
+  width: 275px;
 }
 .footer {
   height: 320px;
