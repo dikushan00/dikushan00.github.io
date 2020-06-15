@@ -300,6 +300,9 @@ $('#contact_content_form_type option').on("click", function () {
                 $(".contact_content_form_input_table").on("click", function () {
                     $(".choose_table").fadeToggle(700);
                 });
+            } else if ($(this).text() == "Takeaway") {
+                $(".contact_content_form_item_delivery").remove();
+                $(".contact_content_form_item_table").remove();
             }
             contact_input_area.append(new_input);
         }
