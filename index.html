@@ -25,7 +25,7 @@
                 <ul class="menu">
                     <li class="menu_item menu_item_active"><a href="#">Home</a></li>
                     <li class="menu_item"><a href="#about">About</a></li>
-                    <li class="menu_item"><a href="#ingridients">Igredients</a></li>
+                    <li class="menu_item"><a href="#ingridients">Ingredients</a></li>
                     <li class="menu_item"><a href="#rmenu">Menu</a></li>
                     <li class="menu_item"><a href="#review">Reviews</a></li>
                     <li class="menu_item"><a href="#contact">Reservations</a></li>
@@ -102,12 +102,14 @@
 
     <div class="rmenu" id="rmenu">
         <div class="container rmenu_container">
+            <!--
             <div class="rmenu_search_area">
                 <input type="text" class="rmenu_search" placeholder="search dishes">
                 <a href="#" class="rmenu_search_btn">
                     <i class="fas fa-search"></i>
                 </a>
             </div>
+-->
             <div class="rmenu_content">
                 <div class="left">
                     <div class="rmenu_content_item">
@@ -261,35 +263,55 @@
                     Delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</p>
 
                 <form action="#" class="contact_content_form">
-                    <div class="contact_content_form_item">
-                        <label for="contact_content_form_name">Name</label>
-                        <input type="text" id="contact_content_form_name" class="contact_content_form_input contact_content_form_name" placeholder="your name *">
+                    <div class="contact_content_form_inputArea">
+                        <div class="contact_content_form_item">
+                            <label for="contact_content_form_name">Name</label>
+                            <input type="text" id="contact_content_form_name" class="contact_content_form_input contact_content_form_name" placeholder="your name *">
+                        </div>
+                        <div class="contact_content_form_item">
+                            <label for="contact_content_form_email">Email</label>
+                            <input type="text" id="contact_content_form_email" class="contact_content_form_input contact_content_form_name" placeholder="your email *">
+                        </div>
+                        <div class="contact_content_form_item">
+                            <label for="contact_content_form_number">Number</label>
+                            <input type="tel" id="contact_content_form_number" class="contact_content_form_input contact_content_form_name" placeholder="party number" pattern="8[0-9]{3} [0-9]{3}[0-9]{4}">
+                        </div>
+                        <div class="contact_content_form_item">
+                            <label for="contact_content_form_date">Date</label>
+                            <input type="date" id="contact_content_form_date" class="contact_content_form_input contact_content_form_name" placeholder="date *">
+                        </div>
+                        <div class="contact_content_form_item">
+                            <label for="contact_content_form_time">Time</label>
+                            <input type="time" name="" list="list" step="1800" id="contact_content_form_time" class="contact_content_form_input contact_content_form_name" placeholder="party number">
+                            <datalist id="list">
+                                <option value="08:00"></option>
+                                <option value="09:00"></option>
+                                <option value="10:00"></option>
+                                <option value="11:00"></option>
+                                <option value="12:00"></option>
+                                <option value="13:00"></option>
+                                <option value="14:00"></option>
+                                <option value="15:00"></option>
+                                <option value="16:00"></option>
+                                <option value="17:00"></option>
+                                <option value="18:00"></option>
+                                <option value="19:00"></option>
+                                <option value="20:00"></option>
+                                <option value="21:00"></option>
+                                <option value="22:00"></option>
+                                <option value="23:00"></option>
+                            </datalist>
+                        </div>
+                        <div class="contact_content_form_item">
+                            <label for="contact_content_form_type">Type</label>
+                            <select type="text" id="contact_content_form_type" class="contact_content_form_input">
+                                <option id="Table">Table</option>
+                                <option id="Delivery">Delivery</option>
+                                <option id="Takeaway">Takeaway</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="contact_content_form_item">
-                        <label for="contact_content_form_email">Email</label>
-                        <input type="text" id="contact_content_form_email" class="contact_content_form_input contact_content_form_name" placeholder="your email *">
-                    </div>
-                    <div class="contact_content_form_item">
-                        <label for="contact_content_form_date">Date</label>
-                        <input type="date" id="contact_content_form_date" class="contact_content_form_input contact_content_form_name" placeholder="date *">
-                    </div>
-                    <div class="contact_content_form_item">
-                        <label for="contact_content_form_number">Number</label>
-                        <input type="tel" id="contact_content_form_number" class="contact_content_form_input contact_content_form_name" placeholder="party number" pattern="8[0-9]{3}-[0-9]{3}">
-                    </div>
-                    <div class="contact_content_form_item contact_content_form_item_table">
-                        <label for="contact_content_form_table">Table</label>
-                        <select type="" id="contact_content_form_table" class="contact_content_form_input contact_content_form_table">
-                            <option>Table 1</option>
-                            <option>Table 2</option>
-                            <option>Table 3</option>
-                            <option>Table 4</option>
-                            <option>Table 5</option>
-                            <option>Table 6</option>
-                        </select>
-                        <img src="./img/restaurant-furniture.jpg" alt="PHOTO" id="res_table">
-                    </div>
-                    <select name="dishes" id="select_dishes"></select>
+                    <select name="foods" id="select_dishes" multiple="multiple"></select>
                     <a href="#" class="contact_content_form_btn">Book now!</a>
                 </form>
             </div>
@@ -342,7 +364,7 @@
         </div>
     </footer>
 
-    <script src="./js/script.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

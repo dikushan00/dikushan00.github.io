@@ -26,10 +26,6 @@ $(".header_card_link").on("click", function (e) {
     $(".basket_drop").fadeToggle();
 });
 
-$("#contact_content_form_table").on("click", function () {
-    $("#res_table").fadeToggle(700);
-});
-
 $(document).on('scroll', function () {
     var scrollBtn = $(this).scrollTop();
 
@@ -76,7 +72,7 @@ AOS.init({
 $(window).scroll(function () {
     var st = $(this).scrollTop();
     $(".about_content_dish").css({
-        "transform": "translate(0%, -" +
+        "transform": "translate(0%, - " +
             st / 80 + "%)"
     });
 });
@@ -121,7 +117,7 @@ json.onreadystatechange = function () {
                 });
             }
 
-            for (var itemKey in cardItems) {
+            for (var itemKey of cardItems) {
                 var basket_item = $("<div/>", {
                     class: "basket_item",
                     id: itemKey.id
@@ -129,8 +125,11 @@ json.onreadystatechange = function () {
 
                 var select_dishes_item = $("<option/>", {
                     id: itemKey.id,
-                    text: itemKey.id + "  |  " + itemKey.title + "  |  " + itemKey.count + "  |  " + itemKey.priceOne + "  |  "
+                    text: itemKey.id,
+                    value: itemKey.id
                 });
+
+                select_dishes_item.attr("selected", "selected");
 
                 var basket_item_title = "<h4 class = 'basket_item_title'>" + itemKey.title + "</h4>";
 
@@ -256,7 +255,7 @@ json.onreadystatechange = function () {
             var title;
             var price;
 
-            for (var key in basketCard.basket) {
+            for (var key of basketCard.basket) {
                 if (parseInt(key.id) == product_id) {
                     title = key.title;
                     price = parseFloat(key.price);
@@ -274,3 +273,35 @@ json.onreadystatechange = function () {
         console.log("status is not 4");
     }
 }
+
+////////////////////////////////////////////////
+
+$(".contact_content_form_input_table").on("click", function () {
+    $(".choose_table").fadeToggle(700);
+});
+
+var contact_input_area = $(".contact_content_form_inputArea");
+
+$('#contact_content_form_type option').on("click", function () {
+    $('#contact_content_form_type option').each(function () {
+        if ($(this).prop('selected') == true) {
+            if ($(this).text() == "Delivery") {
+                $(".contact_content_form_item_table").remove();
+                var new_input = $("<div/>", {
+                    class: "contact_content_form_item contact_content_form_item_delivery",
+                    html: "<label for='contact_content_form_address'>Address</label><input type='tel' id='contact_content_form_address' class='contact_content_form_input contact_content_form_name' placeholder=' delivery address '>"
+                });
+            } else if ($(this).text() == "Table") {
+                $(".contact_content_form_item_delivery").remove();
+                var new_input = $("<div/>", {
+                    class: "contact_content_form_item contact_content_form_item_table",
+                    html: "<label for='contact_content_form_table'>Table</label><select type='text' id='contact_content_form_table' class='contact_content_form_input contact_content_form_input_table'> <option>Table 1</option><option>Table 2</option><option>Table 3</option><option>Table 4</option><option>Table 5</option><option>Table 6</option> </select><img src='./img/restaurant-furniture.jpg' alt = 'PHOTO' id = 'res_table' class='choose_table'>"
+                });
+                $(".contact_content_form_input_table").on("click", function () {
+                    $(".choose_table").fadeToggle(700);
+                });
+            }
+            contact_input_area.append(new_input);
+        }
+    });
+});
