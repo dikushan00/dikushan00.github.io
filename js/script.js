@@ -288,6 +288,7 @@ $('#contact_content_form_type').on("click", function () {
             console.log("selec0");
             if ($(this).text() == "Delivery") {
                 $(".contact_content_form_item_table").remove();
+                $(".contact_content_form_item_delivery").remove();
                 var new_input = $("<div/>", {
                     class: "contact_content_form_item contact_content_form_item_delivery",
                     html: "<label for='contact_content_form_address'>Address</label><input type='tel' id='contact_content_form_address' class='contact_content_form_input contact_content_form_name' placeholder=' delivery address '>"
