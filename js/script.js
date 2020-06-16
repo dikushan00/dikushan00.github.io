@@ -77,202 +77,203 @@ $(window).scroll(function () {
     });
 });
 
-var json = new XMLHttpRequest();
-json.open('GET', 'basket.json', true);
-json.send();
-json.onreadystatechange = function () {
-    if (json.readyState === 4 && json.status === 200) {
-        console.log("state = 4");
+//var json = new XMLHttpRequest();
+//json.open('GET', 'basket.json', true);
+//json.send();
+//json.onreadystatechange = function () {
+//    if (json.readyState === 4 && json.status === 200) {
+//        console.log("state = 4");
+//
+//        var basketCard = JSON.parse(json.responseText);
+//
+//}
+//else {
+//    console.log("status is not 4");
+//}
+//}
 
-        var basketCard = JSON.parse(json.responseText);
+var amount = 0;
+$(".price span").text(+amount.toFixed(2));
 
-        var amount = 0;
-        $(".price span").text(+amount.toFixed(2));
-
-        ////////////////////////////////////////////
+////////////////////////////////////////////
 
 
-        var basket_area = $(".basket_item_area");
-        var select_dishes_area = $("#select_dishes");
-        var countGoods = 0;
-        var cardItems = [];
-        basket_area.append("<p class = 'basket_empty'>Корзина пуста</p>");
-        $(".price span").text(+amount.toFixed(2));
+var basket_area = $(".basket_item_area");
+var select_dishes_area = $("#select_dishes");
+var countGoods = 0;
+var cardItems = [];
+var select_dishes_item = "";
+basket_area.append("<p class = 'basket_empty'>Корзина пуста</p>");
+$(".price span").text(+amount.toFixed(2));
 
-        var renderItemList = function (count) {
-            basket_area.empty();
-            select_dishes_area.empty();
-            var index = 0;
-            if (cardItems.length > 5) {
-                $(".basket_item_area").css({
-                    "height": "270px",
-                    "overflow": "scroll",
-                    "overflow-x": "hidden"
-                });
-            } else {
-                $(".basket_item_area").css({
-                    "height": "auto",
-                    "overflow": "hidden",
-                    "overflow-x": "hidden"
-                });
-            }
+var renderItemList = function (count) {
+    basket_area.empty();
+    select_dishes_area.empty();
 
-            for (var itemKey of cardItems) {
-                var basket_item = $("<div/>", {
-                    class: "basket_item",
-                    id: itemKey.id
-                });
-
-                var select_dishes_item = $("<option/>", {
-                    id: itemKey.id,
-                    text: itemKey.id,
-                    value: itemKey.id
-                });
-
-                select_dishes_item.attr("selected", "selected");
-
-                var basket_item_title = "<h4 class = 'basket_item_title'>" + itemKey.title + "</h4>";
-
-                var basket_item_price = "<p class='basket_item_price'><span class='basket_item_count'>" + itemKey.count + "</span> x <span class = 'basket_item_price4one'>" +
-                    (itemKey.priceOne).toFixed(2) + "</span></p>";
-                var delete_btn = "<a href=' ' class = 'basket_item_delete' data-index = " + index + " id = '" + itemKey.id + "'><i class='fas fa-times-circle basket_item_remove'></i></a>";
-
-                $(".price span").empty();
-                $(".price span").text(+amount.toFixed(2));
-                index++;
-
-                select_dishes_area.append(select_dishes_item);
-                basket_item.append(basket_item_title);
-                basket_item.append(basket_item_price);
-                basket_item.append(delete_btn);
-                basket_area.append(basket_item);
-            }
-        };
-
-        var idNot = 0;
-        var add = function (id, title, price) {
-            var id = id;
-            var title = title;
-            var price = price;
-            var priceOne = price;
-            var count = 1;
-            var idItems = [];
-
-            idItems.push(id);
-
-            var basketItem = {
-                "id": id,
-                "title": title,
-                "price": price,
-                "priceOne": price,
-                "count": 1
-            };
-            for (var i = 0; i < cardItems.length; i++) {
-                if (cardItems[i].id === id) {
-                    basketItem.count = cardItems[i].count;
-                    basketItem.price = cardItems[i].priceOne;
-                    basketItem.priceOne += basketItem.price;
-                    basketItem.count++;
-                    cardItems.splice(i, 1);
-                }
-            }
-            countGoods++;
-            amount += price;
-            cardItems.push(basketItem);
-            renderItemList();
-
-            idNot = Math.floor(Math.random() * 5000);
-            addNot(idNot, title);
-            $("#added-" + idNot).fadeOut(2000);
-
-            if (cardItems.length > 0) {
-                $(".basket_empty").remove();
-            }
-
-        };
-
-        var delete_product = function (index) {
-            countGoods--;
-            amount -= parseFloat(cardItems[index].priceOne);
-            cardItems.splice(index, 1);
-            refresh();
-            if (cardItems.length == 0) {
-                basket_area.append("<p class = 'basket_empty'>Корзина пуста</p>");
-            }
-        };
-
-        var refresh = function () {
-            basket_area.empty();
-            $(".price span").empty(); //Очищаем содержимое контейнера
-            $(".price span").text(+amount.toFixed(2));
-            renderItemList();
-        };
-
-        var addNotarea = $("<ul/>", {
-            class: "addNot_list"
+    var index = 0;
+    if (cardItems.length > 5) {
+        $(".basket_item_area").css({
+            "height": "270px",
+            "overflow": "scroll",
+            "overflow-x": "hidden"
         });
-
-        var addNotItems = [];
-
-        var addNot = function (id, title) {
-            var id = id;
-            var title = title;
-
-            var addNotItem = {
-                "id": id,
-                "title": title
-            }
-
-            var addNotarea_item = $("<li/>", {
-                class: "addNot_list_item",
-                id: "added-" + id
-            });
-
-            var addedProduct = $("<div/>", {
-                class: "addedProduct"
-            });
-
-            var addedProductText = $("<p/>", {
-                class: "addedProductText",
-                id: "added-text-" + id,
-                text: "Added: " + title
-            });
-
-            addNotItems.push(addNotItem);
-
-            addedProduct.append(addedProductText);
-            addNotarea_item.append(addedProduct);
-            addNotarea.append(addNotarea_item);
-            $("body").append(addNotarea);
-        };
-
-
-        ///////////////////////////////////////
-
-
-        $(".rmenu_content_item_btn").on("click", function () {
-            var product_id = parseInt($(this).attr('data-id'));
-            var title;
-            var price;
-
-            for (var key of basketCard.basket) {
-                if (parseInt(key.id) == product_id) {
-                    title = key.title;
-                    price = parseFloat(key.price);
-                }
-            }
-            add(product_id, title, price);
-        });
-
-        $('.basket_item_area').on('click', '.basket_item_delete', function (e) {
-            e.preventDefault();
-            delete_product(+$(this).data("index"));
-        });
-
     } else {
-        console.log("status is not 4");
+        $(".basket_item_area").css({
+            "height": "auto",
+            "overflow": "hidden",
+            "overflow-x": "hidden"
+        });
     }
-}
+    select_dishes_area.empty();
+    for (var itemKey of cardItems) {
+        var basket_item = $("<div/>", {
+            class: "basket_item",
+            id: itemKey.id
+        });
+
+        var select_dishes_item = " ";
+        select_dishes_item += itemKey.title + " " + itemKey.count + "  ";
+
+        //select_dishes_item.attr("selected", "selected");
+
+        var basket_item_title = "<h4 class = 'basket_item_title'>" + itemKey.title + "</h4>";
+
+        var basket_item_price = "<p class='basket_item_price'><span class='basket_item_count'>" + itemKey.count + "</span> x <span class = 'basket_item_price4one'>" +
+            (itemKey.priceOne).toFixed(2) + "</span></p>";
+        var delete_btn = "<a href=' ' class = 'basket_item_delete' data-index = " + index + " id = '" + itemKey.id + "'><i class='fas fa-times-circle basket_item_remove'></i></a>";
+
+        $(".price span").empty();
+        $(".price span").text(+amount.toFixed(2));
+        index++;
+
+        select_dishes_area.append(select_dishes_item);
+        basket_item.append(basket_item_title);
+        basket_item.append(basket_item_price);
+        basket_item.append(delete_btn);
+        basket_area.append(basket_item);
+    }
+};
+
+var idNot = 0;
+var add = function (id, title, price) {
+    var id = id;
+    var title = title;
+    var price = price;
+    var priceOne = price;
+    var count = 1;
+    var idItems = [];
+
+    idItems.push(id);
+
+    var basketItem = {
+        "id": id,
+        "title": title,
+        "price": price,
+        "priceOne": price,
+        "count": 1
+    };
+    for (var i = 0; i < cardItems.length; i++) {
+        if (cardItems[i].id === id) {
+            basketItem.count = cardItems[i].count;
+            basketItem.price = cardItems[i].priceOne;
+            basketItem.priceOne += basketItem.price;
+            basketItem.count++;
+            cardItems.splice(i, 1);
+        }
+    }
+    countGoods++;
+    amount += price;
+    cardItems.push(basketItem);
+    renderItemList();
+
+    idNot = Math.floor(Math.random() * 5000);
+    addNot(idNot, title);
+    $("#added-" + idNot).fadeOut(2000);
+
+    if (cardItems.length > 0) {
+        $(".basket_empty").remove();
+    }
+
+};
+
+var delete_product = function (index) {
+    countGoods--;
+    amount -= parseFloat(cardItems[index].priceOne);
+    cardItems.splice(index, 1);
+    refresh();
+    if (cardItems.length == 0) {
+        basket_area.append("<p class = 'basket_empty'>Корзина пуста</p>");
+    }
+};
+
+var refresh = function () {
+    basket_area.empty();
+    $(".price span").empty(); //Очищаем содержимое контейнера
+    $(".price span").text(+amount.toFixed(2));
+    renderItemList();
+};
+
+var addNotarea = $("<ul/>", {
+    class: "addNot_list"
+});
+
+var addNotItems = [];
+
+var addNot = function (id, title) {
+    var id = id;
+    var title = title;
+
+    var addNotItem = {
+        "id": id,
+        "title": title
+    }
+
+    var addNotarea_item = $("<li/>", {
+        class: "addNot_list_item",
+        id: "added-" + id
+    });
+
+    var addedProduct = $("<div/>", {
+        class: "addedProduct"
+    });
+
+    var addedProductText = $("<p/>", {
+        class: "addedProductText",
+        id: "added-text-" + id,
+        text: "Added: " + title
+    });
+
+    addNotItems.push(addNotItem);
+
+    addedProduct.append(addedProductText);
+    addNotarea_item.append(addedProduct);
+    addNotarea.append(addNotarea_item);
+    $("body").append(addNotarea);
+};
+
+
+///////////////////////////////////////
+
+
+$(".rmenu_content_item_btn").on("click", function () {
+    var product_id = parseInt($(this).attr('data-id'));
+    var title;
+    var price;
+
+    for (var key of basketCard.basket) {
+        if (parseInt(key.id) == product_id) {
+            title = key.title;
+            price = parseFloat(key.price);
+        }
+    }
+    add(product_id, title, price);
+});
+
+$('.basket_item_area').on('click', '.basket_item_delete', function (e) {
+    e.preventDefault();
+    delete_product(+$(this).data("index"));
+});
+
 
 ////////////////////////////////////////////////
 
