@@ -110,6 +110,7 @@ var renderItemList = function (count) {
     basket_area.empty();
     select_dishes_area.empty();
 
+    var select_dishes_item = "";
     var index = 0;
     if (cardItems.length > 5) {
         $(".basket_item_area").css({
@@ -131,10 +132,7 @@ var renderItemList = function (count) {
             id: itemKey.id
         });
 
-        var select_dishes_item = " ";
         select_dishes_item += itemKey.title + " " + itemKey.count + "  ";
-
-        //select_dishes_item.attr("selected", "selected");
 
         var basket_item_title = "<h4 class = 'basket_item_title'>" + itemKey.title + "</h4>";
 
@@ -147,6 +145,7 @@ var renderItemList = function (count) {
         index++;
 
         select_dishes_area.append(select_dishes_item);
+        select_dishes_area.attr("value", select_dishes_item);
         basket_item.append(basket_item_title);
         basket_item.append(basket_item_price);
         basket_item.append(delete_btn);
@@ -283,9 +282,10 @@ $(".contact_content_form_input_table").on("click", function () {
 
 var contact_input_area = $(".contact_content_form_inputArea");
 
-$('#contact_content_form_type option').on("click", function () {
+$('#contact_content_form_type').on("click", function () {
     $('#contact_content_form_type option').each(function () {
         if ($(this).prop('selected') == true) {
+            console.log("selec0");
             if ($(this).text() == "Delivery") {
                 $(".contact_content_form_item_table").remove();
                 var new_input = $("<div/>", {
@@ -294,6 +294,7 @@ $('#contact_content_form_type option').on("click", function () {
                 });
             } else if ($(this).text() == "Table") {
                 $(".contact_content_form_item_delivery").remove();
+                $(".contact_content_form_item_table").remove();
                 var new_input = $("<div/>", {
                     class: "contact_content_form_item contact_content_form_item_table",
                     html: "<label for='contact_content_form_table'>Table</label><select type='text' id='contact_content_form_table' class='contact_content_form_input contact_content_form_input_table'> <option>Table 1</option><option>Table 2</option><option>Table 3</option><option>Table 4</option><option>Table 5</option><option>Table 6</option> </select><img src='./img/restaurant-furniture.jpg' alt = 'PHOTO' id = 'res_table' class='choose_table'>"
