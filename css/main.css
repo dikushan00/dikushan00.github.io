@@ -302,12 +302,14 @@ a:hover {
 
 .slider .slick-arrow.slick-prev {
     left: 79px;
-    background: url(../libs/sl-arrow_l.svg) 0 0 no-repeat
+    background: url(../libs/sl-arrow_l.svg) 0 0 no-repeat;
+    background-size: contain;
 }
 
 .slider .slick-arrow.slick-next {
     right: 79px;
-    background: url(../libs/sl-arrow_r.svg) 0 0 no-repeat
+    background: url(../libs/sl-arrow_r.svg) 0 0 no-repeat;
+    background-size: contain;
 }
 
 .slider .slick-arrow.slick-disabled {
@@ -412,9 +414,9 @@ nav .navbar-nav > li > a {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-top: 10px;
-    margin-left: 34px;
-    width: 117px
+    margin-top: 4px;
+    width: 117px;
+    float: right;
 }
 
 .language-switcher-locale-url {
@@ -757,14 +759,6 @@ nav .navbar-nav > li > a {
     color: #000
 }
 
-.galleryformatter .gallery-slides {
-    width: 100% !important
-}
-
-.galleryformatter .gallery-thumbs {
-    width: 100% !important
-}
-
 #block-block-11 {
     background: url(../img/hoteltopfon.png) top center no-repeat;
     background-size: cover;
@@ -851,26 +845,6 @@ nav .navbar-nav > li > a {
 
 .field-name-field-metka div.geofield-ymap {
     height: 250px
-}
-
-.gallery-thumbs .arrow {
-    display: none
-}
-
-.gallery-slides .prev-slide {
-    background: url(../img/strela_left.png) center center no-repeat;
-    width: 29px;
-    height: 78px;
-    font-size: 0;
-    margin-left: 20px
-}
-
-.gallery-slides .next-slide {
-    background: url(img/strela_right.png) center center no-repeat;
-    width: 29px;
-    height: 78px;
-    font-size: 0;
-    margin-right: 20px
 }
 
 .podfothot {
@@ -1900,6 +1874,7 @@ div.geofield-ymap {
 }
 
 @media (max-width:991px) {
+    
     .aq_content_item_odd_item {
         margin-left: 0
     }
@@ -1982,9 +1957,22 @@ div.geofield-ymap {
     .event_text {
         text-align: left
     }
+    
+    .swipe_dots{
+        top: 13%;
+    }
+    
+    .slider{
+        padding: 0 !important;
+    }
+    
+    .slick-slide img{
+        width: 100%;
+    }
 }
 
 @media (max-width:768px) {
+    
     .container {
         width: 100%
     }
@@ -2388,6 +2376,18 @@ div.geofield-ymap {
     #block-block-15 {
         height: auto
     }
+    
+    .aq_content_item{
+        padding: 0;
+    }
+    
+    .slider .slick-arrow.slick-prev {
+        left: 30px;
+    }
+
+    .slider .slick-arrow.slick-next {
+        right: 30px;
+    }
 }
 
 @media (max-width:576px) {
@@ -2414,11 +2414,11 @@ div.geofield-ymap {
     }
 
     .slider .slick-arrow.slick-prev {
-        left: 50px
+        left: 20px;
     }
 
     .slider .slick-arrow.slick-next {
-        right: 50px
+        right: 20px;
     }
 }
 
@@ -2426,14 +2426,14 @@ div.geofield-ymap {
     border: 1px solid;
     overflow: hidden;
     position: absolute;
-    z-index: 100
+    z-index: 100;
 }
 
 #autocomplete ul {
     list-style: none;
     list-style-image: none;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 #autocomplete li {
