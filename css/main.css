@@ -1,58 +1,58 @@
 @font-face {
     font-family: Circe;
-    src: url(./fonts/Circe-Regular.eot);
-    src: local('Circe'), local('Circe-Regular'), url(Circe-Regular.eot?#iefix) format('embedded-opentype'), url(Circe-Regular.woff) format('woff'), url(Circe-Regular.ttf) format('truetype');
+    src: url(./fonts/Circe-Regular.ttf);
+    src: local('Circe'), local('Circe-Regular'), url(Circe-Regular.eot?#iefix) format('embedded-opentype'), url(./fonts/Circe-Regular.woff) format('woff'), url(./fonts/Circe-Regular.ttf) format('truetype');
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: CirceLight;
-    src: url(./fonts/Circe-ExtraLight.eot);
-    src: local('Circe ExtraLight'), local('Circe-ExtraLight'), url(Circe-ExtraLight.eot?#iefix) format('embedded-opentype'), url(Circe-ExtraLight.woff) format('woff'), url(Circe-ExtraLight.ttf) format('truetype');
+    src: url(./fonts/Circe-ExtraLight.ttf);
+    src: local('Circe ExtraLight'), local('Circe-ExtraLight'), url(./fonts/Circe-ExtraLight.eot?#iefix) format('embedded-opentype'), url(Circe-ExtraLight.woff) format('woff'), url(./fonts/Circe-ExtraLight.ttf) format('truetype');
     font-weight: 200;
     font-style: normal
 }
 
 @font-face {
     font-family: Circe;
-    src: url(./fonts/Circe-Bold.eot);
-    src: local('Circe Bold'), local('Circe-Bold'), url(Circe-Bold.eot?#iefix) format('embedded-opentype'), url(Circe-Bold.woff) format('woff'), url(Circe-Bold.ttf) format('truetype');
+    src: url(./fonts/Circe-Bold.ttf);
+    src: local('Circe Bold'), local('Circe-Bold'), url(./fonts/Circe-Bold.eot?#iefix) format('embedded-opentype'), url(Circe-Bold.woff) format('woff'), url(./fonts/Circe-Bold.ttf) format('truetype');
     font-weight: 700;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Museo Cyrl 500';
-    src: url(./fonts/MuseoSansCyrl-Circe-500.otf) format('otf'), url(museocyrl-500-normal.woff) format('woff'), url(museocyrl-500-normal.ttf) format('truetype');
+    src: url(./fonts/MuseoSansCyrl-Circe-500.otf) format('otf'), url(museocyrl-500-normal.woff) format('woff'), url(./fonts/museocyrl-500-normal.ttf) format('truetype');
     font-weight: 500;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Museo Cyrl 100';
-    src: url(./fonts/MuseoSansCyrl-Circe-100.otf) format('otf'), url(Museo Cyrl 100.otf) format('truetype');
+    src: url(./fonts/MuseoSansCyrl-Circe-100.otf) format('otf'), url(./fonts/Museo Cyrl 100.otf) format('truetype');
     font-weight: 100;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Museo Cyrl 300';
-    src: url(./fonts/MuseoSansCyrl-Circe-300.otf) format('otf'), url(Museo Cyrl 300.otf) format('truetype');
+    src: url(./fonts/MuseoSansCyrl-Circe-300.otf) format('otf'), url(./fonts/Museo Cyrl 300.otf) format('truetype');
     font-weight: 300;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Museo Cyrl 700';
-    src: url(./fonts/MuseoSansCyrl-Circe-700.otf) format('otf'), url(Museo Cyrl 700.otf) format('truetype');
+    src: url(./fonts/MuseoSansCyrl-Circe-700.otf) format('otf'), url(./fonts/Museo Cyrl 700.otf) format('truetype');
     font-weight: 700;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Museo Cyrl 900';
-    src: url(./fonts/MuseoSansCyrl-Circe-900.otf) format('otf'), url(Museo Cyrl 900.otf) format('truetype');
+    src: url(./fonts/MuseoSansCyrl-Circe-900.otf) format('otf'), url(./fonts/Museo Cyrl 900.otf) format('truetype');
     font-weight: 900;
     font-style: normal
 }
