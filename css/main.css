@@ -1931,7 +1931,7 @@ div.geofield-ymap {
     }
 
     #block-block-14 {
-        height: 350px
+        height: auto;
     }
 
     #block-views-gdepozhrat-block-1 .block-title {
@@ -2388,6 +2388,10 @@ div.geofield-ymap {
     .slider .slick-arrow.slick-next {
         right: 30px;
     }
+    
+    .footcos2 a{
+        font-size: 30px;
+    }
 }
 
 @media (max-width:576px) {
@@ -2419,6 +2423,18 @@ div.geofield-ymap {
 
     .slider .slick-arrow.slick-next {
         right: 20px;
+    }
+    
+    .blubut{
+        padding: 14px 10px;
+    }
+    
+    .footcos2{
+        width: 60%;
+    }
+    
+    .swipe_dots{
+        display: none !important;
     }
 }
 
