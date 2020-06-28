@@ -188,7 +188,7 @@ a {
     margin-top: 25px
 }
 
-.review_form label{
+.review_form label {
     display: block;
     margin: 0;
 }
@@ -221,5 +221,10 @@ a {
 }
 
 .review_form_title {
-    font-size: 17px
+    margin-top: 25px;
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+    font-weight: 700;
+    font-size: 24px;
 }
