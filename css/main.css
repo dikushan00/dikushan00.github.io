@@ -62,6 +62,47 @@
     font-style: normal
 }
 
+@font-face {
+    font-family: 'MetaPro';
+    src: url(/fonts/MetaPro-Black.otf); 
+    src: url(/fonts/MetaPro-Black.otf) format('otf'), url(/fonts/MetaPro-Black.otf) format('truetype');
+    font-weight: 900;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'MetaPro';
+    src: url(/fonts/MetaPro-Bold.otf); 
+    src: url(/fonts/MetaPro-Bold.otf) format('otf'), url(/fonts/MetaPro-Bold.otf) format('truetype');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'MetaPro';
+    src: url(/fonts/MetaPro-Medi.otf); 
+    src: url(/fonts/MetaPro-Medi.otf) format('otf'), url(/fonts/MetaPro-Medi.otf) format('truetype');
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'MetaPro';
+    src: url(/fonts/MetaPro-Book.otf); 
+    src: url(/fonts/MetaPro-Book.otf) format('otf'), url(/fonts/MetaPro-Book.otf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'MetaPro';
+    src: url(/fonts/MetaPro-Light.otf); 
+    src: url(/fonts/MetaPro-Light.otf) format('otf'), url(/fonts/MetaPro-Light.otf) format('truetype');
+    font-weight: 300;
+    font-style: normal
+}
+
+
 body {
     position: relative;
     height: 100%;
