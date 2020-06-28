@@ -2484,6 +2484,16 @@ div.geofield-ymap {
     .swipe_dots{
         display: none !important;
     }
+    
+    #block-search-form{
+        margin: 0 !important;
+        margin-right: 5px !important;
+    }
+    
+    #block-locale-language{
+        margin: 0 !important;
+        margin-top: 8px !important;
+    }
 }
 
 #autocomplete {
