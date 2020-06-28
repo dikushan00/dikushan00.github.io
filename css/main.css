@@ -83,7 +83,7 @@ body {
     position: relative;
     height: 100%;
     overflow-x: hidden;
-    font-family: 'Museo Cyrl 500'
+    font-family: 'Museo Cyrl 500', sans-serif;
 }
 
 .i18n-kk h1,
@@ -93,7 +93,7 @@ body {
 .i18n-kk h5,
 .i18n-kk h6,
 .i18n-kk p {
-    font-family: 'Museo Cyrl 300'
+    font-family: 'Museo Cyrl 300', sans-serif;
 }
 
 .block_text_top {
@@ -407,7 +407,7 @@ a:hover {
 }
 
 .nav > li > a {
-    padding: 7px 12px;
+    padding: 7px 11px;
     font-family: 'MetaPro-Book';
 }
 
