@@ -24,8 +24,8 @@
 
 @font-face {
     font-family: 'Museo Cyrl 500';
-    src: url(/fonts/MuseoSansCyrl-500.otf);
-    src: url(/fonts/MuseoSansCyrl-500.otf) format('otf'), url(museocyrl-500-normal.woff) format('woff'), url(/fonts/museocyrl-500-normal.ttf) format('truetype');
+    src: url(/fonts/MuseoSansCyrl-500.OTF);
+    src: url(/fonts/MuseoSansCyrl-500.OTF) format('otf'), url(museocyrl-500-normal.woff) format('woff'), url(/fonts/museocyrl-500-normal.ttf) format('truetype');
     font-weight: 500;
     font-style: normal
 }
@@ -432,7 +432,7 @@ a:hover {
 
 .nav > li > a {
     padding: 7px 12px;
-    font-family: Circe
+    font-family: MetaPro
 }
 
 .not-front .home {
