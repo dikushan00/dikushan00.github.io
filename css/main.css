@@ -24,6 +24,7 @@
 
 @font-face {
     font-family: 'Museo Cyrl 500';
+    src: url(/fonts/MuseoSansCyrl-500.otf);
     src: url(/fonts/MuseoSansCyrl-500.otf) format('otf'), url(museocyrl-500-normal.woff) format('woff'), url(/fonts/museocyrl-500-normal.ttf) format('truetype');
     font-weight: 500;
     font-style: normal
@@ -31,6 +32,7 @@
 
 @font-face {
     font-family: 'Museo Cyrl 100';
+    src: url(/fonts/MuseoSansCyrl-100.otf);
     src: url(/fonts/MuseoSansCyrl-100.otf) format('otf'), url(/fonts/Museo Cyrl 100.otf) format('truetype');
     font-weight: 100;
     font-style: normal
@@ -38,6 +40,7 @@
 
 @font-face {
     font-family: 'Museo Cyrl 300';
+    src: url(/fonts/MuseoSansCyrl-300.otf); 
     src: url(/fonts/MuseoSansCyrl-300.otf) format('otf'), url(/fonts/Museo Cyrl 300.otf) format('truetype');
     font-weight: 300;
     font-style: normal
@@ -45,6 +48,7 @@
 
 @font-face {
     font-family: 'Museo Cyrl 700';
+    src: url(/fonts/MuseoSansCyrl-700.otf); 
     src: url(/fonts/MuseoSansCyrl-700.otf) format('otf'), url(/fonts/Museo Cyrl 700.otf) format('truetype');
     font-weight: 700;
     font-style: normal
@@ -52,6 +56,7 @@
 
 @font-face {
     font-family: 'Museo Cyrl 900';
+    src: url(/fonts/MuseoSansCyrl-900.otf); 
     src: url(/fonts/MuseoSansCyrl-900.otf) format('otf'), url(/fonts/Museo Cyrl 900.otf) format('truetype');
     font-weight: 900;
     font-style: normal
@@ -61,16 +66,7 @@ body {
     position: relative;
     height: 100%;
     overflow-x: hidden;
-    font-family: 'Museo Cyrl 100'
-}
-
-body.i18n-kk {
-    font-family: 'Open Sans', sans-serif
-}
-
-.i18n-kk .nav > li > a {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px
+    font-family: 'Museo Cyrl 500'
 }
 
 .i18n-kk h1,
