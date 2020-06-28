@@ -258,7 +258,12 @@
 
                     <h4 class="content_title review_form_title">Добавить отзыв:</h4>
                     <form action="" class="review_form">
-                        <textarea type="text" placeholder="Введите отзыв.." cols="50" rows="7" class="review_form_input"></textarea>
+                        <label for="review_form_name">Имя</label>
+                        <input type="text" class="review_form_input review_form_name" id="review_form_name" placeholder="Введите свое имя..">
+                        <label for="review_form_email">Email</label>
+                        <input type="text" class="review_form_input review_form_email" id="review_form_name" placeholder="Введите свой email..">
+                        <label for="review_form_review">Отзыв</label>
+                        <textarea type="text" placeholder="Введите отзыв.." cols="50" rows="7" class="review_form_input review_form_review" id="review_form_review"></textarea>
                         <button class="review_form_btn">Отправить</button>
                     </form>
                 </div>
@@ -316,7 +321,6 @@
         <script src="../js/script.js"> </script>
     </div>
     <script>
-
         ymaps.ready(function() {
             // Указывается идентификатор HTML-элемента.
             var my_map = new ymaps.Map("first_map", {

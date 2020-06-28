@@ -117,7 +117,15 @@ body {
 .block_card:hover {
     -webkit-transform: translate(-4px, -4px) !important;
     -ms-transform: translate(-4px, -4px) !important;
-    transform: translate(-4px, -4px) !important
+    transform: translate(-4px, -4px) !important;
+}
+
+.block_card_degLeft:hover{
+    transform: rotate(-3deg) !important;
+}
+
+.block_card_degRight:hover{
+    transform: rotate(7deg) !important;
 }
 
 .swipe_dots {
@@ -403,6 +411,106 @@ a:hover {
     font-size: 18px;
 }
 
+.filter{
+    position: relative;
+    margin-bottom: 20px;
+    padding: 5px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.filter_content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter input{
+    margin: 0;
+}
+
+.select_city{
+    width: 137px;
+    height: 38px;
+    padding: 5px 10px;
+}
+
+.select_city option{
+    height: 25px;
+    padding: 5px;
+}
+
+.select_city_title{
+    display: block;
+}
+
+.stars_list,
+.type_list{
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.stars_list_item,
+.type_list_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.star_check{
+    width: 15px;
+    height: 15px;
+}
+
+.stars_text{
+    margin-left: 17px;
+}
+
+.stars_hotel_count,
+.type_hotel_count{
+    color: #ccc;
+    margin-left: 15px;
+    text-align: right;
+}
+
+.stay_type_area{
+    margin-top: 15px;
+}
+
+.eat_type_area{
+    margin-top: 0;
+}
+
+.type_text{
+    margin-left: 10px;
+}
+
+.confirm_filter{
+    position: absolute;
+    right: 19px;
+    bottom: 12px;
+    width: 83px;
+    height: 36px;
+    display: block;
+    border: 2px solid #0a99d8;
+    background: #fff;
+    transition: .3s all;
+}
+
+.confirm_filter:hover {
+    border: 2px solid #0a99d8;
+    background: #0a99d8;
+    color: #fff;
+}
+
+.input_price{
+    height: 30px;
+    width: 63px;
+    padding: 5px 10px;
+}
 
 
 .navbar-default {
@@ -2493,6 +2601,25 @@ div.geofield-ymap {
     #block-locale-language{
         margin: 0 !important;
         margin-top: 8px !important;
+    }
+    
+    .filter_content{
+        flex-direction: column;
+    }
+    
+    .filter_item_area{
+        margin-top: 25px;
+    }
+    
+    .confirm_filter{
+        position: relative;
+        margin-top: 30px;
+        margin-left: 19px;
+    }
+    
+    .stars_list_item,
+    .type_list_item{
+        width: 155px;
     }
 }
 

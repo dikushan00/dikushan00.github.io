@@ -156,9 +156,6 @@
                                 </h2>
 
                                 <div class="view view-wheretostay view-id-wheretostay view-display-id-block_1 view-dom-id-6839b83dd6345bf7e67dc10c194f0686 jquery-once-1-processed">
-
-
-
                                     <div class="view-content">
                                         <div class="views-row views-row-1 views-row-odd views-row-first">
 
@@ -185,20 +182,85 @@
                                                 </span> </div>
                                         </div>
                                     </div>
-
-
-
-
-
-
                                 </div>
                             </section>
                         </div>
-                    </aside> <!-- /#sidebar-first -->
+                    </aside>
 
                     <section class="col-sm-9">
                         <a id="main-content"></a>
                         <h1 class="page-header">Где остановиться</h1>
+                        <div class="filter stay_filter">
+                          <div class="filter_content">
+                           <div class="select_city_area filter_item_area">
+                           <span class="select_city_title">Город: </span>
+                            <select name="city" id="select_city" class="select_city">
+                                <option class="select_city_check select_city_check_kokshe">Кокшетау</option>
+                                <option class="select_city_check select_city_check_bura">Боровое</option>
+                                <option class="select_city_check select_city_check_zeren">Зеренда</option>
+                                <option class="select_city_check select_city_check_shuchinsk">Щучинск</option>
+                            </select>
+                            <div class="stay_type_area">
+                               <span class="stay_type_title">Тип: </span>
+                                <ul class="type_list">
+                                <li class="type_list_item">
+                                    <input type="checkbox" class="type_check type_check_2">
+                                    <span class="type_text">Отель</span>
+                                    <span class="type_hotel_count type_hotel_count_1">45</span>
+                                </li>
+                                <li class="type_list_item">
+                                    <input type="checkbox" class="type_check type_check_3">
+                                    <span class="type_text">Гостиница</span>
+                                    <span class="type_hotel_count type_hotel_count_2">14</span>
+                                </li>
+                                <li class="type_list_item">
+                                    <input type="checkbox" class="type_check type_check_4">
+                                    <span class="type_text">Хостел</span>
+                                    <span class="type_hotel_count type_hotel_count_3">55</span>
+                                </li>
+                            </ul>
+                            </div>
+                            </div>
+                            <div class="stars_list_area filter_item_area">
+                            <span class="stars_count">Количество звезд: </span>
+                            <ul class="stars_list">
+                                <li class="stars_list_item">
+                                    <input type="checkbox" class="star_check star_check_2">
+                                    <span class="stars_text">2 звезды</span>
+                                    <span class="stars_hotel_count stars_hotel_count_2">34</span>
+                                </li>
+                                <li class="stars_list_item">
+                                    <input type="checkbox" class="star_check star_check_3">
+                                    <span class="stars_text">3 звезды</span>
+                                    <span class="stars_hotel_count stars_hotel_count_3">22</span>
+                                    
+                                </li>
+                                <li class="stars_list_item">
+                                    <input type="checkbox" class="star_check star_check_4">
+                                    <span class="stars_text">4 звезды</span>
+                                    <span class="stars_hotel_count stars_hotel_count_4">45</span>
+                                </li>
+                                <li class="stars_list_item">
+                                    <input type="checkbox" class="star_check star_check_5">
+                                    <span class="stars_text">5 звезд</span>
+                                    <span class="stars_hotel_count stars_hotel_count_5">12</span>
+                                </li>
+                                <li class="stars_list_item">
+                                    <input type="checkbox" class="star_check star_check_0">
+                                    <span class="stars_text">без звезд</span>
+                                    <span class="stars_hotel_count stars_hotel_count_0">32</span>
+                                </li>
+                            </ul>
+                            </div>
+                            <span class="price_area filter_item_area">
+                                <span class="price_text">Price:</span>
+                                <input type="text" placeholder="Min" class="input_price input_price_min">
+                                -
+                                <input type="text" placeholder="Max" class="input_price input_price_max">
+                            </span>
+                            </div>
+                            <button class="confirm_filter">Искать</button>
+                        </div>
                         <div class="region region-content">
                             <section id="block-system-main" class="block block-system clearfix">
 
@@ -207,8 +269,8 @@
                                     <div class="view-content">
                                         <div class="views-row views-row-1 views-row-odd views-row-first">
 
-                                            <div class="views-field views-field-nothing"> 
-                                                   <span class="field-content">
+                                            <div class="views-field views-field-nothing">
+                                                <span class="field-content">
                                                     <div class="row">
                                                         <div class="col-md-4 col-xs-12 blo_imghei"><img typeof="foaf:Image" class="img-responsive" src="../img/wheretostay_burabay_hotel_konfor_fasad.png" width="280" height="222" alt=""></div>
                                                         <div class="col-md-5 zg_block"><a href="../tmp/oteli.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Отели</a>
@@ -227,8 +289,8 @@
                                         </div>
                                         <div class="views-row views-row-2 views-row-even">
 
-                                            <div class="views-field views-field-nothing"> 
-                                                   <span class="field-content">
+                                            <div class="views-field views-field-nothing">
+                                                <span class="field-content">
                                                     <div class="row">
                                                         <div class="col-md-4 col-xs-12 blo_imghei"><img typeof="foaf:Image" class="img-responsive" src="../img/visitaqmola_placeholder2_1.png" width="280" height="222" alt=""></div>
                                                         <div class="col-md-5 zg_block"><a href="../tmp/oteli.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Отели</a>
@@ -319,7 +381,8 @@
                                                         </div>
                                                     </div>
 
-                                                </span> </div>
+                                                </span> 
+                                                </div>
                                         </div>
                                     </div>
 
@@ -327,17 +390,10 @@
                                         <li class="pager__item">
                                             <a href="https://www.visitaqmola.kz/ru/where-to-stay?page=1">Еще</a> </li>
                                     </ul>
-
-
-
-
-
                                 </div>
                             </section>
                         </div>
                     </section>
-
-
                 </div>
             </div>
         </div>
@@ -352,22 +408,17 @@
                                     <img src="../img/vlf.png">
                                     <div class="footcos2">
                                         <a href="https://vk.com/public185677668">
-                                            <!--                                          <img src="./img/soc1.png">-->
                                             <i class="fab fa-vk"></i>
                                         </a>
                                         <a href="https://www.youtube.com/channel/UCmVzmTwxP-_CbfbS2GmSJcA?view_as=subscriber">
-                                            <!--                                    <img src="./img/soc2.png">-->
                                             <i class="fab fa-youtube"></i>
                                         </a>
                                         <a href="https://www.instagram.com/visitaqmola.kz/">
-                                            <!--                                        <img src="./img/soc3.png">-->
                                             <i class="fab fa-instagram"></i>
                                         </a>
                                         <a href="https://www.facebook.com/visitaqmola.kz/">
-                                            <!--                                        <img src="./img/soc4.png">-->
                                             <i class="fab fa-facebook"></i>
                                         </a><a href="https://www.visitaqmola.kz/">
-                                            <!--                                        <img src="./img/soc5.png">-->
                                             <i class="fab fa-twitter"></i>
                                         </a></div>
                                 </div>
@@ -394,7 +445,7 @@
             </div>
         </footer>
         <script src="../js/script.js"> </script>
-        
+
     </div>
 </body>
 
