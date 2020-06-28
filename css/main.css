@@ -408,7 +408,7 @@ a:hover {
 
 .nav > li > a {
     padding: 7px 11px;
-    font-family: 'MetaPro-Book';
+    font-family: 'MetaPro-Book', sans-serif;
 }
 
 .not-front .home {
