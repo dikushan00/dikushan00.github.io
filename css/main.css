@@ -2,7 +2,7 @@
     font-family: Circe;
     src: url(/fonts/Circe-Regular.ttf);
     src: local('Circe'), local('Circe-Regular'), url(Circe-Regular.eot?#iefix) format('embedded-opentype'), url(./fonts/Circe-Regular.woff) format('woff'), url(./fonts/Circe-Regular.ttf) format('truetype');
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal
 }
 
@@ -10,7 +10,7 @@
     font-family: CirceLight;
     src: url(/fonts/Circe-ExtraLight.ttf);
     src: local('Circe ExtraLight'), local('Circe-ExtraLight'), url(/fonts/Circe-ExtraLight.eot?#iefix) format('embedded-opentype'), url(Circe-ExtraLight.woff) format('woff'), url(/fonts/Circe-ExtraLight.ttf) format('truetype');
-    font-weight: 200;
+    font-weight: normal;
     font-style: normal
 }
 
@@ -18,15 +18,15 @@
     font-family: Circe;
     src: url(/fonts/Circe-Bold.ttf);
     src: local('Circe Bold'), local('Circe-Bold'), url(/fonts/Circe-Bold.eot?#iefix) format('embedded-opentype'), url(Circe-Bold.woff) format('woff'), url(/fonts/Circe-Bold.ttf) format('truetype');
-    font-weight: 700;
+    font-weight: normal;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Museo Cyrl 500';
-    src: url(/fonts/MuseoSansCyrl-500.OTF);
-    src: url(/fonts/MuseoSansCyrl-500.OTF) format('otf'), url(museocyrl-500-normal.woff) format('woff'), url(/fonts/museocyrl-500-normal.ttf) format('truetype');
-    font-weight: 500;
+    src: url(/fonts/MuseoSansCyrl-500.otf);
+    src: url(/fonts/MuseoSansCyrl-500.otf) format('otf'), url(museocyrl-500-normal.woff) format('woff'), url(/fonts/museocyrl-500-normal.ttf) format('truetype');
+    font-weight: normal;
     font-style: normal
 }
 
@@ -34,7 +34,7 @@
     font-family: 'Museo Cyrl 100';
     src: url(/fonts/MuseoSansCyrl-100.otf);
     src: url(/fonts/MuseoSansCyrl-100.otf) format('otf'), url(/fonts/Museo Cyrl 100.otf) format('truetype');
-    font-weight: 100;
+    font-weight: normal;
     font-style: normal
 }
 
@@ -42,7 +42,7 @@
     font-family: 'Museo Cyrl 300';
     src: url(/fonts/MuseoSansCyrl-300.otf); 
     src: url(/fonts/MuseoSansCyrl-300.otf) format('otf'), url(/fonts/Museo Cyrl 300.otf) format('truetype');
-    font-weight: 300;
+    font-weight: normal;
     font-style: normal
 }
 
@@ -50,7 +50,7 @@
     font-family: 'Museo Cyrl 700';
     src: url(/fonts/MuseoSansCyrl-700.otf); 
     src: url(/fonts/MuseoSansCyrl-700.otf) format('otf'), url(/fonts/Museo Cyrl 700.otf) format('truetype');
-    font-weight: 700;
+    font-weight: normal;
     font-style: normal
 }
 
@@ -58,47 +58,47 @@
     font-family: 'Museo Cyrl 900';
     src: url(/fonts/MuseoSansCyrl-900.otf); 
     src: url(/fonts/MuseoSansCyrl-900.otf) format('otf'), url(/fonts/Museo Cyrl 900.otf) format('truetype');
-    font-weight: 900;
+    font-weight: normal;
     font-style: normal
 }
 
 @font-face {
-    font-family: 'MetaPro';
+    font-family: 'MetaPro-Black';
     src: url(/fonts/MetaPro-Black.otf); 
     src: url(/fonts/MetaPro-Black.otf) format('otf'), url(/fonts/MetaPro-Black.otf) format('truetype');
-    font-weight: 900;
+    font-weight: normal;
     font-style: normal
 }
 
 @font-face {
-    font-family: 'MetaPro';
+    font-family: 'MetaPro-Bold';
     src: url(/fonts/MetaPro-Bold.otf); 
     src: url(/fonts/MetaPro-Bold.otf) format('otf'), url(/fonts/MetaPro-Bold.otf) format('truetype');
-    font-weight: 700;
+    font-weight: normal;
     font-style: normal
 }
 
 @font-face {
-    font-family: 'MetaPro';
+    font-family: 'MetaPro-Medi';
     src: url(/fonts/MetaPro-Medi.otf); 
     src: url(/fonts/MetaPro-Medi.otf) format('otf'), url(/fonts/MetaPro-Medi.otf) format('truetype');
-    font-weight: 500;
+    font-weight: normal;
     font-style: normal
 }
 
 @font-face {
-    font-family: 'MetaPro';
+    font-family: 'MetaPro-Book';
     src: url(/fonts/MetaPro-Book.otf); 
     src: url(/fonts/MetaPro-Book.otf) format('otf'), url(/fonts/MetaPro-Book.otf) format('truetype');
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal
 }
 
 @font-face {
-    font-family: 'MetaPro';
+    font-family: 'MetaPro-Light';
     src: url(/fonts/MetaPro-Light.otf); 
     src: url(/fonts/MetaPro-Light.otf) format('otf'), url(/fonts/MetaPro-Light.otf) format('truetype');
-    font-weight: 300;
+    font-weight: normal;
     font-style: normal
 }
 
@@ -432,7 +432,7 @@ a:hover {
 
 .nav > li > a {
     padding: 7px 12px;
-    font-family: MetaPro
+    font-family: 'MetaPro-Medi';
 }
 
 .not-front .home {
