@@ -14,12 +14,12 @@ $('a[href*="#"]').on('click', function (e) {
 $(document).on('scroll', function () {
     var scrollBtn = $(this).scrollTop();
 
-    if (scrollBtn >= 600) {
-        $(".swipe_dots").fadeIn(400).css("display", "flex");
-
-    } else {
-        $(".swipe_dots").fadeOut(400)
-    }
+//    if (scrollBtn >= 600) {
+//        $(".swipe_dots").fadeIn(400).css("display", "flex");
+//
+//    } else {
+//        $(".swipe_dots").fadeOut(400)
+//    }
 
     $(".block_area").each(function () {
         if (scrollBtn + 200 >= $(this).offset().top && scrollBtn + 200 <= $(this).offset().top + 750) {
