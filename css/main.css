@@ -1,73 +1,73 @@
 @font-face {
-	font-family: 'MetaPro';
-	src: url('../fonts/MetaPro-Black.eot');
-	src: local('☺'), url('../fonts/MetaPro-Black.woff') format('woff'), url('../fonts/MetaPro-Black.ttf') format('truetype'), url('../fonts/MetaPro-Black.svg') format('svg');
-	font-weight: 900;
-	font-style: normal;
+    font-family: 'MetaPro';
+    src: url('../fonts/MetaPro-Black.eot');
+    src: local('☺'), url('../fonts/MetaPro-Black.woff') format('woff'), url('../fonts/MetaPro-Black.ttf') format('truetype'), url('../fonts/MetaPro-Black.svg') format('svg');
+    font-weight: 900;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'MetaPro';
-	src: url('../fonts/MetaPro-Bold.eot');
-	src: local('☺'), url('../fonts/MetaPro-Bold.woff') format('woff'), url('../fonts/MetaPro-Bold.ttf') format('truetype'), url('../fonts/MetaPro-Bold.svg') format('svg');
-	font-weight: 700;
-	font-style: normal;
+    font-family: 'MetaPro';
+    src: url('../fonts/MetaPro-Bold.eot');
+    src: local('☺'), url('../fonts/MetaPro-Bold.woff') format('woff'), url('../fonts/MetaPro-Bold.ttf') format('truetype'), url('../fonts/MetaPro-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'MetaPro';
-	src: url('../fonts/MetaPro-Book.eot');
-	src: local('☺'), url('../fonts/MetaPro-Book.woff') format('woff'), url('../fonts/MetaPro-Book.ttf') format('truetype'), url('../fonts/MetaPro-Book.svg') format('svg');
-	font-weight: 300;
-	font-style: normal;
+    font-family: 'MetaPro';
+    src: url('../fonts/MetaPro-Book.eot');
+    src: local('☺'), url('../fonts/MetaPro-Book.woff') format('woff'), url('../fonts/MetaPro-Book.ttf') format('truetype'), url('../fonts/MetaPro-Book.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'MetaProLight';
-	src: url('../fonts/MetaPro-Light.eot');
-	src: local('☺'), url('../fonts/MetaPro-Light.woff') format('woff'), url('../fonts/MetaPro-Light.ttf') format('truetype'), url('../fonts/MetaPro-Light.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'MetaProLight';
+    src: url('../fonts/MetaPro-Light.eot');
+    src: local('☺'), url('../fonts/MetaPro-Light.woff') format('woff'), url('../fonts/MetaPro-Light.ttf') format('truetype'), url('../fonts/MetaPro-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'MetaPro';
-	src: url('../fonts/MetaPro-Medi.eot');
-	src: local('☺'), url('../fonts/MetaPro-Medi.woff') format('woff'), url('../fonts/MetaPro-Medi.ttf') format('truetype'), url('../fonts/MetaPro-Medi.svg') format('svg');
-	font-weight: 400;
-	font-style: normal;
+    font-family: 'MetaPro';
+    src: url('../fonts/MetaPro-Medi.eot');
+    src: local('☺'), url('../fonts/MetaPro-Medi.woff') format('woff'), url('../fonts/MetaPro-Medi.ttf') format('truetype'), url('../fonts/MetaPro-Medi.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'Museo Cyrl';
-	src: url('../fonts/MuseoSansCyrl-100.eot');
-	src: local('☺'), url('../fonts/MuseoSansCyrl-100.woff') format('woff'), url('../fonts/MuseoSansCyrl-100.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-100.svg') format('svg');
-	font-weight: 100;
-	font-style: normal;
+    font-family: 'Museo Cyrl';
+    src: url('../fonts/MuseoSansCyrl-100.eot');
+    src: local('☺'), url('../fonts/MuseoSansCyrl-100.woff') format('woff'), url('../fonts/MuseoSansCyrl-100.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-100.svg') format('svg');
+    font-weight: 100;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'Museo Cyrl';
-	src: url('../fonts/MuseoSansCyrl-300.eot');
-	src: local('☺'), url('../fonts/MuseoSansCyrl-300.woff') format('woff'), url('../fonts/MuseoSansCyrl-300.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-300.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Museo Cyrl';
+    src: url('../fonts/MuseoSansCyrl-300.eot');
+    src: local('☺'), url('../fonts/MuseoSansCyrl-300.woff') format('woff'), url('../fonts/MuseoSansCyrl-300.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-300.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'Museo Cyrl';
-	src: url('../fonts/MuseoSansCyrl-500.eot');
-	src: local('☺'), url('../fonts/MuseoSansCyrl-500.woff') format('woff'), url('../fonts/MuseoSansCyrl-500.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-500.svg') format('svg');
-	font-weight: 500;
-	font-style: normal;
+    font-family: 'Museo Cyrl';
+    src: url('../fonts/MuseoSansCyrl-500.eot');
+    src: local('☺'), url('../fonts/MuseoSansCyrl-500.woff') format('woff'), url('../fonts/MuseoSansCyrl-500.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-500.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-	font-family: 'Museo Cyrl';
-	src: url('../fonts/MuseoSansCyrl-700.eot');
-	src: local('☺'), url('../fonts/MuseoSansCyrl-700.woff') format('woff'), url('../fonts/MuseoSansCyrl-700.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-700.svg') format('svg');
-	font-weight: 700;
-	font-style: normal;
+    font-family: 'Museo Cyrl';
+    src: url('../fonts/MuseoSansCyrl-700.eot');
+    src: local('☺'), url('../fonts/MuseoSansCyrl-700.woff') format('woff'), url('../fonts/MuseoSansCyrl-700.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-700.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
 }
 
 
@@ -79,7 +79,7 @@ body {
     font-weight: 500;
 }
 
-body .html{
+body .html {
     position: relative;
     height: 100%;
     overflow-x: hidden;
@@ -98,6 +98,10 @@ body .html{
     font-weight: 400;
 }
 
+.bold{
+    font-weight: 700;
+}
+
 .block_text_top {
     margin-top: 20%
 }
@@ -106,7 +110,7 @@ body .html{
     margin-top: 50%
 }
 
-.block_text_white{
+.block_text_white {
     margin-top: 105px;
 }
 
@@ -122,11 +126,11 @@ body .html{
     transform: translate(-4px, -4px) !important;
 }
 
-.block_card_degLeft:hover{
+.block_card_degLeft:hover {
     transform: rotate(-3deg) !important;
 }
 
-.block_card_degRight:hover{
+.block_card_degRight:hover {
     transform: rotate(7deg) !important;
 }
 
@@ -159,7 +163,7 @@ body .html{
     opacity: 1;
 }
 
-.swipe_dots:hover .dot{
+.swipe_dots:hover .dot {
     height: 18px;
     width: 18px;
 }
@@ -199,11 +203,11 @@ a:hover {
     padding-bottom: 30px
 }
 
-.btn_border:active{
+.btn_border:active {
     border: 2px solid #204d74 !important;
 }
 
-.btn_border:focus{
+.btn_border:focus {
     border: 2px solid #204d74 !important;
 }
 
@@ -364,8 +368,8 @@ a:hover {
 
 .slider .slick-dots button {
     font-size: 0;
-    width: 10px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     background-color: #000;
     border-radius: 50%;
     border: 1px solid #000;
@@ -386,12 +390,12 @@ a:hover {
     height: 380px
 }
 
-.term{
+.term {
     font-weight: bold;
     font-size: 17px;
 }
 
-.dish_list_item img{
+.dish_list_item img {
     width: 100%;
 }
 
@@ -402,25 +406,22 @@ a:hover {
 }
 
 .tours_titles h5,
-.tours_titles h6
-{
+.tours_titles h6 {
     font-size: 17px !important;
 }
 
-.tours-maincontent h5
-.tours-maincontent h4
-.tours-maincontent h6{
+.tours-maincontent h5 .tours-maincontent h4 .tours-maincontent h6 {
     font-size: 18px;
 }
 
-.filter{
+.filter {
     position: relative;
     margin-bottom: 20px;
     padding: 5px 20px;
     border-bottom: 1px solid #ccc;
 }
 
-.filter_content{
+.filter_content {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -428,69 +429,70 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.filter input{
+.filter input {
     margin: 0;
 }
 
-.select_city{
+.select_city {
     width: 137px;
     height: 38px;
     padding: 5px 10px;
 }
 
-.select_city option{
+.select_city option {
     height: 25px;
     padding: 5px;
 }
 
-.select_city_title{
+.select_city_title {
     display: block;
 }
 
 .stars_list,
-.type_list{
+.type_list {
     list-style: none;
     padding: 0;
     margin-top: 10px;
 }
 
 .stars_list_item,
-.type_list_item{
+.type_list_item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    margin-top: 7px;
 }
 
-.star_check{
-    width: 15px;
-    height: 15px;
+.star_check {
+    width: 19px;
+    height: 19px;
 }
 
-.stars_text{
+.stars_text {
     margin-left: 17px;
 }
 
 .stars_hotel_count,
-.type_hotel_count{
+.type_hotel_count {
     color: #ccc;
     margin-left: 15px;
     text-align: right;
 }
 
-.stay_type_area{
+.stay_type_area {
     margin-top: 15px;
 }
 
-.eat_type_area{
+.eat_type_area {
     margin-top: 0;
 }
 
-.type_text{
+.type_text {
     margin-left: 10px;
 }
 
-.confirm_filter{
+.confirm_filter {
     position: absolute;
     right: 19px;
     bottom: 12px;
@@ -508,10 +510,14 @@ a:hover {
     color: #fff;
 }
 
-.input_price{
+.input_price {
     height: 30px;
     width: 63px;
     padding: 5px 10px;
+}
+
+.stay_img {
+    height: fit-content;
 }
 
 
@@ -775,7 +781,7 @@ nav .navbar-nav > li > a {
     padding-left: 15px
 }
 
-.tours-maincontent{
+.tours-maincontent {
     margin-top: 40px;
 }
 
@@ -1116,14 +1122,22 @@ nav .navbar-nav > li > a {
     color: #fff
 }
 
+.event_page_b img {
+    -webkit-transition: .4s all;
+    -o-transition: .4s all;
+    transition: .4s all;
+}
+
 .event_page_b a:hover {
-    text-decoration: underline
+    text-decoration: underline;
+    color: #209bd4;
 }
 
 .event_page_b a:hover img {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2)
+    -webkit-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    transform: scale(1.06);
+    filter: brightness(1.15);
 }
 
 .event_page_b {
@@ -1133,19 +1147,14 @@ nav .navbar-nav > li > a {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
 }
 
-.event_page_b img {
-    -webkit-transition: .4s all;
-    -o-transition: .4s all;
-    transition: .4s all
-}
-
 .event_page_b:hover img {
     -webkit-transition: .8s all;
     -o-transition: .8s all;
     transition: .8s all;
     -webkit-transform: scale(1.06);
     -ms-transform: scale(1.06);
-    transform: scale(1.06)
+    transform: scale(1.06);
+    filter: brightness(1.15);
 }
 
 .event_zagol {
@@ -1188,12 +1197,15 @@ nav .navbar-nav > li > a {
     margin: auto;
     margin-bottom: 20px;
     padding-bottom: 20px;
+    padding-top: 0;
     background: url(../img/line_event.png) bottom center no-repeat
 }
 
 .event_page_b .timer p {
     margin-left: 0;
-    background: 0 0
+    background: 0 0;
+    padding-top: 0;
+
 }
 
 .event_page_b .timer .date-display-single {
@@ -2036,7 +2048,7 @@ div.geofield-ymap {
 }
 
 @media (max-width:991px) {
-    
+
     .aq_content_item_odd_item {
         margin-left: 0
     }
@@ -2107,8 +2119,8 @@ div.geofield-ymap {
     .reczagol {
         margin-left: 35px
     }
-    
-    .reczagol:before{
+
+    .reczagol:before {
         left: 17px;
         top: 18px;
     }
@@ -2124,24 +2136,24 @@ div.geofield-ymap {
     .event_text {
         text-align: left
     }
-    
-    .swipe_dots{
+
+    .swipe_dots {
         top: 13%;
     }
-    
-    .slider{
+
+    .slider {
         padding: 0 !important;
     }
-    
-    .slick-slide img{
+
+    .slick-slide img {
         width: 100%;
     }
-    
-    
+
+
 }
 
 @media (max-width:768px) {
-    
+
     .container {
         width: 100%
     }
@@ -2545,11 +2557,11 @@ div.geofield-ymap {
     #block-block-15 {
         height: auto
     }
-    
-    .aq_content_item{
+
+    .aq_content_item {
         padding: 0;
     }
-    
+
     .slider .slick-arrow.slick-prev {
         left: 30px;
     }
@@ -2557,8 +2569,8 @@ div.geofield-ymap {
     .slider .slick-arrow.slick-next {
         right: 30px;
     }
-    
-    .footcos2 a{
+
+    .footcos2 a {
         font-size: 30px;
     }
 }
@@ -2593,45 +2605,46 @@ div.geofield-ymap {
     .slider .slick-arrow.slick-next {
         right: 20px;
     }
-    
-    .blubut{
+
+    .blubut {
         padding: 14px 10px;
     }
-    
-    .footcos2{
+
+    .footcos2 {
         width: 60%;
     }
-    
-    .swipe_dots{
+
+    .swipe_dots {
         display: none !important;
     }
-    
-    #block-search-form{
+
+    #block-search-form {
         margin: 0 !important;
         margin-right: 5px !important;
     }
-    
-    #block-locale-language{
+
+    #block-locale-language {
         margin: 0 !important;
         margin-top: 8px !important;
     }
-    
-    .filter_content{
+
+    .filter_content {
         flex-direction: column;
     }
-    
-    .filter_item_area{
+
+    .filter_item_area {
         margin-top: 25px;
+        margin-left: 0;
     }
-    
-    .confirm_filter{
+
+    .confirm_filter {
         position: relative;
         margin-top: 30px;
         margin-left: 19px;
     }
-    
+
     .stars_list_item,
-    .type_list_item{
+    .type_list_item {
         width: 155px;
     }
 }
