@@ -15,6 +15,43 @@ a {
     text-decoration: none
 }
 
+.rekomen {
+    transition: .4s all;
+}
+
+.rekomen div{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.rekomen:hover img{
+    position: relative;
+    filter: brightness(0.9);
+}
+
+.rekomen:hover p{
+    text-shadow: 0 1px 11px #000;
+    transition: .4s all;
+    transform: translate(0, -10px);
+}
+
+.rekomen p {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    color: #fff !important;
+    font-weight: 700 !important;
+    transition: .4s all;
+}
+
+.rekomen img {
+    position: relative;
+    text-align: center;
+    filter: brightness(0.8);
+    transition: .4s all;
+}
+
 .swipe_btn {
     position: fixed;
     font-size: 55px;
@@ -383,4 +420,3 @@ form.cross:after {
           transform-origin: bottom right;
 }
 */
-

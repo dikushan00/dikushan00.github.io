@@ -1,0 +1,160 @@
+{
+    "wts": [
+        {
+            "id": "1",
+            "title": "KONFOR HOTEL BURABAY",
+            "price": "25000",
+            "HType": "Отели",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/wheretostay_burabay_hotel_konfor_fasad.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "2",
+            "title": "БЕРЕКЕ",
+            "price": "13000",
+            "HType": "Отели",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/visitaqmola_placeholder2_1.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "3",
+            "title": "РАХАТ",
+            "price": "16000",
+            "HType": "Отели",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/wheretostay_burabay_rakhat_fasad.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "4",
+            "title": "АСТАНА",
+            "price": "8000",
+            "HType": "Гостевые дома",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/wheretostay_burabay_guesthouse_astana_fasad.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "5",
+            "title": "ДИАНА",
+            "price": "21000",
+            "HType": "Гостевые дома",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/wheretostay_burabay_guest_house_diana_fasad-min_0.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "6",
+            "title": "АК ЖЕЛКЕН",
+            "price": "15000",
+            "HType": "Отели",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/ak_zhelken_0.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "7",
+            "title": "Самал",
+            "price": "20000",
+            "HType": "Отели",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/wheretostay_burabay_hotel_samal_hotel_0.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "8",
+            "title": "Сары-арка",
+            "price": "6000",
+            "HType": "Отели",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/wheretostay_burabay_hotel_saryarka_0.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "9",
+            "title": "Эдем",
+            "price": "17500",
+            "HType": "Отели",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/wheretostay_burabay_edem_fasad_0.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "10",
+            "title": "Green Which Hotel",
+            "price": "20000",
+            "HType": "Отели",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/hotel_kokshetau_greenwhich_bedroom_0.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "11",
+            "title": "Алина",
+            "price": "10000",
+            "HType": "Отели",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/hotel_alina_bedroom5_0.png",
+            "link": "../tmp/grandHotel.html"
+    },
+        {
+            "id": "12",
+            "title": "Азия",
+            "price": "12500",
+            "HType": "Отели",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/hotel_asia_facad-_0.png",
+            "link": "../tmp/grandHotel.html"
+    }
+  ],
+    "wte": [
+        {
+            "id": "3",
+            "title": "Ramen",
+            "price": "5.50"
+    },
+        {
+            "id": "",
+            "title": "Burger",
+            "price": "1.20"
+    }
+  ],
+    "wtg": [
+        {
+            "id": "1",
+            "title": "Ramen",
+            "price": "5.50"
+    },
+        {
+            "id": "2",
+            "title": "Burger",
+            "price": "1.20"
+    }
+  ],
+    "event": [
+        {
+            "id": "1",
+            "title": "Ramen",
+            "price": "5.50"
+    },
+        {
+            "id": "2",
+            "title": "Burger",
+            "price": "1.20"
+    }
+  ]
+}

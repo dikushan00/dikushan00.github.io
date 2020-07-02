@@ -98,7 +98,7 @@ body .html {
     font-weight: 400;
 }
 
-.bold{
+.bold {
     font-weight: 700;
 }
 
@@ -1362,7 +1362,7 @@ nav .navbar-nav > li > a {
 
 .page-where-to-stay .views-row {
     margin-bottom: 25px;
-    border: 1px solid #dcdcdc;
+    box-shadow: 0 0px 7px #ccc;
     background: #f5f5f5
 }
 
@@ -1452,8 +1452,6 @@ nav .navbar-nav > li > a {
 #block-views-wheretostay-block-1 .views-row {
     border: none;
     background: 0 0;
-    -webkit-box-shadow: 0 17px 15px -17px rgba(0, 0, 0, .75);
-    box-shadow: 0 17px 15px -17px rgba(0, 0, 0, .75)
 }
 
 .object_left {
@@ -1495,7 +1493,7 @@ nav .navbar-nav > li > a {
 
 .page-where-to-eat .views-row {
     margin-bottom: 25px;
-    border: 1px solid #dcdcdc;
+    box-shadow: 0 0px 7px #ccc;
     background: #f5f5f5
 }
 
@@ -1582,8 +1580,6 @@ nav .navbar-nav > li > a {
 #block-views-gdepozhrat-block-1 .views-row {
     border: none;
     background: 0 0;
-    -webkit-box-shadow: 0 17px 15px -17px rgba(0, 0, 0, .75);
-    box-shadow: 0 17px 15px -17px rgba(0, 0, 0, .75)
 }
 
 .page-where-to-eat .kolvo {
@@ -2043,7 +2039,11 @@ div.geofield-ymap {
     }
 
     .cena_block {
-        height: 261px
+        height: 222px
+    }
+
+    .rekomen p {
+        left: 5px;
     }
 }
 
@@ -2094,6 +2094,10 @@ div.geofield-ymap {
     .cena_hotel,
     .zg_block {
         text-align: center
+    }
+
+    .cena_hotel {
+        padding-left: 0;
     }
 
     #block-views-marshrutru-block-1 .views-row a {
@@ -2149,10 +2153,16 @@ div.geofield-ymap {
         width: 100%;
     }
 
+    .rekomen p {
+        bottom: 0;
+        left: 10px;
+    }
+
+
 
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
 
     .container {
         width: 100%
@@ -2347,7 +2357,7 @@ div.geofield-ymap {
     }
 
     .view-gdepozhrat .views-row {
-        max-width: 80%
+        max-width: 60%
     }
 
     .dr_content_item {
@@ -2550,8 +2560,7 @@ div.geofield-ymap {
     }
 
     .rekomen img {
-        text-align: center;
-        margin: 0 auto
+        width: 100%;
     }
 
     #block-block-15 {
@@ -2572,6 +2581,12 @@ div.geofield-ymap {
 
     .footcos2 a {
         font-size: 30px;
+    }
+
+    .rekomen p {
+        position: absolute;
+        font-size: 20px !important;
+        text-align: left;
     }
 }
 
@@ -2646,6 +2661,14 @@ div.geofield-ymap {
     .stars_list_item,
     .type_list_item {
         width: 155px;
+    }
+
+    .view-gdepozhrat .views-row {
+        max-width: 80%
+    }
+
+    .blo_imghei {
+        height: 150px;
     }
 }
 
