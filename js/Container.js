@@ -6,7 +6,3 @@ function Container(id) {
 Container.prototype.render = function () {
     return this.htmlCode;
 };
-
-//TODO: ДЗ
-Container.prototype.remove = function () {
-};

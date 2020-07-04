@@ -281,8 +281,6 @@ a:hover {
 }
 
 .item_img {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content
 }
 
@@ -566,6 +564,13 @@ nav .navbar-nav > li > a {
     background: 0 0
 }
 
+.block-locale{
+    float: none;
+    margin: 0;
+    margin-top: 9px;
+    margin-right: 10px;
+}
+
 #block-locale-language {
     display: -webkit-box;
     display: -webkit-flex;
@@ -696,6 +701,15 @@ nav .navbar-nav > li > a {
     z-index: 2
 }
 
+.front_event .akmo:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+.front_event .akmo:hover .event_title{
+    text-decoration: underline;
+}
+
 .akmo {
     display: inline-block;
     background: #fff;
@@ -777,7 +791,7 @@ nav .navbar-nav > li > a {
 }
 
 .heading {
-    border-left: 5px solid var(--primary-color);
+    border-left: 5px solid;
     padding-left: 15px
 }
 
@@ -1097,7 +1111,6 @@ nav .navbar-nav > li > a {
     border-radius: 40px;
     color: #0096d6;
     font-size: 22px;
-    margin-left: 20px;
     position: relative;
     padding: 38px 20px;
     margin-left: -20px
@@ -1192,7 +1205,6 @@ nav .navbar-nav > li > a {
 
 .event_page_b .timer {
     text-align: center;
-    background: 0 0;
     line-height: 1.1;
     margin: auto;
     margin-bottom: 20px;
@@ -1970,10 +1982,42 @@ div.geofield-ymap {
     height: 600px
 }
 
+.block-search{
+    position: relative;
+    float: none;
+    font-size: 22px;
+}
+
+.form-search{
+    display: none;
+    position: absolute;
+    width: 266px;
+    height: 87px;
+    left: -188px;
+    top: 36px;
+    background: #68c6ed;
+    border-radius: 3px;
+}
+
+.search_open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_btn{
+    border: 1px solid #fff !important;
+}
+
 .form-search input {
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none
+}
+
+.input-group{
+    margin: 0 auto;
+    margin-top: 25px;
 }
 
 #block-search-form {
@@ -2063,14 +2107,6 @@ div.geofield-ymap {
 
     .block_cards {
         text-align: center
-    }
-
-    #block-search-form {
-        float: right !important
-    }
-
-    #block-locale-language {
-        float: right !important
     }
 
     .cena_block {
@@ -2210,9 +2246,11 @@ div.geofield-ymap {
     }
 
     #block-locale-language {
-        float: left !important;
-        margin-left: 20px;
-        margin-bottom: 10px
+        margin-left: 15px;
+    }
+    
+    .block-locale{
+        margin-right: 0;
     }
 
     .region-hed {
@@ -2501,7 +2539,6 @@ div.geofield-ymap {
     }
 
     .footcos2 {
-        display: -webkit-inline-box;
         display: -webkit-inline-flex;
         display: -ms-inline-flexbox;
         display: inline-flex
@@ -2509,7 +2546,7 @@ div.geofield-ymap {
 
     #block-search-form {
         float: right !important;
-        margin-right: 25px !important
+        margin: 0 !important
     }
 
     #block-block-13 {
@@ -2589,6 +2626,40 @@ div.geofield-ymap {
         font-size: 20px !important;
         text-align: left;
     }
+    
+    .home_container{
+        display: block;
+    }
+    
+    .navigation{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .navigation > div{
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .navbar-nav{
+        width: 100%;
+    }
+    
+    .form-search{
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        background: transparent;
+    }
+    
+    .input-group input{
+        width: 150px !important;
+    }
+    
+    .form_toggle_btn{
+        display: none;
+    }
 }
 
 @media (max-width:576px) {
@@ -2636,12 +2707,6 @@ div.geofield-ymap {
 
     #block-search-form {
         margin: 0 !important;
-        margin-right: 5px !important;
-    }
-
-    #block-locale-language {
-        margin: 0 !important;
-        margin-top: 8px !important;
     }
 
     .filter_content {
@@ -2672,6 +2737,10 @@ div.geofield-ymap {
     .blo_imghei {
         height: 150px;
     }
+    
+    .input-group{
+        margin-left: 0;
+    }
 }
 
 #autocomplete {
@@ -2683,7 +2752,6 @@ div.geofield-ymap {
 
 #autocomplete ul {
     list-style: none;
-    list-style-image: none;
     margin: 0;
     padding: 0;
 }
@@ -2696,14 +2764,8 @@ div.geofield-ymap {
     zoom: 1
 }
 
-html.js input.form-autocomplete {
-    background-image: url(../../misc/throbber-inactive.png);
-    background-position: 100% center;
-    background-repeat: no-repeat
-}
-
 html.js input.throbbing {
-    background-image: url(../../misc/throbber-active.gif);
+    background-image: url(../img/throbber-active.gif);
     background-position: 100% center
 }
 
@@ -2734,15 +2796,6 @@ fieldset.collapsible .fieldset-legend {
     box-sizing: border-box
 }
 
-.resizable-textarea .grippie {
-    background: #eee url(../../misc/grippie.png) no-repeat center 2px;
-    border: 1px solid #ddd;
-    border-top-width: 0;
-    cursor: s-resize;
-    height: 9px;
-    overflow: hidden
-}
-
 body.drag {
     cursor: move
 }
@@ -2761,7 +2814,6 @@ a.tabledrag-handle:hover {
 }
 
 a.tabledrag-handle .handle {
-    background: url(../../misc/draggable.png) no-repeat 6px 9px;
     height: 13px;
     margin: -.4em .5em;
     padding: .42em .5em;
@@ -2778,18 +2830,6 @@ div.indentation {
     margin: -.4em .2em -.4em -.4em;
     padding: .42em 0 .42em .6em;
     width: 20px
-}
-
-div.tree-child {
-    background: url(../../misc/tree.png) no-repeat 11px center
-}
-
-div.tree-child-last {
-    background: url(../../misc/tree-bottom.png) no-repeat 11px center
-}
-
-div.tree-child-horizontal {
-    background: url(../../misc/tree.png) no-repeat -11px center
 }
 
 .tabledrag-toggle-weight-wrapper {
@@ -2821,7 +2861,7 @@ table.sticky-header {
 }
 
 .ajax-progress .throbber {
-    background: transparent url(../../misc/throbber-active.gif) no-repeat 0 center;
+    background: transparent url(../img/throbber-active.gif) no-repeat 0 center;
     float: left;
     height: 15px;
     margin: 2px;

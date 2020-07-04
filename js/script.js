@@ -44,8 +44,7 @@ $(document).on('scroll', function () {
 $(document).ready(function() {
             $('.slider').slick({
                 arrows: true,
-                dots: true,
-                //                autoplay: true,
+                dots: true,         autoplay: true,
                 speed: 1000,
                 autoplaySpeed: 2000,
                 responsive: [{
@@ -65,3 +64,7 @@ $(document).ready(function() {
         });
 
 
+var form_toggle_btn = $(".form_toggle_btn");
+form_toggle_btn.on("click", () => {
+    $(".form-search").slideToggle();
+})

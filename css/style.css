@@ -19,18 +19,18 @@ a {
     transition: .4s all;
 }
 
-.rekomen div{
+.rekomen div {
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-.rekomen:hover img{
+.rekomen:hover img {
     position: relative;
     filter: brightness(0.9);
 }
 
-.rekomen:hover p{
+.rekomen:hover p {
     text-shadow: 0 1px 11px #000;
     transition: .4s all;
     transform: translate(0, -10px);
@@ -148,7 +148,7 @@ a {
     content: '';
     background: #000;
     height: 1px;
-    width: 0%;
+    width: 0;
     left: auto;
     right: 0;
     bottom: 0;
@@ -194,7 +194,6 @@ a {
 }
 
 .content_title {
-    margin-top: 25px;
     padding-bottom: 9px;
     margin: 40px 0 20px;
     border-bottom: 1px solid #eee;
@@ -266,7 +265,6 @@ a {
 }
 
 .review_form_title {
-    margin-top: 25px;
     padding-bottom: 9px;
     margin: 40px 0 20px;
     border-bottom: 1px solid #eee;
@@ -274,149 +272,24 @@ a {
     font-size: 24px;
 }
 
-/*
-
-   * {
-  box-sizing: border-box;
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-input[type='text'] {
-  -webkit-appearance: none;
-  outline: none;
-  border: 0;
-    color: #00338c;
+.navigation div{
+    display: flex;
+    align-items: center;
 }
 
-.search_wrap {
-  display: -webkit-box;
-  display: flex;
-  width: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  height: 100%;
-  -webkit-transition: all 2s linear;
-  transition: all 2s linear;
+@media (max-width: 767px){
+    
+    .menu_item_link:hover::before{
+        width: 0 !important;
+    }
+    
+    .menu_item:hover{
+        background: #f5f5f5;
+    }
 }
-
-form {
-  position: relative;
-  display: block;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-  margin-left: 0;
-  padding: 0;
-  margin-bottom: 10px;
-  border: 4px solid #00cdfc;
-  border-radius: 20px;
-  -webkit-transition: all 0.25s ease 0.3s;
-  transition: all 0.25s ease 0.3s;
-  cursor: pointer;
-    float: right;
-}
-form::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 90%;
-  left: 90%;
-  width: 16px;
-  height: 3px;
-  background-color: #00cdfc;
-  border-radius: 1px;
-  -webkit-transition: width 0.15s ease 0.55s;
-  transition: width 0.15s ease 0.55s;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-}
-form.open {
-  width: 260px;
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
-}
-form.open:before {
-  width: 0px;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
-form.open input {
-  opacity: 1;
-  -webkit-transition-delay: 0.15s;
-          transition-delay: 0.15s;
-}
-form.open .cross:before, form.open .cross:after {
-  width: 15px;
-  right: 12px;
-}
-form.open .cross:before {
-  top: 9px;
-  -webkit-transition-delay: 0.25s;
-          transition-delay: 0.25s;
-}
-form.open .cross:after {
-  bottom: 9px;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-}
-form input {
-  width: 100%;
-  height: 100%;
-  padding: 0 30px 0 15px;
-  font-size: 14px;
-  line-height: 38px;
-  opacity: 0;
-  background-color: transparent;
-  color: #fff;
-  -webkit-transition: opacity 0.15s ease;
-  transition: opacity 0.15s ease;
-}
-form .cross {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  z-index: 20;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-form.cross:before, 
-form.cross:after {
-  content: "";
-  position: absolute;
-  display: block;
-  right: 5px;
-  height: 2px;
-  width: 2px;
-  border-radius: 1px;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-form .cross:before {
-  top: 2px;
-  background-color: #00cdfc;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
-}
-form.cross:after {
-  bottom: 2px;
-  background-color: #00cdfc;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
-}
-*/
