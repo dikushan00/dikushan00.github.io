@@ -2356,6 +2356,7 @@ div.geofield-ymap {
         transform: rotate(6deg)
     }
 
+    .page-where-to-stay .views-row,
     .view-gdepozhrat .views-row {
         max-width: 60%
     }
@@ -2663,6 +2664,7 @@ div.geofield-ymap {
         width: 155px;
     }
 
+    .page-where-to-stay .views-row,
     .view-gdepozhrat .views-row {
         max-width: 80%
     }
