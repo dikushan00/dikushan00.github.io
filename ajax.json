@@ -123,38 +123,121 @@
   ],
     "wte": [
         {
-            "id": "3",
-            "title": "Ramen",
-            "price": "5.50"
-    },
-        {
-            "id": "",
-            "title": "Burger",
-            "price": "1.20"
+            "id": "1",
+            "title": "THE LOFT",
+            "price": "25000",
+            "HType": "Кафе",
+            "review": "0",
+            "photo": "../img/wheretostay_burabay_hotel_konfor_fasad.png",
+            "link": "../tmp/grandHotel.html"
     }
   ],
     "wtg": [
         {
             "id": "1",
-            "title": "Ramen",
-            "price": "5.50"
-    },
+            "title": "АЛЛЕЯ ГЕРОЕВ СОВЕТСКОГО СОЮЗА",
+            "photo": "../img/4c8de7ee-dd3f-4247-a620-e33853cf7e54.jpg",
+            "link": "../tmp/aleya.html"
+        },
         {
             "id": "2",
-            "title": "Burger",
-            "price": "1.20"
-    }
-  ],
+            "title": "ДОМБРА КОКШЕТАУ",
+            "photo": "../img/whatsapp-image-2019-09-16-at-09.16.188.jpeg",
+            "link": "../tmp/dombra.html"
+        },
+        {
+            "id": "3",
+            "title": "CINEMA ALEM",
+            "photo": "../img/xxxl.jpg",
+            "link": "#"
+        },
+        {
+            "id": "4",
+            "title": "АЛЛЕЯ ДВД",
+            "photo": "../img/WhatsApp-Image-2019-09-13-at-15.36.06-300x400.jpeg",
+            "link": "#"
+        },
+        {
+            "id": "5",
+            "title": "ОГО-GO",
+            "photo": "../img/169f8862-9233-4e6a-89bc-41ebbd1bc489.jpg",
+            "link": "#"
+        },
+        {
+            "id": "6",
+            "title": "МУЗЕЙ МАЛИКА ГАБДУЛЛИНА",
+            "photo": "../img/vid.jpg",
+            "link": "#"
+        },
+        {
+            "id": "7",
+            "title": "ФИТНЕС-КЛУБ “FAMILY FITNESS”",
+            "photo": "../img/e31d6fb8a9ef.jpg",
+            "link": "#"
+        },
+        {
+            "id": "8",
+            "title": "ФИТНЕС КЛУБ “KAPITAL”",
+            "photo": "../img/d733b658-a3c9-45e6-8138-a9455c0c088d.jpg",
+            "link": "#"
+        },
+        {
+            "id": "9",
+            "title": "ДС «БУРАБАЙ»",
+            "photo": "../img/s4d3hra9bzdn7a2e4pi4m5zghya98w.jpg",
+            "link": "#"
+         },
+        {
+            "id": "10",
+            "title": "ДК “КОКШЕТАУ”",
+            "photo": "../img/f20160814141130-f20160120174450-39_b-1.jpg",
+            "link": "#"
+        },
+        {
+            "id": "11",
+            "title": "ОЛЕНИ",
+            "photo": "../img/gefyqbwjvcq.jpg",
+            "link": "#"
+        },
+        {
+            "id": "12",
+            "title": "ТРЦ «РИО»",
+            "photo": "../img/28288235192521404_d700.jpg",
+            "link": "#"
+        },
+        {
+            "id": "13",
+            "title": "БУКВЫ BURABAY",
+            "photo": "../img/0026faa2aba232d8fc415d74b53bd083_crop_l_134_t_261_w_1024_h_576.jpg",
+            "link": "#"
+        },
+        {
+            "id": "14",
+            "title": "БУКВЫ “КОКШЕТАУ”",
+            "photo": "../img/mvsl0206.jpg",
+            "link": "#"
+        },
+        {
+            "id": "15",
+            "title": "АКАН СЕРЭ КОРАМСАУЛЫ",
+            "photo": "../img/58970496-cd6b-4b64-8e76-5fba90fa8411.jpg",
+            "link": "#"
+        },
+        {
+            "id": "16",
+            "title": "УКИЛИ ЫБЫРАЙ",
+            "photo": "../img/f1360a5b-19e6-49b9-8fd9-39acc15ef049.jpg",
+            "link": "#"
+        }
+    ],
     "event": [
         {
             "id": "1",
-            "title": "Ramen",
-            "price": "5.50"
-    },
-        {
-            "id": "2",
-            "title": "Burger",
-            "price": "1.20"
+            "title": "SANTA FEST",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/wheretostay_burabay_hotel_konfor_fasad.png",
+            "link": "../tmp/grandHotel.html"
     }
   ]
 }

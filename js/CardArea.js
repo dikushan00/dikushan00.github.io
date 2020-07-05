@@ -2,9 +2,6 @@ function CardArea(idCardArea) {
     Container.call(this, idCardArea);
 
     this.countCard = 0; //Общее количество товаров
-    //this.cardItems = []; //Массив для хранения товаров
-
-    //Получаем все товары, при созаднии корзины
     this.renderCardList();
 }
 
@@ -15,7 +12,8 @@ var cardItems = [];
 var allCardItems = [];
 var idCardItems = [];
 
-CardArea.prototype.renderCardList = function (count) {
+CardArea.prototype.renderCardList = function () {
+
     var json = new XMLHttpRequest();
     json.open('GET', '../ajax.json', true);
     json.send();
@@ -23,27 +21,43 @@ CardArea.prototype.renderCardList = function (count) {
         if (json.readyState === 4 && json.status === 200) {
             console.log("state = 4");
             var cardDB = JSON.parse(json.responseText);
-            console.log(cardDB.wts[1].HType);
 
             //////////////////////////////////////////
 
-
-            var card_area = $(".stay_list");
-
-            var index = 0;
-
-            for (var itemKey of cardDB.wts) {
-                allCardItems.push(itemKey);
-            }
+            var card_area = $(".wts_list");
 
             var cardCount = 0;
 
-            for (var itemKey of allCardItems) {
-                if (cardCount < 6) {
-                    idCardItems.push(itemKey.id);
-                    var newCard = new Card(itemKey.id, itemKey.title, itemKey.price, itemKey.HType, itemKey.stars, itemKey.photo, itemKey.review, itemKey.link);
-                    newCard.render();
-                    cardCount++;
+            //console.log($("body").attr("class").includes("wts"));
+            if($("body").attr("class").includes("wts")) {
+                var cardCount = 0;
+
+                for (var itemKey of cardDB.wts) {
+                    allCardItems.push(itemKey);
+                }
+
+                for (var itemKey of allCardItems) {
+                    if (cardCount < 6) {
+                        idCardItems.push(itemKey.id);
+                        var newCard = new Card("wts", itemKey.id, itemKey.title, itemKey.photo, itemKey.link, itemKey.price, itemKey.HType, itemKey.stars, itemKey.review);
+                        newCard.render();
+                        cardCount++;
+                    }
+                }
+            }  else if($("body").attr("class").includes("wtg")){
+                var cardCount = 0;
+
+                for (var itemKey of cardDB.wtg) {
+                    allCardItems.push(itemKey);
+                }
+
+                for (var itemKey of allCardItems) {
+                    if (cardCount < 8) {
+                        idCardItems.push(itemKey.id);
+                        var newCard = new Card("wtg", itemKey.id, itemKey.title, itemKey.photo, itemKey.link, itemKey.price, itemKey.HType, itemKey.stars, itemKey.review);
+                        newCard.render();
+                        cardCount++;
+                    }
                 }
             }
 
@@ -53,11 +67,20 @@ CardArea.prototype.renderCardList = function (count) {
     };
 };
 
-CardArea.prototype.add = function () {
+CardArea.prototype.add = function (type) {
+    let card_type = type.split("_")[2];
+
+    var allowItems;
+    if(card_type == "wtg" || card_type == "event"){
+        allowItems = 8;
+    } else if(card_type == "wts" && card_type == "wte"){
+        allowItems = 6;
+    }
+
     var cardCount = 0;
     for (var itemKey of allCardItems) {
         var boolId = false;
-        if (cardCount < 6) {
+        if (cardCount < allowItems) {
             for (idKEy of idCardItems) {
 
                 if (itemKey.id == idKEy) {
@@ -66,7 +89,7 @@ CardArea.prototype.add = function () {
             }
             if (boolId == false) {
                 idCardItems.push(itemKey.id);
-                var newCard = new Card(itemKey.id, itemKey.title, itemKey.price, itemKey.HType, itemKey.stars, itemKey.photo, itemKey.review, itemKey.link);
+                var newCard = new Card(card_type, itemKey.id, itemKey.title, itemKey.photo, itemKey.link, itemKey.price, itemKey.HType, itemKey.stars,  itemKey.review);
                 newCard.render();
                 cardCount++;
             }
