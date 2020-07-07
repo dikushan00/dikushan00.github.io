@@ -278,10 +278,14 @@ a {
     justify-content: space-around;
 }
 
-.navigation div{
+.navigation > div{
     display: flex;
-    align-items: center;
 }
+
+.navbar-collapse .in .swipe_dots{
+    display: none;
+}
+
 
 @media (max-width: 767px){
     

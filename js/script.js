@@ -68,3 +68,25 @@ var form_toggle_btn = $(".form_toggle_btn");
 form_toggle_btn.on("click", () => {
     $(".form-search").slideToggle();
 })
+
+let arr = $(".event_zagol p");
+
+for(let key of arr){
+    if(key.textContent.length > 40){
+        key.textContent = key.textContent.slice(0, 40) + "...";
+    }
+}
+
+$(document).on("click", function () {
+    if($(".navbar-collapse").attr("class").includes("in")){
+        $(".swipe_dots").animate({
+            "opacity": "0"
+        }, 500)
+    }else{
+        $(".swipe_dots").animate({
+            "opacity": ".35"
+        }, 500)
+    }
+})
+
+//todo aqmola news
