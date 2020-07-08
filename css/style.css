@@ -280,6 +280,7 @@ a {
 
 .navigation > div{
     display: flex;
+    align-items: center;
 }
 
 .navbar-collapse .in .swipe_dots{
@@ -295,5 +296,9 @@ a {
     
     .menu_item:hover{
         background: #f5f5f5;
+    }
+
+    .navigation > div{
+        align-items: normal;
     }
 }
