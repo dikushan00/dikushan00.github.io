@@ -26,11 +26,10 @@ CardArea.prototype.renderCardList = function () {
 
             var card_area = $(".wts_list");
 
-            var cardCount = 0;
+            let cardCount = 0;
 
-            //console.log($("body").attr("class").includes("wts"));
             if($("body").attr("class").includes("wts")) {
-                var cardCount = 0;
+                let cardCount = 0;
 
                 for (var itemKey of cardDB.wts) {
                     allCardItems.push(itemKey);
@@ -45,7 +44,7 @@ CardArea.prototype.renderCardList = function () {
                     }
                 }
             }  else if($("body").attr("class").includes("wtg")){
-                var cardCount = 0;
+                let cardCount = 0;
 
                 for (var itemKey of cardDB.wtg) {
                     allCardItems.push(itemKey);
@@ -55,6 +54,22 @@ CardArea.prototype.renderCardList = function () {
                     if (cardCount < 8) {
                         idCardItems.push(itemKey.id);
                         var newCard = new Card("wtg", itemKey.id, itemKey.title, itemKey.photo, itemKey.link, itemKey.price, itemKey.HType, itemKey.stars, itemKey.review);
+                        newCard.render();
+                        cardCount++;
+                    }
+                }
+            }
+            else if($("body").attr("class").includes("event")){
+                let cardCount = 0;
+
+                for (let itemKey of cardDB.event) {
+                    allCardItems.push(itemKey);
+                }
+
+                for (let itemKey of allCardItems) {
+                    if (cardCount < 8) {
+                        idCardItems.push(itemKey.id);
+                        var newCard = new Card("event", itemKey.id, itemKey.title, itemKey.photo, itemKey.link, itemKey.date, itemKey.place, '', '');
                         newCard.render();
                         cardCount++;
                     }
@@ -70,16 +85,16 @@ CardArea.prototype.renderCardList = function () {
 CardArea.prototype.add = function (type) {
     let card_type = type.split("_")[2];
 
-    var allowItems;
+    let cardCount = 0;
+    let allowItems;
     if(card_type == "wtg" || card_type == "event"){
         allowItems = 8;
-    } else if(card_type == "wts" && card_type == "wte"){
+    } else if(card_type == "wts" || card_type == "wte"){
         allowItems = 6;
     }
 
-    var cardCount = 0;
-    for (var itemKey of allCardItems) {
-        var boolId = false;
+    for (let itemKey of allCardItems) {
+        let boolId = false;
         if (cardCount < allowItems) {
             for (idKEy of idCardItems) {
 
@@ -89,12 +104,21 @@ CardArea.prototype.add = function (type) {
             }
             if (boolId == false) {
                 idCardItems.push(itemKey.id);
-                var newCard = new Card(card_type, itemKey.id, itemKey.title, itemKey.photo, itemKey.link, itemKey.price, itemKey.HType, itemKey.stars,  itemKey.review);
-                newCard.render();
+                if (card_type !== 'event') {
+                    let newCard = new Card(card_type, itemKey.id, itemKey.title, itemKey.photo, itemKey.link, itemKey.price, itemKey.HType, itemKey.stars, itemKey.review);
+                    newCard.render();
+                } else{
+                    let newCard = new Card(card_type, itemKey.id, itemKey.title, itemKey.photo, itemKey.link, itemKey.date, itemKey.place, '', '');
+                    newCard.render();
+                }
                 cardCount++;
+            }
+            if(allCardItems.length == idCardItems.length){
+                $(".more_card").remove();
             }
         }
     }
+
 
 };
 

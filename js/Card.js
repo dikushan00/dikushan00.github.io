@@ -10,15 +10,13 @@ function Card(str_type, id, title, photo, link, price, type, stars, review) {
     this.stars = stars;
     this.review = review;
 
-    if(this.price == undefined){
-        this.price = 0;
-    } else if(this.type == undefined){
-        this.type = '';
-    } else if(this.review == undefined){
-        this.review = 0;
-    } else if(this.stars == undefined){
-        this.type = 0;
-    }
+    // if(this.type == undefined){
+    //     this.type = '';
+    // } else if(this.review == undefined){
+    //     this.review = 0;
+    // } else if(this.stars == undefined){
+    //     this.type = 0;
+    // }
 }
 
 Card.prototype = Object.create(Container.prototype);
@@ -109,6 +107,34 @@ Card.prototype.render = function () {
 
 
         $cardContainer_3.append($wtg_content);
+        $cardContainer_2.append($cardContainer_3);
+        $cardContainer_1.append($cardContainer_2);
+        $cardContainer.append($cardContainer_1);
+        $card_area.append($cardContainer);
+
+    } else if(this.str_type == "event") {
+
+        var $cardContainer = $('<div />', {
+            class: 'views-row content_item'
+        });
+
+        var $cardContainer_1= $('<div />', {
+            class: 'views-field views-field-nothing'
+        });
+
+        var $cardContainer_2= $('<span />', {
+            class: 'field-content'
+        });
+
+        var $cardContainer_3 = $('<div />', {
+            class: 'event_page_b'
+        });
+
+        var $card_area = $(".event_list");
+
+        let $event_content = '<div class="imgtimer"><img typeof="foaf:Image" class="img-responsive event_img" src="' + this.photo + '" width="325" height="215" alt=""></div><div class="event_zagol"> <p>' +  this.title  +  '</p> </div> <div class="timer"> <p class="timer_text">Дата</p><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2019-05-11T11:15:00+06:00">' + this.price + '</span> </div> <div class="event_mesto">' +  this.type + '</div>';
+
+        $cardContainer_3.append($event_content);
         $cardContainer_2.append($cardContainer_3);
         $cardContainer_1.append($cardContainer_2);
         $cardContainer.append($cardContainer_1);
