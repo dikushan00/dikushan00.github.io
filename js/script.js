@@ -77,6 +77,32 @@ for(let key of arr){
     }
 }
 
+let desc = $(".search_item_desc");
+
+for(let key of desc){
+    if(key.textContent.length > 300){
+        key.textContent = key.textContent.slice(0, 300) + "...";
+    }
+}
+
+let title = $(".news_title");
+
+for(let key of title){
+    if(key.textContent.length > 75){
+        key.textContent = key.textContent.slice(0, 75) + "...";
+    }
+}
+
+let news_desc = $(".news_text_desc");
+
+for(let key of news_desc){
+    if(key.textContent.length > 290){
+        key.textContent = key.textContent.slice(0, 290) + "...";
+    }
+}
+
+
+
 $(document).on("click", function () {
     if($(".navbar-collapse").attr("class").includes("in")){
         $(".swipe_dots").animate({
@@ -89,4 +115,4 @@ $(document).on("click", function () {
     }
 })
 
-//todo aqmola news
+$(".section_footer").css("height", window.screen.availHeight - 65);

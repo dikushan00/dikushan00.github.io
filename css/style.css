@@ -291,6 +291,7 @@ a {
     font-weight: 700 !important;
     font-size: 18px;
     padding: 10px 5px;
+    margin: 0;
 }
 
 .news_title_main{
@@ -321,25 +322,138 @@ a {
 }
 
 .news_list{
+    padding: 0;
     height: auto;
     width: 100%;
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     list-style: none;
 }
 
 .news_list_item{
     width: 275px;
-    height: 269px;
+    height: 297px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .news_list_img{
     width: 270px;
+    height: 180px;
 }
 
+.news_header_title{
+    font-weight: 700 !important;
+}
+
+.news_header_desc{
+    font-size: 17px;
+    margin: 20px 0;
+}
+
+.news_content{
+    margin-top: 25px;
+}
+
+.news_content_text{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.news_content_img{
+    width: 100%;
+}
+
+.news_list_item.float{
+    height: 302px;
+    margin-top: 17px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.home_slider{
+    height: 759px;
+}
+
+.home_slider .slick-dots {
+    position: absolute;
+    padding: 0;
+    bottom: 6px;
+    left: 47%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.home_slider .slick-dots li {
+    list-style: none;
+    margin: 0 10px;
+    outline: 0
+}
+
+.home_slider .slick-dots button {
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+    outline: 0;
+    opacity: .65;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all
+}
+
+.home_slider .slick-dots li.slick-active button {
+    background-color: #fff;
+    opacity: 1;
+    border: none
+}
+
+.home_slider.slick-dots{
+    left: 31% ;
+}
+
+.block_text_title{
+    color: #fff;
+}
+
+.navbar-toggle{
+    background-color: #ddd !important;
+}
+
+.slider img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+}
+
+
+.page-item.disabled a{
+    color: #ccc;
+}
+
+@media (max-width: 991px){
+
+    .news_list_area{
+        margin-top: 30px;
+    }
+
+}
 
 @media (max-width: 767px){
     
@@ -353,5 +467,13 @@ a {
 
     .navigation > div{
         align-items: normal;
+    }
+
+    .home_slider_title{
+        font-size: 30px !important;
+    }
+
+    .home_slider_content.another{
+        right: 54px !important;
     }
 }

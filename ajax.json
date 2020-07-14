@@ -125,12 +125,33 @@
         {
             "id": "1",
             "title": "THE LOFT",
-            "price": "25000",
+            "price": "5000",
             "HType": "Кафе",
             "review": "0",
-            "photo": "../img/wheretostay_burabay_hotel_konfor_fasad.png",
-            "link": "../tmp/grandHotel.html"
-    }
+            "stars": "0",
+            "photo": "../img/the_loft1.jpg",
+            "link": "../tmp/theLoft.html"
+    },
+        {
+            "id": "2",
+            "title": "THE LOFT",
+            "price": "5000",
+            "HType": "Кафе",
+            "review": "0",
+            "stars": "0",
+            "photo": "../img/pinta1.jpg",
+            "link": "#"
+        },
+        {
+            "id": "3",
+            "title": "THE LOFT",
+            "price": "3000",
+            "HType": "Кафе",
+            "stars": "0",
+            "review": "0",
+            "photo": "../img/3taym1.jpg",
+            "link": "#"
+        }
   ],
     "wtg": [
         {
@@ -354,6 +375,246 @@
         },
         {
             "id": "16",
+            "title": "ЯРКО- КРОСС",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/Jarko-kross_1.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "17",
+            "title": "SANTA FEST",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/santa-fest-header-1024x576-400x225.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "18",
+            "title": "МЕЖДУНАРОДНЫЙ ТУРНИР «КАНСОНАР»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/Risunok1-400x217.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "19",
+            "title": "РЕЗИДЕНЦИЯ САНТЫ",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/kl_1%20(1).jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "20",
+            "title": "RACE NATION KAZAKHSTAN",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/WhatsApp-Image-2019-09-11-at-18.14.35_1.jpeg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "21",
+            "title": "БЛАГОТВОРИТЕЛЬНЫЙ ВЕЛОЗАБЕГ «BURABIKE 2019»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/96f9f0e9-b46b-45ac-b86e-faabdb20414a.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "22",
+            "title": "«БОЛЬШАЯ РЫБАЛКА»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/WhatsApp-Image-2019-09-11-at-18.16.32_1.jpeg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "23",
+            "title": "RED BULL 400",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/red-bull-400_1.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "24",
+            "title": "ЯРКО- КРОСС",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/Jarko-kross_1.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "25",
+            "title": "SANTA FEST",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/santa-fest-header-1024x576-400x225.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "26",
+            "title": "МЕЖДУНАРОДНЫЙ ТУРНИР «КАНСОНАР»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/Risunok1-400x217.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "27",
+            "title": "РЕЗИДЕНЦИЯ САНТЫ",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/kl_1%20(1).jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "28",
+            "title": "RACE NATION KAZAKHSTAN",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/WhatsApp-Image-2019-09-11-at-18.14.35_1.jpeg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "29",
+            "title": "БЛАГОТВОРИТЕЛЬНЫЙ ВЕЛОЗАБЕГ «BURABIKE 2019»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/96f9f0e9-b46b-45ac-b86e-faabdb20414a.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "30",
+            "title": "«БОЛЬШАЯ РЫБАЛКА»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/WhatsApp-Image-2019-09-11-at-18.16.32_1.jpeg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "31",
+            "title": "RED BULL 400",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/red-bull-400_1.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "32",
+            "title": "ЯРКО- КРОСС",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/Jarko-kross_1.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "33",
+            "title": "ЯРКО- КРОСС",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/Jarko-kross_1.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "34",
+            "title": "БЛАГОТВОРИТЕЛЬНЫЙ ВЕЛОЗАБЕГ «BURABIKE 2019»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/96f9f0e9-b46b-45ac-b86e-faabdb20414a.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "35",
+            "title": "«БОЛЬШАЯ РЫБАЛКА»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/WhatsApp-Image-2019-09-11-at-18.16.32_1.jpeg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "36",
+            "title": "RED BULL 400",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/red-bull-400_1.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "37",
+            "title": "ЯРКО- КРОСС",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/Jarko-kross_1.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "38",
+            "title": "SANTA FEST",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/santa-fest-header-1024x576-400x225.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "39",
+            "title": "МЕЖДУНАРОДНЫЙ ТУРНИР «КАНСОНАР»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/Risunok1-400x217.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "40",
+            "title": "РЕЗИДЕНЦИЯ САНТЫ",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/kl_1%20(1).jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "41",
+            "title": "RACE NATION KAZAKHSTAN",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/WhatsApp-Image-2019-09-11-at-18.14.35_1.jpeg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "42",
+            "title": "БЛАГОТВОРИТЕЛЬНЫЙ ВЕЛОЗАБЕГ «BURABIKE 2019»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/96f9f0e9-b46b-45ac-b86e-faabdb20414a.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "43",
+            "title": "«БОЛЬШАЯ РЫБАЛКА»",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/WhatsApp-Image-2019-09-11-at-18.16.32_1.jpeg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "44",
+            "title": "RED BULL 400",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/red-bull-400_1.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "45",
+            "title": "ЯРКО- КРОСС",
+            "date": "16.12.2019",
+            "place": "Курорт Бурабай",
+            "photo": "../img/Jarko-kross_1.jpg",
+            "link": "../tmp/grandHotel.html"
+        },
+        {
+            "id": "46",
             "title": "ЯРКО- КРОСС",
             "date": "16.12.2019",
             "place": "Курорт Бурабай",

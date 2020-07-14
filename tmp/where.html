@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>ТУРИСТСКИЙ ИНФОРМАЦИОННЫЙ ЦЕНТР АКМОЛИНСКОЙ ОБЛАСТИ |</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
     <link rel="stylesheet" href="../css/normalize.css">
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.css" media="all">
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/7.x-3.x/drupal-bootstrap.css" media="all">
@@ -49,7 +50,7 @@
                                     <li class="menu_item leaf"><a href="../tmp/stay.html" title="" class="menu_item_link">Орналасу</a></li>
                                     <li class="menu_item leaf"><a href="../tmp/restaraunt.html" title="" class="menu_item_link">Тамақтану
                                         </a></li>
-                                    <li class="menu_item menu_item leaf"><a href="../tmp/where.html" title="" class="menu_item_link">Қайда баруға болады</a></li>
+                                    <li class="menu_item menu_item leaf active_link"><a href="../tmp/where.html" title="" class="menu_item_link">Қайда баруға болады</a></li>
                                     <li class="menu_item leaf"><a href="../tmp/event.html" title="" class="menu_item_link">Іс шаралар</a></li>
                                     <li class="menu_item leaf"><a href="../tmp/tourist.html" title="" class="menu_item_link">Туристке</a></li>
                                     <li class="menu_item last expanded dropdown"><a href="http://example.com/" title="" class="dropdown-toggle" data-toggle="dropdown">Тағы
@@ -110,8 +111,7 @@
                                 </section>
                             </div>
                             <div class="col-md-3 pamyat_t">
-                                <p>КУДА СХОДИТЬ<br>
-                                    Проведите время с пользой и удовольствием!</p>
+                                <p>Проведите время с пользой и удовольствием!</p>
                             </div>
 
                             <div class="col-md-9">
@@ -140,7 +140,7 @@
                         <h1 class="page-header">Мероприятия</h1>
                         <div class="region region-content">
                             <section id="block-system-main" class="block block-system clearfix">
-                                <div class="view view-events view-id-events view-display-id-page_1 view-dom-id-d01f5e2ed505510a58c57788cfb56799 jquery-once-1-processed">
+                                <div class="view view-events view-id-events view-display-id-page_1 view-dom-id-d01f5e2ed505510a58c57788cfb56799 jquery-once-1-processed pag_page">
 
                                     <div class="view-content content wtg_list">
 <!--                                        <div class="views-row views-row-1 views-row-odd views-row-first content_item">-->
@@ -249,7 +249,6 @@
 <!--                                                </span> </div>-->
 <!--                                        </div>-->
 <!--                                        <div class="views-row views-row-8 views-row-even views-row-last content_item">-->
-
 <!--                                            <div class="views-field views-field-nothing"> <span class="field-content">-->
 <!--                                                    <div class="event_page_b">-->
 <!--                                                       <a href="https://www.visitaqmola.kz/ru/where-to-go/fitnes-klub-kapital">-->
@@ -259,16 +258,24 @@
 <!--                                                        </div>-->
 <!--                                                        </a>-->
 <!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+                                        </div>
 
+                                    <nav aria-label="Page navigation example pagination_nav">
+                                        <div class="pagination_area">
+                                            <div class="page_prev disabled">
+                                                <a class="page-link page_link_prev" href="" tabindex="-1">Пред.</a>
+                                            </div>
+                                            <ul class="pagination justify-content-center">
+                                            </ul>
+                                            <div class="page_next">
+                                                <a class="page-link page_link_next more_card_event" href="">След.</a>
+                                            </div>
+                                        </div>
+                                    </nav>
 
-<!--                                                </span> </div>-->
-<!--                                        </div>-->
                                     </div>
-
-                                    <ul class="pager pager--infinite-scroll ">
-                                        <li class="pager__item">
-                                            <a href="" class="more_card more_card_wtg">показать еще</a> </li>
-                                    </ul>
 
                                 </div>
                             </section>
@@ -277,6 +284,7 @@
                 </div>
             </div>
         </div>
+
         <footer class="footer">
             <div class="container">
                 <div class="region region-footer">
@@ -332,13 +340,14 @@
     </div>
     <script src="../js/script.js"> </script>
     <script>
-        var cardArea = new CardArea('basket');
-        cardArea.render($('.view-content'));
-        var moreBtn = $(".more_card_wtg");
-        moreBtn.on("click", function(e){
-            e.preventDefault();
-            cardArea.add(this.classList[1])
-        });
+        $(document).ready(function () {
+            var cardArea = new CardArea('basket');
+            cardArea.render($('.view-content'));
+            $(".pagination_area").on("click", function (e) {
+                e.preventDefault();
+                cardArea.add("wtg", e.target.classList.value, e.target.innerText);
+            })
+        })
     </script>
 </body>
 </html>
