@@ -251,7 +251,6 @@
             "link": "#"
         }
     ],
-
     "event": [
         {
             "id": "1",
@@ -620,6 +619,152 @@
             "place": "Курорт Бурабай",
             "photo": "../img/Jarko-kross_1.jpg",
             "link": "../tmp/grandHotel.html"
+        }
+    ],
+    "foto": [
+        {
+            "id": "1",
+            "path": "../img/burabay.jpg"
+        },
+        {
+            "id": "2",
+            "path": "../img/burabay_0.jpg"
+        },
+        {
+            "id": "3",
+            "path": "../img/home.png"
+        },
+        {
+            "id": "4",
+            "path": "../img/burabay.jpg"
+        },
+        {
+            "id": "5",
+            "path": "../img/063_2476-min.jpg"
+        },
+        {
+            "id": "6",
+            "path": "../img/58970496-cd6b-4b64-8e76-5fba90fa8411.jpg"
+        },
+        {
+            "id": "7",
+            "path": "../img/040581291.jpg"
+        },
+        {
+            "id": "8",
+            "path": "../img/de6e8e5e-fca4-4c48-9672-86a4aa2d1c3d.jpg"
+        },
+        {
+            "id": "9",
+            "path": "../img/e89f4ac1bd143df0c2e00eb6ae219c71.jpg"
+        },
+        {
+            "id": "10",
+            "path": "../img/event_championship_snowboarding.png"
+        },
+        {
+            "id": "11",
+            "path": "../img/event_qansonar.png"
+        },
+        {
+            "id": "12",
+            "path": "../img/event_sakskie_bani.png"
+        },
+        {
+            "id": "13",
+            "path": "../img/event_rock_climbing_championship_juniors.png"
+        },
+        {
+            "id": "14",
+            "path": "../img/events_halfmarathon.png"
+        },
+        {
+            "id": "15",
+            "path": "../img/F8A38A5C-7898-483A-A213-C3F16E7BC4C3.jpg"
+        },
+        {
+            "id": "16",
+            "path": "../img/gefyQBwjVCQ.jpg"
+        },
+        {
+            "id": "17",
+            "path": "../img/JaRKO-KROSS.jpg"
+        },
+        {
+            "id": "18",
+            "path": "../img/mvsl0206.jpg"
+        },
+        {
+            "id": "19",
+            "path": "../img/Parusnaja-regata.jpg"
+        },
+        {
+            "id": "20",
+            "path": "../img/photo5379865748979165773.jpg"
+        },
+        {
+            "id": "21",
+            "path": "../img/photo_251805.jpg"
+        },
+        {
+            "id": "22",
+            "path": "../img/regata.jpg"
+        },
+        {
+            "id": "23",
+            "path": "../img/tourist_burabay.png"
+        },
+        {
+            "id": "24",
+            "path": "../img/tours_burabay_pearl_of_kazakhstan.png"
+        },
+        {
+            "id": "25",
+            "path": "../img/tours_the_magical_world_of_burabay.png"
+        },
+        {
+            "id": "26",
+            "path": "../img/vid.jpg"
+        },
+        {
+            "id": "27",
+            "path": "../img/visitaqmola_wheretogo_attractions_complex_mausoleum_edygebi_tolebayuly.png"
+        },
+        {
+            "id": "28",
+            "path": "../img/visitaqmola_wheretogo_attractions_erejmentau_mountains.png"
+        },
+        {
+            "id": "29",
+            "path": "../img/visitaqmola_wheretogo_attractions_mausoleum_kanykey.png"
+        },
+        {
+            "id": "30",
+            "path": "../img/visitaqmola_wheretogo_attractions_mountain_aydahar_ugiri.png"
+        },
+        {
+            "id": "31",
+            "path": "../img/visitaqmola_wheretogo_attractions_polyana_abylay_khan.png"
+        },
+        {
+            "id": "32",
+            "path": "../img/visitaqmola_wheretogo_attractions_save_kenesary_khan.png"
+        },
+        {
+            "id": "33",
+            "path": "../img/visitaqmola_wheretogo_kokshetau_monuments_shokan_valikhanov.png"
+        },
+        {
+            "id": "34",
+            "path": "../img/whatsapp-image-2019-09-16-at-09.16.18_0.jpeg"
+        },
+        {
+            "id": "35",
+            "path": "../img/wheretogo_botay_culture5.png"
+        },
+        {
+            "id": "36",
+            "path": "../img/wheretogo_burabay__ethnoaul_zhailau2.png"
         }
     ]
 }

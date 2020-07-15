@@ -23,10 +23,14 @@
     <script src="../libs/slick.js"></script>
     <script src="https://kit.fontawesome.com/003b636a5f.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.js"></script>
+    <script src="../js/Container.js"></script>
+    <script src="../js/Foto.js"></script>
+    <script src="../js/FotoArea.js"></script>
+
 </head>
 
 
-<body class="html not-front not-logged-in no-sidebars page-foto i18n-kk">
+<body class="html not-front not-logged-in no-sidebars page-foto foto i18n-kk">
 <div class="wrapper">
     <div class="site_content">
         <div class="home block_area" id="home">
@@ -122,7 +126,6 @@
         <div class="main-container container">
 
             <header role="banner" id="page-header">
-
                 <div class="region region-header">
                     <section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
                         <div itemscope="" class="easy-breadcrumb">
@@ -136,40 +139,41 @@
             </header>
 
             <div class="row">
-                <section class="col-sm-12">
+                <section class="col-sm-12 pag_page">
                     <h1 class="page-header">Фото</h1>
                     <div class="foto_content">
                         <div class="foto_slider_wrap">
                             <div class="foto_slider">
-                                <div class="foto_slider_item">
-                                    <img src="../img/burabay.jpg" alt="">
-                                </div>
-                                <div class="foto_slider_item">
-                                    <img src="../img/burabay_0.jpg" alt="">
-                                </div>
-                                <div class="foto_slider_item">
-                                    <img src="../img/home.png" alt="">
-                                </div>
-                                <div class="foto_slider_item">
-                                    <img src="../img/seven_fon.png" alt="">
-                                </div>
+<!--                                <div class="foto_slider_item">-->
+<!--                                    <img src="../img/burabay.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="foto_slider_item">-->
+<!--                                    <img src="../img/burabay_0.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="foto_slider_item">-->
+<!--                                    <img src="../img/home.png" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="foto_slider_item">-->
+<!--                                    <img src="../img/home.png" alt="">-->
+<!--                                </div>-->
                             </div>
                         </div>
                         <div class="foto_list">
-                            <div class="foto_list_item">
-                                <img src="../img/burabay.jpg" class="minimized" alt="">
-                            </div>
-                            <div class="foto_list_item">
-                                <img src="../img/burabay_0.jpg"  class="minimized" alt="">
-                            </div>
-                            <div class="foto_list_item">
-                                <img src="../img/home.png" class="minimized" alt="">
-                            </div>
-                            <div class="foto_list_item">
-                                <img src="../img/seven_fon.png" class="minimized" alt="">
-                            </div>
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/burabay.jpg" class="minimized" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/burabay_0.jpg"  class="minimized" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/home.png" class="minimized" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="foto_list_item">-->
+<!--                                <img src="../img/seven_fon.png" class="minimized" alt="">-->
+<!--                            </div>-->
                         </div>
                     </div>
+
                     <nav aria-label="Page navigation example pagination_nav">
                         <div class="pagination_area">
                             <div class="page_prev disabled">
@@ -182,6 +186,7 @@
                             </div>
                         </div>
                     </nav>
+
                 </section>
             </div>
         </div>
@@ -243,54 +248,17 @@
 <script src="../js/script.js"></script>
 <script>
     $(document).ready(function () {
-        $('.foto_slider').slick({
-            arrows: true,
-            dots: true,
-            slidesToShow: 3,
-            //autoplay: true,
-            speed: 1000,
-            autoplaySpeed: 800,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 550,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    });
-</script>
-<script>
-    $(function(){
-        $('.minimized').click(function(event) {
-            var i_path = $(this).attr('src');
-            $('body').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
-            $('#magnify').css({
-                left: ($(document).width() - $('#magnify').outerWidth())/2,
-                // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
-                top: ($(window).height() - $('#magnify').outerHeight())/2
-            });
-            $('#overlay, #magnify').fadeIn('fast');
-            $('body').addClass("pop_overflow");
-        });
+        var fotoArea = new FotoArea();
+        fotoArea.render($('.foto_list'));
 
-        $('body').on('click', '#close-popup, #overlay', function(event) {
-            event.preventDefault();
+        $(".pagination_area").on("click", function (e) {
+            e.preventDefault();
+            fotoArea.addFoto(e.target.classList.value, e.target.innerText);
+        })
+    })
 
-            $('#overlay, #magnify').fadeOut('fast', function() {
-                $('#close-popup, #magnify, #overlay').remove();
-            });
-            $('body').removeClass("pop_overflow");
+    $(".page_link_prev").on("click", function(e){ console.log(e.target.classList.value) })
 
-        });
-    });
 </script>
 </body>
 </html>

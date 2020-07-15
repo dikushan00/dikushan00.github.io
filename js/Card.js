@@ -9,14 +9,6 @@ function Card(str_type, id, title, photo, link, price, type, stars, review) {
     this.type = type;
     this.stars = stars;
     this.review = review;
-
-    // if(this.type == undefined){
-    //     this.type = '';
-    // } else if(this.review == undefined){
-    //     this.review = 0;
-    // } else if(this.stars == undefined){
-    //     this.type = 0;
-    // }
 }
 
 Card.prototype = Object.create(Container.prototype);

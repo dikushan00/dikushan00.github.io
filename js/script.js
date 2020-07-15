@@ -116,3 +116,7 @@ $(document).on("click", function () {
 })
 
 $(".section_footer").css("height", window.screen.availHeight - 65);
+
+if($(".page_next").attr("class").includes("disabled")){
+    $(".page_next").css("cursor", "pointer")
+}

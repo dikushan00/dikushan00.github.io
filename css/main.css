@@ -511,6 +511,7 @@ a:hover {
 
 .foto_list_item{
     width: 265px;
+    margin-top: 10px;
 }
 
 .foto_list_item img{
@@ -554,7 +555,7 @@ a:hover {
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.1;
     z-index: 9990;
 }
 
@@ -721,7 +722,7 @@ a:hover {
 }
 
 .pagination_area {
-    width: 300px;
+    width: 315px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -729,6 +730,7 @@ a:hover {
 }
 
 .disabled a{
+    cursor: default;
     color: #ccc !important;
 }
 
