@@ -2371,6 +2371,14 @@ div.geofield-ymap {
     .rekomen p {
         left: 5px;
     }
+
+    .wts.zg_block a{
+        font-size: 22px;
+    }
+
+    .zg_block p{
+        margin-top: 10px;
+    }
 }
 
 @media (max-width:991px) {
@@ -2415,6 +2423,7 @@ div.geofield-ymap {
 
     .cena_hotel {
         padding-left: 0;
+        border: 0;
     }
 
     #block-views-marshrutru-block-1 .views-row a {
@@ -2480,7 +2489,9 @@ div.geofield-ymap {
         left: 10px;
     }
 
-
+    .content{
+        justify-content: space-around;
+    }
 
 }
 
@@ -2631,7 +2642,7 @@ div.geofield-ymap {
     }
 
     .blo_imghei img {
-        width: 100%
+        width: 100% !important;
     }
 
     .zg_block {
@@ -2683,7 +2694,8 @@ div.geofield-ymap {
 
     .page-where-to-stay .views-row,
     .view-gdepozhrat .views-row {
-        max-width: 60%
+        max-width: 60%;
+        margin: 15px auto;
     }
 
     .dr_content_item {
@@ -3038,7 +3050,8 @@ div.geofield-ymap {
     }
 
     .blo_imghei {
-        height: 150px;
+        height: 190px;
+        width: 100%;
     }
     
     .input-group{
