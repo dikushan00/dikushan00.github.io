@@ -41,7 +41,8 @@ FotoArea.prototype.renderPhotoSlider = (path) => {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 2
-                    }
+                    },
+                    dots: false
                 },
                 {
                     breakpoint: 550,

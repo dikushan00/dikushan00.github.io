@@ -2959,6 +2959,14 @@ div.geofield-ymap {
         height: 380px;
     }
 
+    #magnify img {
+        height: 300px;
+    }
+
+    .slick-dots{
+        display: none !important;
+    }
+
 }
 
 @media (max-width:576px) {
