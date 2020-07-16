@@ -912,7 +912,8 @@ nav .navbar-nav > li > a {
 }
 
 .frontvzagol {
-    font-size: 44px
+    font-size: 44px;
+    text-shadow: 0px 0px 5px #000;
 }
 
 .front_home h1 {
@@ -963,7 +964,7 @@ nav .navbar-nav > li > a {
     -webkit-transform: rotate(-10deg);
     -ms-transform: rotate(-10deg);
     transform: rotate(-10deg);
-    margin-left: -100px;
+    margin-left: -62px;
     z-index: 9;
     position: relative
 }
@@ -1635,6 +1636,7 @@ nav .navbar-nav > li > a {
     padding: 15px 30px;
     border: 2px solid #0a99d8;
     color: #fff;
+    background-color: rgba(0, 0, 0, .2);
     margin-top: 15px;
     -webkit-transition: .3s all;
     -o-transition: .3s all;
@@ -3056,6 +3058,14 @@ div.geofield-ymap {
     
     .input-group{
         margin-left: 0;
+    }
+
+    .content_item{
+        width: 350px;
+    }
+
+    .event_img{
+        height: 220px;
     }
 }
 
