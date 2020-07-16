@@ -88,7 +88,9 @@ for(let key of desc){
 let title = $(".news_title");
 
 for(let key of title){
-    if(key.textContent.length > 75){
+    let word = key.textContent;
+    word = word.replace(/ +/g, ' ').trim();
+    if(word.length > 75){
         key.textContent = key.textContent.slice(0, 75) + "...";
     }
 }
@@ -100,7 +102,6 @@ for(let key of news_desc){
         key.textContent = key.textContent.slice(0, 290) + "...";
     }
 }
-
 
 
 $(document).on("click", function () {

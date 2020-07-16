@@ -3010,6 +3010,11 @@ div.geofield-ymap {
         right: 20px;
     }
 
+    .slider{
+        height: 380px;
+    }
+
+
     .blubut {
         padding: 14px 10px;
     }
@@ -3067,6 +3072,12 @@ div.geofield-ymap {
     .event_img{
         height: 220px;
     }
+
+    .news_header_title,
+    .news_title_main{
+        font-size: 23px;
+    }
+
 }
 
 #autocomplete {
