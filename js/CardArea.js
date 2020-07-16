@@ -344,3 +344,4 @@ CardArea.prototype.add = function (type, btn_type, num_type) {
     }
 
 };
+
