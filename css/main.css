@@ -150,12 +150,12 @@ body .html {
     align-items: center;
     justify-content: center;
     transition: .6s all;
-/ / background-color: rgba(0, 0, 0, .3);
+    / / background-color: rgba(0, 0, 0, .3);
 }
 
 .swipe_dots_wrap:hover {
     opacity: 1;
-/ / box-shadow: - 20 px 0 38 px 1 px #000;
+    / / box-shadow: - 20 px 0 38 px 1 px #000;
 }
 
 .swipe_dots {
@@ -179,7 +179,7 @@ body .html {
     -o-transition: .3s all;
     transition: .3s all;
     border-radius: 10px;
-/ / background-color: rgba(0, 0, 0, .35);
+    / / background-color: rgba(0, 0, 0, .35);
 }
 
 .swipe_dots:hover {
@@ -191,7 +191,7 @@ body .html {
 
 .dot {
     display: block;
-/ / color: #ffaf00;
+    / / color: #ffaf00;
     color: #337ab7;
     background-color: rgba(0, 0, 0, .35);
     height: 15px;
@@ -251,6 +251,7 @@ a {
     color: #fff !important;
     font-weight: 700 !important;
     transition: .4s all;
+    text-transform: uppercase;
 }
 
 .rekomen img {
@@ -258,6 +259,8 @@ a {
     text-align: center;
     filter: brightness(0.8);
     transition: .4s all;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .swipe_btn {
@@ -646,8 +649,8 @@ a {
 
 .slider img {
     display: block;
-    max-width: 100%;
-    height: 100%;
+    min-width: 100%;
+    height: 450px;
 }
 
 
@@ -800,13 +803,18 @@ a:hover {
     height: 60px;
     border: 0;
     opacity: .5;
+    outline: none;
     -webkit-transition: .4s all;
     -o-transition: .4s all;
     transition: .4s all
 }
 
-.slider.slick-arrow:hover {
+.slick-arrow:hover {
     opacity: .9
+}
+
+.slick-arrow:active {
+    outline: none
 }
 
 .slider.slick-arrow:focus,
@@ -868,7 +876,7 @@ a:hover {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #002e5b;
     border: none;
     outline: 0;
     opacity: .65;
@@ -880,7 +888,8 @@ a:hover {
 .slider .slick-dots li.slick-active button {
     background-color: #fff;
     opacity: 1;
-    border: none
+    border: none;
+    background-color: #ccc;
 }
 
 .slider.slick-slide img {
@@ -947,6 +956,10 @@ a:hover {
     font-size: 0;
     width: 30px;
     height: 60px;
+}
+
+.foto_slider.slick-arrow:hover {
+    opacity: 1 !important;
 }
 
 .foto_slider .slick-arrow.slick-prev {
@@ -1409,7 +1422,7 @@ nav .navbar-nav > li > a {
     padding: 0
 }
 
-.more_ways_btn{
+.more_ways_btn {
     transform: rotate(90deg);
     width: 25px;
     position: absolute;
@@ -1418,9 +1431,7 @@ nav .navbar-nav > li > a {
     cursor: pointer;
 }
 
-.more_ways_btn:hover {
-
-}
+.more_ways_btn:hover {}
 
 .frontvzagol {
     font-size: 44px;
@@ -1588,6 +1599,38 @@ nav .navbar-nav > li > a {
 .tours-maincontent {
     margin-top: 40px;
 }
+
+.top_object_item{
+    margin-top: 30px;
+}
+
+.top_object_item.even>div{
+    flex-direction: row-reverse;
+}
+
+.top_object_item>div{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top_object_img{
+    width: 100%;
+}
+
+.top_object_title {
+    font-weight: 500 !important;
+}
+
+.top_object_desc{
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.top_object_item p{
+    font-size: 16px;
+}
+
 
 .tours-maincontent_head {
     width: 100%;
@@ -2830,6 +2873,10 @@ div.geofield-ymap {
     color: #fff
 }
 
+.marsh_item_img{
+    height: 227px !important;
+}
+
 @media (max-width: 1350px) {
     .home {
         background-position: top
@@ -2995,10 +3042,15 @@ div.geofield-ymap {
     .rekomen p {
         bottom: 0;
         left: 10px;
+        font-size: 15px !important;
     }
 
     .content {
         justify-content: space-around;
+    }
+
+    .top_object_img{
+        margin-top: 20px;
     }
 
 }

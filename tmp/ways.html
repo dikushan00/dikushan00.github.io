@@ -14,7 +14,6 @@
     <link type="text/css" rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/7.x-3.x/drupal-bootstrap.css"
           media="all">
-
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../libs/slick.css">
@@ -326,9 +325,9 @@
                                         <div class="views-field views-field-title"><span class="field-content"><a
                                                 href="../tmp/lechebnye_gyazi_kz.html">«Лечебные грязи»</a></span></div>
                                     </div>
-                                    <span class="more_ways_span"><img src="../libs/next.svg" class="more_ways_btn"
-                                                                     style="transform: rotate(90deg); width: 25px; position: absolute; left: 50%; margin-left: -13px; cursor: pointer;"
-                                                                     alt="PHOTO"></span>
+                                    <span class="more_ways_span">
+                                        <img src="../libs/next.svg" class="more_ways_btn" style="transform: rotate(90deg); width: 25px; position: absolute; left: 50%; margin-left: -13px; cursor: pointer;" alt="PHOTO">
+                                    </span>
                                 </div>
                             </div>
                         </section>
@@ -345,19 +344,15 @@
                                      about="/ru/tours/volshebnyy-mir-burabaya" typeof="sioc:Item foaf:Document">
                                 <header>
                                     <span property="dc:title" content="Волшебный мир Бурабая"
-                                          class="rdf-meta element-hidden"></span><span property="sioc:num_replies"
-                                                                                       content="0"
-                                                                                       datatype="xsd:integer"
-                                                                                       class="rdf-meta element-hidden"></span>
+                                          class="rdf-meta element-hidden"></span>
+                                    <span property="sioc:num_replies"content="0" datatype="xsd:integer" class="rdf-meta element-hidden">
+
+                                    </span>
                                 </header>
                                 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
                                     <div class="field-items">
                                         <div class="field-item even" property="content:encoded">
-
-
                                             <div class="view view-marshrutru view-id-marshrutru view-display-id-page_1 view-dom-id-e08f0e1d2147d1d764ce3e5e6fba056a">
-
-
                                                 <div class="view-content marsh_item">
                                                     <div class="views-row views-row-1 views-row-odd views-row-first marsh_item">
 
@@ -365,7 +360,7 @@
                                                                 class="field-content">
                                                                     <div class="akmo"><a
                                                                             href="../tmp/lechebnye_gyazi_kz.html"><img
-                                                                            typeof="foaf:Image" class="img-responsive"
+                                                                            typeof="foaf:Image" class="img-responsive marsh_item_img"
                                                                             src="../img/gryaz.jpg" width="416"
                                                                             height="227" alt=""><p class="event_title">«Лечебные грязи»</p></a></div>
                                                                 </span></div>
@@ -376,7 +371,7 @@
                                                                 class="field-content">
                                                                     <div class="akmo"><a
                                                                             href="https://www.visitaqmola.kz/ru/tours/v-glub-istorii"><img
-                                                                            typeof="foaf:Image" class="img-responsive"
+                                                                            typeof="foaf:Image" class="img-responsive marsh_item_img"
                                                                             src="../img/history.jpg" width="416"
                                                                             height="227" alt=""><p class="event_title">«В глубь истории»</p></a></div>
                                                                 </span>
@@ -388,7 +383,7 @@
                                                                 class="field-content">
                                                                     <div class="akmo"><a
                                                                             href="https://www.visitaqmola.kz/ru/tours/v-gosti-k-prirode-ot-burabay-damy"><img
-                                                                            typeof="foaf:Image" class="img-responsive"
+                                                                            typeof="foaf:Image" class="img-responsive marsh_item_img"
                                                                             src="../img/e89f4ac1bd143df0c2e00eb6ae219c71.jpg"
                                                                             width="416" height="227" alt=""><p
                                                                             class="event_title">В гости к природе от Burabay Damy</p></a>
@@ -420,8 +415,6 @@
                         </section>
                     </div>
                 </section>
-
-
             </div>
         </div>
     </div>
@@ -496,8 +489,13 @@
     }
 
     $(".more_ways_btn").on("click", () => {
+        $(".more_ways_btn").css("display", "none")
         let i = 18;
         let view = $(".views-row");
+
+        if(view.length > 18)
+            $(".more_ways_btn").css("display", "block")
+
         for (let key of view) {
             if (key.className.includes(i.toString())) {
                 key.style.cssText = "display: block";

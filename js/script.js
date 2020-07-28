@@ -44,7 +44,8 @@ $(document).on('scroll', function () {
 $(document).ready(function() {
             $('.slider').slick({
                 arrows: true,
-                dots: true,         autoplay: true,
+                dots: true,
+                //autoplay: true,
                 speed: 1000,
                 autoplaySpeed: 2000,
                 responsive: [{
@@ -103,7 +104,6 @@ for(let key of news_desc){
     }
 }
 
-
 $(document).on("click", function () {
     if($(".navbar-collapse").attr("class").includes("in")){
         $(".swipe_dots").animate({
@@ -120,16 +120,4 @@ $(".section_footer").css("height", window.screen.availHeight - 65);
 
 if($(".page_next").attr("class").includes("disabled")){
     $(".page_next").css("cursor", "pointer")
-}
-console.log("hahha")
-
-
-
-try{
-    function f() {
-        console.log("hahha")
-    }
-
-}catch (e) {
-    throw e
 }
