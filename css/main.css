@@ -3057,6 +3057,10 @@ div.geofield-ymap {
 
 @media (max-width: 767px) {
 
+    .rekomen img {
+        max-height: 100%;
+    }
+
     .container {
         width: 100%
     }
