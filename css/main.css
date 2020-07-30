@@ -1600,21 +1600,25 @@ nav .navbar-nav > li > a {
     margin-top: 40px;
 }
 
-.top_object_item{
+.top_object_item {
     margin-top: 30px;
 }
 
-.top_object_item.even>div{
+.top_object_item:first-child {
+    margin-top: 0;
+}
+
+.top_object_item.even > div {
     flex-direction: row-reverse;
 }
 
-.top_object_item>div{
+.top_object_item > div {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.top_object_img{
+.top_object_img {
     width: 100%;
 }
 
@@ -1622,12 +1626,12 @@ nav .navbar-nav > li > a {
     font-weight: 500 !important;
 }
 
-.top_object_desc{
+.top_object_desc {
     font-size: 16px;
     padding: 0 10px;
 }
 
-.top_object_item p{
+.top_object_item p {
     font-size: 16px;
 }
 
@@ -2873,7 +2877,7 @@ div.geofield-ymap {
     color: #fff
 }
 
-.marsh_item_img{
+.marsh_item_img {
     height: 227px !important;
 }
 
@@ -3049,7 +3053,7 @@ div.geofield-ymap {
         justify-content: space-around;
     }
 
-    .top_object_img{
+    .top_object_img {
         margin-top: 20px;
     }
 
