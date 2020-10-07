@@ -33,7 +33,7 @@ FotoArea.prototype.renderPhotoSlider = (path) => {
             arrows: true,
             dots: true,
             slidesToShow: 3,
-            //autoplay: true,
+            autoplay: true,
             speed: 1000,
             autoplaySpeed: 800,
             responsive: [

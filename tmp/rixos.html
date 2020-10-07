@@ -359,31 +359,28 @@
     <script>
             ymaps.ready(function() {
                 // Указывается идентификатор HTML-элемента.
-                var my_map = new ymaps.Map("first_map", {
-                        center: [52.97424000774699,70.24207694222851],
-                        zoom: 16
+                var my_map = new ymaps.Map("first_map", {  // id элемента/div
+                        center: [52.97424000774699,70.24207694222851], // координаты
+                        zoom: 16 // зум - для маленьких карт(отели, кафе и тд)
                     }, {
                         searchControlProvider: 'yandex#search'
                     }),
                     myGeoObject = new ymaps.GeoObject({}, {
                         // Опции.
                         // Иконка метки будет растягиваться под размер ее содержимого.
-                        preset: 'islands#blackStretchyIcon',
-                        // Метку можно перемещать.
-                        draggable: true
+                        preset: 'islands#blackStretchyIcon'
                     }),
                     myPieChart = new ymaps.Placemark([]);
 
                 my_map.geoObjects
                     .add(myGeoObject)
                     .add(myPieChart)
-                    .add(new ymaps.Placemark([52.97424000774699,70.24207694222851], {
+                    .add(new ymaps.Placemark([52.97424000774699,70.24207694222851], { // координаты
                         balloonContent: '<strong>Rixos Borovoe</strong>'
                     }, {
                         preset: 'islands#dotIcon',
                         iconColor: '#735184'
                     }));
-
             });
 
     </script>
