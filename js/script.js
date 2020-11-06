@@ -1,5 +1,35 @@
 'use strict'
 
+ymaps.ready(function () {
+    var my_map = new ymaps.Map("index_map", {
+            center: [51.898729, 69.806227],
+            zoom: 6
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [51.898729, 69.806227]
+            },
+        }, {
+            preset: 'islands#blackStretchyIcon',
+            draggable: true,
+            iconColor: '#735184'
+        });
+
+    my_map.geoObjects
+        .add(myGeoObject)
+        .add(new ymaps.Placemark([51.898729, 69.806227], {
+            balloonContent: '<strong>Акмолинская область</strong>'
+        }, {
+            preset: 'islands#dotIcon',
+            iconColor: '#735184'
+        }));
+
+});
+
 $('.main_btn').on("click", function (e) {
     e.preventDefault();
 });
@@ -28,7 +58,7 @@ $(document).on('scroll', function () {
                 $(this).removeClass("active_dots");
             });
             $(dots).addClass("active_dots");
-            
+
             $('a[href*="#"]').on('click', function (e) {
                 var dots = $(this).attr('href') + "_dots";
 
@@ -41,28 +71,24 @@ $(document).on('scroll', function () {
     })
 });
 
-$(document).ready(function() {
-            $('.slider').slick({
-                arrows: true,
-                dots: true,
-                //autoplay: true,
-                speed: 1000,
-                autoplaySpeed: 2000,
-                responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    },
-                    {
-                        breakpoint: 550,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
-        });
+$(document).ready(function () {
+    $('.slider').slick({
+        arrows: true,
+        dots: true,
+        autoplay: true,
+        speed: 1000,
+        slidesToShow: 1,
+        autoplaySpeed: 2000,
+        draggable: true
+        // responsive: [{
+        //         breakpoint: 768,
+        //         settings: {
+        //             draggable: true
+        //         }
+        //     }
+        // ]
+    });
+});
 
 
 var form_toggle_btn = $(".form_toggle_btn");
@@ -72,44 +98,42 @@ form_toggle_btn.on("click", () => {
 
 let arr = $(".event_zagol p");
 
-for(let key of arr){
-    if(key.textContent.length > 40){
+for (let key of arr) {
+    if (key.textContent.length > 40) {
         key.textContent = key.textContent.slice(0, 40) + "...";
     }
 }
 
 let desc = $(".search_item_desc");
 
-for(let key of desc){
-    if(key.textContent.length > 300){
+for (let key of desc) {
+    if (key.textContent.length > 300) {
         key.textContent = key.textContent.slice(0, 300) + "...";
     }
 }
 
 let title = $(".news_title");
 
-for(let key of title){
-    let word = key.textContent;
-    word = word.replace(/ +/g, ' ').trim();
-    if(word.length > 75){
+for (let key of title) {
+    if (key.textContent.length > 75) {
         key.textContent = key.textContent.slice(0, 75) + "...";
     }
 }
 
 let news_desc = $(".news_text_desc");
 
-for(let key of news_desc){
-    if(key.textContent.length > 290){
+for (let key of news_desc) {
+    if (key.textContent.length > 290) {
         key.textContent = key.textContent.slice(0, 290) + "...";
     }
 }
 
 $(document).on("click", function () {
-    if($(".navbar-collapse").attr("class").includes("in")){
+    if ($(".navbar-collapse").attr("class").includes("in")) {
         $(".swipe_dots").animate({
             "opacity": "0"
         }, 500)
-    }else{
+    } else {
         $(".swipe_dots").animate({
             "opacity": ".35"
         }, 500)
@@ -118,56 +142,39 @@ $(document).on("click", function () {
 
 $(".section_footer").css("height", window.screen.availHeight - 65);
 
-if($(".page_next").attr("class").includes("disabled")){
-    $(".page_next").css("cursor", "pointer")
+$(document).ready(function () {
+
+    let i = 18;
+    let view = $(".views-row");
+    for (let key of view) {
+        if (key.className.includes(i.toString())) {
+            key.style.cssText = "display: none";
+            i++;
+        }
+    }
+
+    $(".more_ways_btn").on("click", () => {
+        let i = 18;
+        let view = $(".views-row");
+        for (let key of view) {
+            if (key.className.includes(i.toString())) {
+                key.style.cssText = "display: block";
+                i++;
+            }
+        }
+        $(".more_ways_btn").css("display", "none")
+    })
+})
+
+let cena = $(".cena_hotel span")
+
+for (let key of cena) {
+    if (key.innerText.length > 5) {
+        $(".cena_hotel span").css("font-size", "36px")
+    }
 }
 
-$(document).ready(function () {
-    $('.foto_slider').slick({
-        arrows: true,
-        dots: true,
-        slidesToShow: 3,
-        autoplay: true,
-        speed: 1000,
-        autoplaySpeed: 800,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2
-                },
-                dots: false
-            },
-            {
-                breakpoint: 550,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-});
 
-$(function(){
-    $('.minimized').click(function(event) {
-        var i_path = $(this).attr('src');
-        $('body').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
-        $('#magnify').css({
-            left: ($(document).width() - $('#magnify').outerWidth())/2,
-            // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
-            top: ($(window).height() - $('#magnify').outerHeight())/2
-        });
-        $('#overlay, #magnify').fadeIn('fast');
-        $('body').addClass("pop_overflow");
-    });
-
-    $('body').on('click', '#close-popup, #overlay', function(event) {
-        event.preventDefault();
-
-        $('#overlay, #magnify').fadeOut('fast', function() {
-            $('#close-popup, #magnify, #overlay').remove();
-        });
-        $('body').removeClass("pop_overflow");
-
-    });
-});
+if ($(".page_next").attr("class").includes("disabled")) {
+    $(".page_next").css("cursor", "pointer")
+}

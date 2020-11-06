@@ -1,71 +1,71 @@
 @font-face {
     font-family: 'MetaPro';
-    src: url('../fonts/MetaPro-Black.eot');
-    src: local('☺'), url('../fonts/MetaPro-Black.woff') format('woff'), url('../fonts/MetaPro-Black.ttf') format('truetype'), url('../fonts/MetaPro-Black.svg') format('svg');
+    src: url('./fonts/MetaPro-Black.eot');
+    src: local('☺'), url('./fonts/MetaPro-Black.woff') format('woff'), url('./fonts/MetaPro-Black.ttf') format('truetype'), url('./fonts/MetaPro-Black.svg') format('svg');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MetaPro';
-    src: url('../fonts/MetaPro-Bold.eot');
-    src: local('☺'), url('../fonts/MetaPro-Bold.woff') format('woff'), url('../fonts/MetaPro-Bold.ttf') format('truetype'), url('../fonts/MetaPro-Bold.svg') format('svg');
+    src: url('./fonts/MetaPro-Bold.eot');
+    src: local('☺'), url('./fonts/MetaPro-Bold.woff') format('woff'), url('./fonts/MetaPro-Bold.ttf') format('truetype'), url('./fonts/MetaPro-Bold.svg') format('svg');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MetaPro';
-    src: url('../fonts/MetaPro-Book.eot');
-    src: local('☺'), url('../fonts/MetaPro-Book.woff') format('woff'), url('../fonts/MetaPro-Book.ttf') format('truetype'), url('../fonts/MetaPro-Book.svg') format('svg');
+    src: url('./fonts/MetaPro-Book.eot');
+    src: local('☺'), url('./fonts/MetaPro-Book.woff') format('woff'), url('./fonts/MetaPro-Book.ttf') format('truetype'), url('./fonts/MetaPro-Book.svg') format('svg');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MetaProLight';
-    src: url('../fonts/MetaPro-Light.eot');
-    src: local('☺'), url('../fonts/MetaPro-Light.woff') format('woff'), url('../fonts/MetaPro-Light.ttf') format('truetype'), url('../fonts/MetaPro-Light.svg') format('svg');
+    src: url('./fonts/MetaPro-Light.eot');
+    src: local('☺'), url('./fonts/MetaPro-Light.woff') format('woff'), url('./fonts/MetaPro-Light.ttf') format('truetype'), url('./fonts/MetaPro-Light.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MetaPro';
-    src: url('../fonts/MetaPro-Medi.eot');
-    src: local('☺'), url('../fonts/MetaPro-Medi.woff') format('woff'), url('../fonts/MetaPro-Medi.ttf') format('truetype'), url('../fonts/MetaPro-Medi.svg') format('svg');
+    src: url('./fonts/MetaPro-Medi.eot');
+    src: local('☺'), url('./fonts/MetaPro-Medi.woff') format('woff'), url('./fonts/MetaPro-Medi.ttf') format('truetype'), url('./fonts/MetaPro-Medi.svg') format('svg');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Museo Cyrl';
-    src: url('../fonts/MuseoSansCyrl-100.eot');
-    src: local('☺'), url('../fonts/MuseoSansCyrl-100.woff') format('woff'), url('../fonts/MuseoSansCyrl-100.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-100.svg') format('svg');
+    src: url('./fonts/MuseoSansCyrl-100.eot');
+    src: local('☺'), url('./fonts/MuseoSansCyrl-100.woff') format('woff'), url('./fonts/MuseoSansCyrl-100.ttf') format('truetype'), url('./fonts/MuseoSansCyrl-100.svg') format('svg');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Museo Cyrl';
-    src: url('../fonts/MuseoSansCyrl-300.eot');
-    src: local('☺'), url('../fonts/MuseoSansCyrl-300.woff') format('woff'), url('../fonts/MuseoSansCyrl-300.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-300.svg') format('svg');
+    src: url('./fonts/MuseoSansCyrl-300.eot');
+    src: local('☺'), url('./fonts/MuseoSansCyrl-300.woff') format('woff'), url('./fonts/MuseoSansCyrl-300.ttf') format('truetype'), url('./fonts/MuseoSansCyrl-300.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Museo Cyrl';
-    src: url('../fonts/MuseoSansCyrl-500.eot');
-    src: local('☺'), url('../fonts/MuseoSansCyrl-500.woff') format('woff'), url('../fonts/MuseoSansCyrl-500.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-500.svg') format('svg');
+    src: url('./fonts/MuseoSansCyrl-500.eot');
+    src: local('☺'), url('./fonts/MuseoSansCyrl-500.woff') format('woff'), url('./fonts/MuseoSansCyrl-500.ttf') format('truetype'), url('./fonts/MuseoSansCyrl-500.svg') format('svg');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Museo Cyrl';
-    src: url('../fonts/MuseoSansCyrl-700.eot');
-    src: local('☺'), url('../fonts/MuseoSansCyrl-700.woff') format('woff'), url('../fonts/MuseoSansCyrl-700.ttf') format('truetype'), url('../fonts/MuseoSansCyrl-700.svg') format('svg');
+    src: url('./fonts/MuseoSansCyrl-700.eot');
+    src: local('☺'), url('./fonts/MuseoSansCyrl-700.woff') format('woff'), url('./fonts/MuseoSansCyrl-700.ttf') format('truetype'), url('./fonts/MuseoSansCyrl-700.svg') format('svg');
     font-weight: 700;
     font-style: normal;
 }
@@ -159,8 +159,6 @@ body .html {
 }
 
 .swipe_dots {
-    /*height: 400px;*/
-    border-radius: 3px;
     height: 60%;
     width: 60px;
     right: 0;
@@ -486,7 +484,8 @@ a {
 .navigation {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-right: 15px;
 }
 
 .navigation > div {
@@ -501,8 +500,7 @@ a {
 .news_title {
     font-weight: 700 !important;
     font-size: 18px;
-    padding: 10px 5px;
-    margin: 0;
+    margin: 0 0 15px 0;
 }
 
 .news_title_main {
@@ -515,11 +513,13 @@ a {
 }
 
 .news_date {
-    font-weight: 500;
+    margin-top: 10px;
+    font-weight: 500 !important;
 }
 
 .news_img {
     width: 100%;
+    max-height: 420px;
 }
 
 .news_page-header {
@@ -543,16 +543,20 @@ a {
 }
 
 .news_list_item {
-    width: 275px;
-    height: 297px;
+    width: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 15px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.card_text{
+    padding: 8px;
 }
 
 .news_list_img {
-    width: 270px;
+    width: 100%;
     height: 180px;
 }
 
@@ -649,8 +653,10 @@ a {
 
 .slider img {
     display: block;
+    max-width: 100%;
+    height: 100%;
     min-width: 100%;
-    height: 450px;
+    min-height: 509px;
 }
 
 
@@ -782,9 +788,9 @@ a:hover {
 .slider {
     width: 100%;
     position: relative;
-    padding: 0 60px;
     margin: 0 auto;
-    height: 455px;
+    height: 509px;
+    padding: 0 7px;
 }
 
 @media (max-width: 767px) {
@@ -803,7 +809,6 @@ a:hover {
     height: 60px;
     border: 0;
     opacity: .5;
-    outline: none;
     -webkit-transition: .4s all;
     -o-transition: .4s all;
     transition: .4s all
@@ -813,11 +818,7 @@ a:hover {
     opacity: .9
 }
 
-.slick-arrow:active {
-    outline: none
-}
-
-.slider.slick-arrow:focus,
+.slick-arrow:focus,
 .foto_slider .slick-arrow:focus {
     border: 0;
     outline: 0
@@ -831,13 +832,13 @@ a:hover {
 }
 
 .slider .slick-arrow.slick-prev {
-    left: 79px;
+    left: 45px;
     background: url(../libs/sl-arrow_l.svg) 0 0 no-repeat;
     background-size: contain;
 }
 
 .slider .slick-arrow.slick-next {
-    right: 79px;
+    right: 45px;
     background: url(../libs/sl-arrow_r.svg) 0 0 no-repeat;
     background-size: contain;
 }
@@ -849,7 +850,7 @@ a:hover {
 .slider .slick-dots {
     position: absolute;
     bottom: 20px;
-    width: 84%;
+    width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -886,7 +887,6 @@ a:hover {
 }
 
 .slider .slick-dots li.slick-active button {
-    background-color: #fff;
     opacity: 1;
     border: none;
     background-color: #ccc;
@@ -894,8 +894,21 @@ a:hover {
 
 .slider.slick-slide img {
     display: block;
-    max-width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 509px;
+    outline: none;
+}
+
+.slider.slick-slide img:focus,
+.slider.slick-slide img:active{
+    border: 0;
+    outline: none;
+}
+
+.slider:focus,
+.slider:active{
+    border: 0;
+    outline: none;
 }
 
 .slider_area {
@@ -956,6 +969,7 @@ a:hover {
     font-size: 0;
     width: 30px;
     height: 60px;
+    outline: none;
 }
 
 .foto_slider.slick-arrow:hover {
@@ -1008,7 +1022,7 @@ a:hover {
 }
 
 .foto_slider_item {
-    padding: 0px 15px;
+    padding: 0 15px;
 }
 
 .foto_slider_item img {
@@ -1117,6 +1131,41 @@ a:hover {
     margin-bottom: 20px;
 }
 
+.top_object_item {
+    margin-top: 30px;
+}
+
+.top_object_item:first-child {
+    margin-top: 0 !important;
+}
+
+.top_object_item.even > div {
+    flex-direction: row-reverse;
+}
+
+.top_object_item > div {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top_object_img {
+    width: 100%;
+}
+
+.top_object_title {
+    font-weight: 500 !important;
+}
+
+.top_object_desc {
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.top_object_item p {
+    font-size: 16px;
+}
+
 .tours_titles h5,
 .tours_titles h6 {
     font-size: 17px !important;
@@ -1170,10 +1219,19 @@ a:hover {
 .stars_list_item,
 .type_list_item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: relative;
     margin-top: 7px;
+}
+
+.filter_check {
+    width: 19px;
+    height: 19px;
+}
+
+input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
 }
 
 .star_check {
@@ -1233,7 +1291,6 @@ a:hover {
 }
 
 .pagination_area {
-    width: 315px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -1367,9 +1424,7 @@ nav .navbar-nav > li > a {
 
 .block-locale {
     float: none;
-    margin: 0;
-    margin-top: 18px;
-    margin-right: 10px;
+    margin: 22px 10px 0 0;
 }
 
 #block-locale-language {
@@ -1435,7 +1490,7 @@ nav .navbar-nav > li > a {
 
 .frontvzagol {
     font-size: 44px;
-    text-shadow: 0px 0px 2px #000;
+    text-shadow: 0 0px 2px #000;
 }
 
 .front_home h1 {
@@ -1600,42 +1655,6 @@ nav .navbar-nav > li > a {
     margin-top: 40px;
 }
 
-.top_object_item {
-    margin-top: 30px;
-}
-
-.top_object_item:first-child {
-    margin-top: 0;
-}
-
-.top_object_item.even > div {
-    flex-direction: row-reverse;
-}
-
-.top_object_item > div {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.top_object_img {
-    width: 100%;
-}
-
-.top_object_title {
-    font-weight: 500 !important;
-}
-
-.top_object_desc {
-    font-size: 16px;
-    padding: 0 10px;
-}
-
-.top_object_item p {
-    font-size: 16px;
-}
-
-
 .tours-maincontent_head {
     width: 100%;
     display: -webkit-box;
@@ -1692,6 +1711,14 @@ nav .navbar-nav > li > a {
     text-transform: uppercase;
     color: #000
 }
+
+.marsh_item_img {
+    height: 250px !important;
+}
+
+/*.marsh_item{*/
+/*    box-shadow: 0 0 14px #ccc;*/
+/*}*/
 
 .front_hotel {
     background: url(../img/four_fon.png) top center no-repeat;
@@ -1772,7 +1799,7 @@ nav .navbar-nav > li > a {
 }
 
 .easy-breadcrumb_black a {
-    color: #000
+    color: #000 !important;
 }
 
 #block-block-11 {
@@ -2018,6 +2045,7 @@ nav .navbar-nav > li > a {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -2501,6 +2529,11 @@ nav .navbar-nav > li > a {
     color: #fff
 }
 
+.where_type{
+    font-size: 12px;
+    margin-top: 11px;
+}
+
 .page-where-to-go .page-header {
     display: none
 }
@@ -2877,10 +2910,6 @@ div.geofield-ymap {
     color: #fff
 }
 
-.marsh_item_img {
-    height: 227px !important;
-}
-
 @media (max-width: 1350px) {
     .home {
         background-position: top
@@ -3027,15 +3056,14 @@ div.geofield-ymap {
         text-align: left
     }
 
-    /*.swipe_dots {*/
-    /*    top: 13%;*/
-    /*}*/
     .slider {
         padding: 0 !important;
     }
 
     .slick-slide img {
         max-width: 100%;
+        min-width: 660px;
+        min-height: 445px;
     }
 
     .slider .slick-dots {
@@ -3057,13 +3085,23 @@ div.geofield-ymap {
         margin-top: 20px;
     }
 
+    .footcontact_content{
+        width: 96%;
+    }
+
+    .footcontact_content p{
+        margin: 0 5px;
+    }
+
+    .aq_content_item{
+        flex-direction: column;
+        justify-content: normal;
+        align-items: normal;
+    }
+
 }
 
 @media (max-width: 767px) {
-
-    .rekomen img {
-        max-height: 100% !important;
-    }
 
     .container {
         width: 100%
@@ -3464,6 +3502,7 @@ div.geofield-ymap {
 
     .rekomen img {
         width: 100%;
+        max-height: 100% !important;
     }
 
     #block-block-15 {
@@ -3550,6 +3589,7 @@ div.geofield-ymap {
 }
 
 @media (max-width: 576px) {
+
     .oteltopkat p {
         font-size: 12px
     }
@@ -3642,6 +3682,10 @@ div.geofield-ymap {
     .news_header_title,
     .news_title_main {
         font-size: 23px;
+    }
+
+    .footer_text{
+        display: none;
     }
 
 }
